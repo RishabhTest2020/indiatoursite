@@ -50,7 +50,15 @@
 }
 
 body {
-  color: #777777;
+  /* background-image: linear-gradient(to right,blue 0%,red 100%),url("/img/drak-bg.jpg");
+  background-blend-mode:multiply; */
+  /* background-color: transparent ; */
+  /* background-image: url("/img/stratos-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center; */
+  /* background-size: 500%, 50%; */
+  /* background-attachment: fixed; */
+  color: #4dd141;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   font-weight: 300;
@@ -2056,7 +2064,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .protfolio-wrap {
-  margin: 50px;
+  /* margin: 50px; */
 }
 
 @media (max-width: 767px) {
@@ -2166,10 +2174,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .banner-area {
-  margin-top: -56px;
-  border-radius: 10px;
-  background: url(../img/header-bg.jpg) center;
+  margin-top: -90px;
+  /* border-radius: 10px; */
+  background: url("/img/header-bg.jpg");
   background-size: cover;
+  box-shadow: inset 0px 0px 150px 60px rgba(0,0,0,0.8);
+  position: relative;
 }
 
 @media (max-width: 1199.98px) {
