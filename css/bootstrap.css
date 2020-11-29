@@ -83,6 +83,7 @@ html {
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 @-ms-viewport {
@@ -654,8 +655,8 @@ pre code {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .col {
@@ -2078,7 +2079,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 }
 
 .form-inline {
-  display: flex;
+  /* display: flex; */
   flex-flow: row wrap;
   align-items: center;
 }
@@ -2105,6 +2106,9 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     display: inline-block;
     width: auto;
     vertical-align: middle;
+    align-items: center;
+    border-radius: 10px;
+
   }
   .form-inline .form-control-plaintext {
     display: inline-block;
