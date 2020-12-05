@@ -655,8 +655,8 @@ pre code {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 60px;
+  padding-left: 60px;
 }
 
 .col {
