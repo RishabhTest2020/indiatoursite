@@ -1,312 +1,248 @@
-<!-- <!DOCTYPE html>
-<html lang="en zxx" class="no-js">
-
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
 <head>
-		<!-- Mobile Specific Meta -->
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-		<!-- Favicon-->
-		<!-- <link rel="shortcut icon" href="img/fav.png"> -->
-		<!-- Author Meta -->
-		<!-- <meta name="author" content=""> -->
-		<!-- Meta Description -->
-		<!-- <meta name="description" content=""> -->
-		<!-- Meta Keyword -->
-		<!-- <meta name="keywords" content=""> -->
-		<!-- meta character set -->
-		<!-- <meta charset="UTF-8"> -->
-		<!-- Site Title -->
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Explore India - Golden Temple</title>
+    <link rel="icon" href="/img/logoex.jpg" type="image/jpg">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="css/goldentemple.css">
 
+    <!-- Custom Styling -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
 
-  <!-- <title>Explore India</title>
-  <link rel="icon" href="/indiatoursite/img/logoex.jpg" type="image/jpg"> -->
+        /* Navigation Bar */
+        .navbar {
+            background-color: #333;
+            padding: 10px 30px;
+        }
 
-  <!-- Bootstrap core CSS -->
-  <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">  -->
-  <!--CSS============================================= -->
-  <!-- <link rel="stylesheet" href="/css/linearicons.css">
-  <link rel="stylesheet" href="/indiatoursite/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/indiatoursite/css/bootstrap.css">
-  <link rel="stylesheet" href="/indiatoursite/css/magnific-popup.css">
-  <link rel="stylesheet" href="/indiatoursite/css/nice-select.css">					
-  <link rel="stylesheet" href="/indiatoursite/css/animate.min.css">
-  <link rel="stylesheet" href="/indiatoursite/css/owl.carousel.css">
-  <link rel="stylesheet" href="/indiatoursite/css/main.css"> -->
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-  <!-- Custom styles for this template -->
-  <!-- <link href="css/goldentemple.css" rel="stylesheet">
+        .navbar a:hover {
+            color: #f9d342;
+        }
 
+        /* Hero Section */
+        .banner-area {
+            background-image: url('./img/Harmandir-Sahib-Amritsar-India-Punjab.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 150px 20px;
+            position: relative;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .banner-area .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .primary-btn {
+            background-color: #f9d342;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .primary-btn:hover {
+            background-color: #c7a731;
+        }
+
+        /* About Section */
+        #middle {
+            background-color: #fff;
+            margin: 45px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1.5s;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        #middle h3 {
+            color: #f9a826;
+            margin-bottom: 20px;
+        }
+
+        /* Interactive Gallery */
+        .row {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .row img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .row img:hover {
+            transform: scale(1.05);
+            opacity: 0.8;
+        }
+
+        /* Feedback Section */
+        .feedback {
+            background-color: #fff;
+            margin: 45px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback h3 {
+            color: #f9a826;
+            margin-bottom: 20px;
+        }
+
+        .feedback form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .feedback textarea {
+            resize: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+
+        .feedback button {
+            background-color: #f9d342;
+            color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .feedback button:hover {
+            background-color: #c7a731;
+        }
+
+        /* Footer */
+        .footer-area {
+            background-color: #333;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #f9d342;
+        }
+    </style>
 </head>
 
-<body> -->
-
-  <!-- Navigation -->
-  <!-- Start Header Area -->
-  <!-- <header class="default-header">
-    <nav class="navbar navbar-expand-lg  navbar-light">
-      <div class="container">
-          <a class="navbar-brand" href="/indiatour/index.html">
-            <img src="img/wingslogo.png" alt="" style="height: 50px;">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="text-white lnr lnr-menu"></span>
-          </button>
-
-          <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-        <div class="dropdown">
-          <li><a>Catagories</a></li>
-          <div class="dropdown-content">
-            <li><a href="#">Link ddddddd1</a></li>
-            <li><a href="#">Link 2ddddddd</a></li>
-            <li><a href="#">Link 3dddddd</a></li>
-            <li><a href="#">Link 4ddddd</a></li>
-            <li><a href="#">Link 5dddd</a></li>
-            <li><a href="#">Link 6dddddddd</a></li>
-          </div>
-        </div>
-            <li><a class="nav-link" href="/indiatour/index.html">Home</a></li>
-            <li><a href="./Pages-inside/blog.html">Blogs</a></li>
-            <li><a href="#portfolio">Places</a></li>
-            <li><a href="#service">Services</a></li>
-            <li><a href="./Pages-inside/About.html">About Us</a></li>
-            </ul>
-          </div>						
-      </div>
-    </nav>
-  </header>
-  End Header Area -->
-	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
-	<head>
-		<!-- Mobile Specific Meta -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- Favicon-->
-		<link rel="shortcut icon" href="/img/fav.png">
-		<!-- Author Meta -->
-		<meta name="author" content="">
-		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
-		<!-- meta character set -->
-		<meta charset="UTF-8">
-		<!-- Site Title -->
-		<title>Explore India</title>
-        <link rel="icon" href="/img/logoex.jpg" type="image/jpg">
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
-			<!--CSS============================================= -->
-			<link rel="stylesheet" href="/css/linearicons.css">
-			<link rel="stylesheet" href="/css/font-awesome.min.css">
-			<link rel="stylesheet" href="/css/bootstrap.css">
-			<link rel="stylesheet" href="/css/magnific-popup.css">
-			<link rel="stylesheet" href="/css/nice-select.css">					
-			<link rel="stylesheet" href="/css/animate.min.css">
-			<link rel="stylesheet" href="/css/owl.carousel.css">
-      <link rel="stylesheet" href="/css/main.css">
-      <link href="css/goldentemple.css" rel="stylesheet">
-		</head>
-		<body>
-
-			<div class="icon-bar">
-				<a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-				<a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-				<a href="#" class="google"><i class="fa fa-google"></i></a> 
-				<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-				<!-- <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>  -->
-				<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-			  </div>
-			  
-			<div class="protfolio-wrap">
-
-			<!-- Start Header Area -->
-			<header class="default-header">
-				<nav class="navbar navbar-expand-lg  navbar-light">
-					<div class="container">
-						  <a class="navbar-brand" href="/index.html">
-						  	<img src="/img/wingslogo.png" alt="" style="height: 50px;">
-						  </a>
-						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						    <span class="text-white lnr lnr-menu"></span>
-						  </button>
-
-						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-						    <ul class="navbar-nav">
-						<div class="dropdown">
-							<li><a>Catagories</a></li>
-							<div class="dropdown-content">
-								<li><a href="#">Link ddddddd1</a></li>
-								<li><a href="#">Link 2ddddddd</a></li>
-								<li><a href="#">Link 3dddddd</a></li>
-								<li><a href="#">Link 4ddddd</a></li>
-								<li><a href="#">Link 5dddd</a></li>
-								<li><a href="#">Link 6dddddddd</a></li>
-							</div>
-            </div>
-                <li><a href="/index.html">Home</a></li>
-								<li><a href="./Pages-inside/blog.html">Collaborate with us</a></li>
-								<!-- <li><a href="#portfolio">Places</a></li>
-								<li><a href="#service">Services</a></li> -->
-								<li><a href="./Pages-inside/About.html">About Us</a></li>
-						    </ul>
-						  </div>						
-					</div>
-				</nav>
-			</header>
-			<!-- End Header Area -->
-  <!-- Page Content -->
-  <!-- <div class="container"> -->
-				<!-- start banner Area -->
-				<section class="banner-area" id="home" style="background-image: url('./img/Harmandir-Sahib-Amritsar-India-Punjab.jpg');">	
-					<div class="overlay overlay-bg"></div>
-					<div class="container">
-						<div class="row fullscreen d-flex align-items-center justify-content-center">
-							<div class="banner-content col-lg-10">
-								<h5 class="text-uppercase">Be the part of this Wonderful Journey</h5>
-								<h1>
-									Explore Punjab : Golden Temple!				
-								</h1>
-								<a href="#middle" class="primary-btn text-uppercase">Explore Now</a>					
-							</div>											
-						</div>
-					</div>
-        </section>
-      
-				<!-- End banner Area -->
-    <!-- Page Heading/Breadcrumbs -->
-    <!-- <h1 class="mt-4 mb-3">Golden Temple
-      <small>It's Real Gold</small>
-    </h1>
-
-    <ol class="breadcrumb">
-      <li class="breadcrumb-item">
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
         <a href="/index.html">Home</a>
-      </li>
-      <li class="breadcrumb-item active">Golden Temple</li>
-    </ol>
+        <a href="./Pages-inside/blog.html">Collaborate with us</a>
+        <a href="./Pages-inside/About.html">About Us</a>
+    </header>
 
-    <!-- Portfolio Item Row -->
-   <!-- <div class="row">
+    <!-- Hero Section -->
+    <section class="banner-area">
+        <div class="overlay"></div>
+        <div class="banner-content">
+            <h5>Be part of this Wonderful Journey</h5>
+            <h1>Explore Punjab: Golden Temple!</h1>
+            <a href="#middle" class="primary-btn">Explore Now</a>
+        </div>
+    </section>
 
-      <div style="max-width: 100%; margin: 20px;">
-        <img class="img-fluid" src="./img/Harmandir-Sahib-Amritsar-India-Punjab.jpg" alt="">
-      </div> -->
-
-      <div id="middle" style="margin: 45px;box-sizing: border-box;"><br><br><br>
-        <h3 class="my-3">Description</h3>
-        <p>The Golden Temple, also known as Sri Harmandir Sahib ("abode of God") or Darbar Sahib, (Punjabi pronunciation: [dəɾbɑɾ sɑhɪb], "exalted holy court"), is a Gurdwara located in the city of Amritsar, Punjab, India.After Gurdwara Janam Asthan, the birthplace of Sikhism, this temple is the most important pilgrimage site of Sikhism.
-
-The temple is built around a man-made pool (sarovar) that was completed by Guru Ram Das in 1577. </p>
-        <h3 class="my-3">Also Known as</h3>
+    <!-- About Section -->
+    <div id="middle">
+        <h3>Description</h3>
+        <p>The Golden Temple, also known as Sri Harmandir Sahib, is a significant pilgrimage site for Sikhism.</p>
+        <h3>Also Known As</h3>
         <ul>
-          <li>abode of God</li>
-          <li>dəɾbɑɾ sɑhɪb</li>
-          <li>Sri Harmandir Sahib</li>
+            <li>Abode of God</li>
+            <li>Darbar Sahib</li>
+            <li>Sri Harmandir Sahib</li>
         </ul>
-      </div>
-
     </div>
-    <!-- /.row -->
 
-    <!-- Related Projects Row -->
+    <!-- Gallery Section -->
     <h3 class="my-4" style="margin: 45px;">Related Pictures</h3>
-
     <div class="row">
-
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-          <img class="img-fluid" src="./img/The-Golden-Temple-India8.jpg" alt="">
-        </a>
-      </div>
-
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-          <img class="img-fluid" src="./img/597529822Amritsar_Main.jpg" alt="">
-        </a>
-      </div>
-
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-          <img class="img-fluid" src="./img/imb-photos-warrior-medium.jpg" alt="">
-        </a>
-      </div>
-
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-          <img class="img-fluid" src="./img/photo1.jpg" alt="">
-        </a>
-      </div>
-
+        <img src="./img/The-Golden-Temple-India8.jpg" alt="Golden Temple View">
+        <img src="./img/597529822Amritsar_Main.jpg" alt="Golden Temple at Night">
     </div>
-    <!-- /.row -->
 
-  </div>
-  <!-- /.container -->
+    <!-- Feedback Section -->
+    <div class="feedback">
+        <h3>Share Your Experience</h3>
+        <form>
+            <textarea placeholder="Share your experience..."></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
 
-  <!-- Footer -->
-				<!-- start footer Area -->		
-				<footer class="footer-area section-gap">
-					<div class="container">
-						<div class="row">
-							<div class="col-lg-5 col-md-6 col-sm-6">
-								<div class="single-footer-widget">
-									<h6>About Us</h6>
-									<p>
-										We Provide the best and latest content. Let yourself dive into the Beauty, Culture &amp; festivals of India. Have You're Good time at India.
-									</p>
-									<p class="footer-text">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is created with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/rishabhtest2020" target="_blank">Rishabh Gupta</a>
-								</p>	
-								</div>
-							</div>
-							<div class="col-lg-5  col-md-6 col-sm-6">
-								<div class="single-footer-widget">
-									<h6>Newsletter</h6>
-									<p>Stay update with our latest</p>
-									<div class="" id="mc_embed_signup">
-							         <form target="_blank"  action="" method="get" class="form-inline">
-											<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Email Here '" required="" type="email">
-				                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-				                           
-											<div class="info"></div>
-										</form>
-									</div>
-								</div>
-							</div>						
-							<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-								<div class="single-footer-widget">
-									<h6>Follow Us</h6>
-									<p>Let us be social</p>
-									<div class="footer-social d-flex align-items-center">
-										<a href="#"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-snapchat"></i></a>
-										<a href="#"><i class="fa fa-instagram"></i></a>
-									</div>
-								</div>
-							</div>							
-						</div>
-					</div>
-        </footer>	
-        <!-- End footer Area -->
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="/vendor/jquery/jquery.min.js"></script>
-  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/indiatoursite/js/vendor/jquery-2.2.4.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="/indiatoursite/js/vendor/bootstrap.min.js"></script>			
-  <script src="/indiatoursite/js/easing.min.js"></script>			
-  <script src="/indiatoursite/js/jquery.ajaxchimp.min.js"></script>
-  <script src="/indiatoursite/js/jquery.magnific-popup.min.js"></script>	
-  <script src="/indiatoursite/js/owl.carousel.min.js"></script>			
-  <script src="/indiatoursite/js/jquery.sticky.js"></script>			
-  <script src="/indiatoursite/js/jquery.nice-select.min.js"></script>			
-  <script src="/indiatoursite/js/parallax.min.js"></script>	
-  <script src="/indiatoursite/js/mail-script.js"></script>
-  <script src="/indiatoursite/js/isotope.pkgd.min.js"></script>	
-  <script src="/indiatoursite/js/main.js"></script>	
-
+    <!-- Footer -->
+    <footer class="footer-area">
+        <p>© 2025 Explore India | All rights reserved</p>
+        <div class="footer-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </footer>
 </body>
-
 </html>
