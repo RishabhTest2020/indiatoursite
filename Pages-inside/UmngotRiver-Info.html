@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Explore India - Umngot River</title>
+    <link rel="icon" href="/img/logoex.jpg" type="image/jpg">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        body {font-family: 'Poppins', sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; overflow-x: hidden;}
+        .navbar {background-color: #333; padding: 10px 30px;}
+        .navbar a {color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500; transition: color 0.3s;}
+        .navbar a:hover {color: #f9d342;}
+        .banner-area {background-image: url('../img/p7.jpg'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 150px 20px; position: relative; animation: fadeIn 2s;}
+        @keyframes fadeIn {from { opacity: 0; } to { opacity: 1; }}
+        .banner-area .overlay {background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1;}
+        .banner-content {position: relative; z-index: 2;}
+        .primary-btn {background-color: #f9d342; color: #333; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; border: none; margin-top: 15px;}
+        .primary-btn:hover {background-color: #c7a731;}
+        #middle {background-color: #fff; margin: 45px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); animation: slideUp 1.5s;}
+        @keyframes slideUp {from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; }}
+        #middle h3 {color: #f9a826; margin-bottom: 20px;}
+        .row.gallery {display: flex; justify-content: space-around; margin: 20px 0; flex-wrap: wrap;}
+        .row.gallery img {width: 100%; max-width: 320px; height: auto; margin-bottom: 15px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer;}
+        .row.gallery img:hover {transform: scale(1.05); opacity: 0.8;}
+        .footer-area {background-color: #333; color: #fff; padding: 30px; text-align: center;}
+        .footer-social a {margin: 0 10px; color: #fff; font-size: 1.5em; transition: color 0.3s;}
+        .footer-social a:hover {color: #f9d342;}
+        @media (max-width: 900px) {#middle { margin: 20px; padding: 15px; }}
+        @media (max-width: 600px) {.banner-area { padding: 80px 10px; } #middle { margin: 5px; padding: 10px; }}
+        #queryModal {display: none;position: fixed;z-index: 9999;left: 0;top: 0;width: 100vw;height: 100vh;background: rgba(0,0,0,0.5);align-items: center;justify-content: center;}
+        #queryModal > div {background: #fff;padding: 30px 20px;border-radius: 10px;max-width: 400px;width: 90vw;box-shadow: 0 8px 32px rgba(0,0,0,0.2);position: relative;}
+        #queryModal textarea,#queryModal input[type="email"] {width: 100% !important;min-width: 0 !important;max-width: 100% !important;box-sizing: border-box !important;margin-bottom: 15px !important;padding: 10px !important;border-radius: 5px !important;border: 1px solid #ccc !important;}
+        #queryModal .primary-btn {width: 100% !important;min-width: 0 !important;max-width: 100% !important;box-sizing: border-box !important;display: block !important;margin-bottom: 0 !important;}
+        @media (max-width: 991px) {#queryModal > div {padding: 20px 10px;max-width: 95vw;}}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="/index.html">Home</a>
+        <a href="../Pages-inside/blog.html">Collaborate with us</a>
+        <a href="../Pages-inside/About.html">About Us</a>
+    </header>
+    <!-- Hero Section -->
+    <section class="banner-area">
+        <div class="overlay"></div>
+        <div class="banner-content">
+            <h5>Be part of this Wonderful Journey</h5>
+            <h1>Explore Meghalaya: Umngot River!</h1>
+            <button class="primary-btn" id="openQueryModal" type="button">Send Us Query</button>
+        </div>
+    </section>
+    <!-- About Section -->
+    <div id="middle">
+        <h3>About Umngot River</h3>
+        <p>The Umngot River in Dawki, Meghalaya, is famous for its crystal-clear waters. It is a popular spot for boating, fishing, and enjoying the scenic beauty of the region.</p>
+        <h3>Highlights</h3>
+        <ul>
+            <li>Crystal-clear river water</li>
+            <li>Boating and fishing experiences</li>
+            <li>Picturesque landscapes</li>
+            <li>Close to the India-Bangladesh border</li>
+        </ul>
+        <h3>Visitor Tips</h3>
+        <ul>
+            <li>Best time to visit: November to April</li>
+            <li>Carry a camera for stunning photos</li>
+            <li>Respect local customs and environment</li>
+        </ul>
+    </div>
+    <!-- Gallery Section -->
+    <h3 class="my-4" style="margin: 45px;">Gallery</h3>
+    <div class="row gallery">
+        <img src="../img/p7.jpg" alt="Umngot River">
+        <img src="../img/p9.jpg" alt="River">
+        <img src="../img/p8.jpg" alt="Meghalaya">
+    </div>
+    <!-- Query Section -->
+    <div class="text-center" style="margin: 30px 0;">
+        <button class="primary-btn w-100" id="openQueryModal" type="button">Send Us Query</button>
+    </div>
+    <!-- Query Modal -->
+    <div id="queryModal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;">
+        <div style="background:#fff;padding:30px 20px;border-radius:10px;max-width:400px;width:90vw;box-shadow:0 8px 32px rgba(0,0,0,0.2);position:relative;">
+            <button id="closeQueryModal" style="position:absolute;top:10px;right:15px;background:none;border:none;font-size:22px;cursor:pointer;">&times;</button>
+            <h4 style="margin-bottom:15px;">Send Us Your Query</h4>
+            <form id="contact" action="https://formspree.io/f/xzzgaydr" method="POST">
+                <textarea name="message" placeholder="Type your query..." required style="width:100%;min-height:80px;margin-bottom:15px;padding:10px;border-radius:5px;border:1px solid #ccc;"></textarea>
+                <input name="email" type="email" placeholder="Your Email (for reply)" required style="width:100%;margin-bottom:15px;padding:10px;border-radius:5px;border:1px solid #ccc;">
+                <button class="primary-btn w-100" type="submit">Submit Query</button>
+            </form>
+            <div id="queryMsg" style="margin-top:10px;color:green;display:none;">Query sent! We'll get back to you soon.</div>
+        </div>
+    </div>
+    <script>
+    (function() {
+        document.getElementById('openQueryModal').onclick = function() {
+            document.getElementById('queryModal').style.display = 'flex';
+        };
+        document.getElementById('closeQueryModal').onclick = function() {
+            document.getElementById('queryModal').style.display = 'none';
+            document.getElementById('contact').reset();
+            document.getElementById('queryMsg').style.display = 'none';
+        };
+        document.getElementById('contact').onsubmit = function(e) {
+            e.preventDefault();
+            var email = document.querySelector('#contact input[name="email"]').value.trim();
+            var message = document.querySelector('#contact textarea[name="message"]').value.trim();
+            if (!email || !message) {
+                alert('Both email and query are required!');
+                return false;
+            }
+            var form = this;
+            var data = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(function(response) {
+                document.getElementById('queryMsg').style.display = 'block';
+                document.getElementById('queryMsg').textContent = "Thank you! Your query has been sent.";
+                form.reset();
+            }).catch(function(error) {
+                document.getElementById('queryMsg').style.display = 'block';
+                document.getElementById('queryMsg').textContent = "There was an error. Please try again later.";
+            });
+            return false;
+        };
+    })();
+    </script>
+    <!-- Footer -->
+    <footer class="footer-area">
+        <p>© 2025 Explore India | All rights reserved</p>
+        <div class="footer-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
