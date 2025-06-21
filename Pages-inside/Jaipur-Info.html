@@ -14,7 +14,7 @@
         .navbar {background-color: #333; padding: 10px 30px;}
         .navbar a {color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500; transition: color 0.3s;}
         .navbar a:hover {color: #f9d342;}
-        .banner-area {background-image: url('../img/jaipur.jpg'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 150px 20px; position: relative; animation: fadeIn 2s;}
+        .banner-area {background-image: url('../img/p3.jpg'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 150px 20px; position: relative; animation: fadeIn 2s;}
         @keyframes fadeIn {from { opacity: 0; } to { opacity: 1; }}
         .banner-area .overlay {background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1;}
         .banner-content {position: relative; z-index: 2;}
@@ -31,7 +31,6 @@
         .footer-social a:hover {color: #f9d342;}
         @media (max-width: 900px) {#middle { margin: 20px; padding: 15px; }}
         @media (max-width: 600px) {.banner-area { padding: 80px 10px; } #middle { margin: 5px; padding: 10px; }}
-        /* Query Modal Styles */
         #queryModal {display: none;position: fixed;z-index: 9999;left: 0;top: 0;width: 100vw;height: 100vh;background: rgba(0,0,0,0.5);align-items: center;justify-content: center;}
         #queryModal > div {background: #fff;padding: 30px 20px;border-radius: 10px;max-width: 400px;width: 90vw;box-shadow: 0 8px 32px rgba(0,0,0,0.2);position: relative;}
         #queryModal textarea,#queryModal input[type="email"] {width: 100% !important;min-width: 0 !important;max-width: 100% !important;box-sizing: border-box !important;margin-bottom: 15px !important;padding: 10px !important;border-radius: 5px !important;border: 1px solid #ccc !important;}
@@ -42,43 +41,46 @@
 <body>
     <header class="navbar">
         <a href="/index.html">Home</a>
-        <a href="./blog.html">Collaborate with us</a>
-        <a href="./About.html">About Us</a>
+        <a href="../Pages-inside/blog.html">Collaborate with us</a>
+        <a href="../Pages-inside/About.html">About Us</a>
     </header>
+    <!-- Hero Section -->
     <section class="banner-area">
         <div class="overlay"></div>
         <div class="banner-content">
-            <h5>The Pink City</h5>
-            <h1>Jaipur, Rajasthan</h1>
+            <h5>Be part of this Wonderful Journey</h5>
+            <h1>Explore Jaipur!</h1>
             <button class="primary-btn" id="openQueryModal" type="button">Send Us Query</button>
         </div>
     </section>
+    <!-- About Section -->
     <div id="middle">
         <h3>About Jaipur</h3>
-        <p>Jaipur, the capital of Rajasthan, is known as the Pink City for its distinctively colored buildings. Famous for its palaces, forts, vibrant bazaars, and rich culture, Jaipur is a must-visit destination for history and architecture lovers.</p>
+        <p>Jaipur, the Pink City, is renowned for its majestic forts, vibrant bazaars, and rich Rajasthani culture. Explore the architectural marvels and royal heritage of this UNESCO World Heritage city.</p>
         <h3>Highlights</h3>
         <ul>
-            <li>Amber Fort</li>
-            <li>City Palace</li>
-            <li>Hawa Mahal</li>
-            <li>Jantar Mantar</li>
-            <li>Colorful markets and traditional crafts</li>
+            <li>Amber Fort and Jaigarh Fort</li>
+            <li>Hawa Mahal and City Palace</li>
+            <li>Shopping in Johari and Bapu Bazaar</li>
+            <li>Traditional Rajasthani cuisine</li>
         </ul>
         <h3>Visitor Tips</h3>
         <ul>
             <li>Best time to visit: October to March</li>
-            <li>Try local Rajasthani cuisine</li>
-            <li>Shop for handicrafts and jewelry</li>
+            <li>Carry comfortable walking shoes</li>
+            <li>Respect local customs and dress modestly</li>
         </ul>
     </div>
+    <!-- Gallery Section -->
     <h3 class="my-4" style="margin: 45px;">Gallery</h3>
     <div class="row gallery">
-        <img src="../img/jaipur-1.jpg" alt="Amber Fort">
-        <img src="../img/jaipur-2.jpg" alt="Hawa Mahal">
-        <img src="../img/jaipur-3.jpg" alt="City Palace Jaipur">
+        <img src="../img/p3.jpg" alt="Jaipur 1">
+        <img src="../img/p4.jpg" alt="Jaipur 2">
+        <img src="../img/p5.jpg" alt="Jaipur 3">
     </div>
+    <!-- Query Section -->
     <div class="text-center" style="margin: 30px 0;">
-        <button class="primary-btn w-100" id="openQueryModal2" type="button">Send Us Query</button>
+        <button class="primary-btn w-100" id="openQueryModal" type="button">Send Us Query</button>
     </div>
     <!-- Query Modal -->
     <div id="queryModal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;">
@@ -86,57 +88,16 @@
             <button id="closeQueryModal" style="position:absolute;top:10px;right:15px;background:none;border:none;font-size:22px;cursor:pointer;">&times;</button>
             <h4 style="margin-bottom:15px;">Send Us Your Query</h4>
             <form id="contact" action="https://formspree.io/f/xzzgaydr" method="POST">
-                <textarea name="message" placeholder="Type your query..." required></textarea>
-                <input name="email" type="email" placeholder="Your Email (for reply)" required>
+                <textarea name="message" placeholder="Type your query..." required style="width:100%;min-height:80px;margin-bottom:15px;padding:10px;border-radius:5px;border:1px solid #ccc;"></textarea>
+                <input name="email" type="email" placeholder="Your Email (for reply)" required style="width:100%;margin-bottom:15px;padding:10px;border-radius:5px;border:1px solid #ccc;">
                 <button class="primary-btn w-100" type="submit">Submit Query</button>
             </form>
             <div id="queryMsg" style="margin-top:10px;color:green;display:none;">Query sent! We'll get back to you soon.</div>
         </div>
     </div>
-    <footer class="footer-area section-gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>About Us</h6>
-                        <p>We Provide the best and latest content. Let yourself dive into the Beauty, Culture & festivals of India. Have You're Good time at India.</p>
-                        <p class="footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is created with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/rishabhtest2020" target="_blank">Rishabh Gupta</a></p>
-                    </div>
-                </div>
-                <div class="col-lg-5  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Newsletter</h6>
-                        <p>Stay update with our latest</p>
-                        <div class="" id="mc_embed_signup">
-                            <form target="_blank"  action="" method="get" class="form-inline">
-                                <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Email Here '" required="" type="email">
-                                <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-                    <div class="single-footer-widget">
-                        <h6>Follow Us</h6>
-                        <p>Let us be social</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-snapchat"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
     <script>
     (function() {
         document.getElementById('openQueryModal').onclick = function() {
-            document.getElementById('queryModal').style.display = 'flex';
-        };
-        document.getElementById('openQueryModal2').onclick = function() {
             document.getElementById('queryModal').style.display = 'flex';
         };
         document.getElementById('closeQueryModal').onclick = function() {
@@ -170,5 +131,13 @@
         };
     })();
     </script>
+    <!-- Footer -->
+    <footer class="footer-area">
+        <p>© 2025 Explore India | All rights reserved</p>
+        <div class="footer-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </footer>
 </body>
 </html>

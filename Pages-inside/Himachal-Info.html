@@ -11,29 +11,27 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
     <style>
-        body { font-family: 'Poppins', sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; overflow-x: hidden; }
-        .navbar { background-color: #333; padding: 10px 30px; }
-        .navbar a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500; transition: color 0.3s; }
-        .navbar a:hover { color: #f9d342; }
-        .banner-area { background-image: url('../img/p11.jpg'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 150px 20px; position: relative; animation: fadeIn 2s; }
-        .banner-area .overlay { background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1; }
-        .banner-content { position: relative; z-index: 2; }
-        .primary-btn { background-color: #f9d342; color: #333; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; }
-        .primary-btn:hover { background-color: #c7a731; }
-        #middle { background-color: #fff; margin: 45px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); animation: slideUp 1.5s; }
-        #middle h3 { color: #f9a826; margin-bottom: 20px; }
-        .row { display: flex; justify-content: space-around; margin: 20px 0; flex-wrap: wrap; }
-        .row img { width: 100%; height: auto; margin-bottom: 15px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer; }
-        .row img:hover { transform: scale(1.05); opacity: 0.8; }
-        .feedback { background-color: #fff; margin: 45px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        .feedback h3 { color: #f9a826; margin-bottom: 20px; }
-        .feedback form { display: flex; flex-direction: column; gap: 10px; }
-        .feedback textarea { resize: none; padding: 10px; border: 1px solid #ddd; border-radius: 5px; min-height: 100px; }
-        .feedback button { background-color: #f9d342; color: #333; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; }
-        .feedback button:hover { background-color: #c7a731; }
-        .footer-area { background-color: #333; color: #fff; padding: 30px; text-align: center; }
-        .footer-social a { margin: 0 10px; color: #fff; font-size: 1.5em; transition: color 0.3s; }
-        .footer-social a:hover { color: #f9d342; }
+        body {font-family: 'Poppins', sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; overflow-x: hidden;}
+        .navbar {background-color: #333; padding: 10px 30px;}
+        .navbar a {color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500; transition: color 0.3s;}
+        .navbar a:hover {color: #f9d342;}
+        .banner-area {background-image: url('../img/p11.jpg'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 150px 20px; position: relative; animation: fadeIn 2s;}
+        @keyframes fadeIn {from { opacity: 0; } to { opacity: 1; }}
+        .banner-area .overlay {background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1;}
+        .banner-content {position: relative; z-index: 2;}
+        .primary-btn {background-color: #f9d342; color: #333; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; border: none; margin-top: 15px;}
+        .primary-btn:hover {background-color: #c7a731;}
+        #middle {background-color: #fff; margin: 45px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); animation: slideUp 1.5s;}
+        @keyframes slideUp {from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; }}
+        #middle h3 {color: #f9a826; margin-bottom: 20px;}
+        .row.gallery {display: flex; justify-content: space-around; margin: 20px 0; flex-wrap: wrap;}
+        .row.gallery img {width: 100%; max-width: 320px; height: auto; margin-bottom: 15px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer;}
+        .row.gallery img:hover {transform: scale(1.05); opacity: 0.8;}
+        .footer-area {background-color: #333; color: #fff; padding: 30px; text-align: center;}
+        .footer-social a {margin: 0 10px; color: #fff; font-size: 1.5em; transition: color 0.3s;}
+        .footer-social a:hover {color: #f9d342;}
+        @media (max-width: 900px) {#middle { margin: 20px; padding: 15px; }}
+        @media (max-width: 600px) {.banner-area { padding: 80px 10px; } #middle { margin: 5px; padding: 10px; }}
         #queryModal {display: none;position: fixed;z-index: 9999;left: 0;top: 0;width: 100vw;height: 100vh;background: rgba(0,0,0,0.5);align-items: center;justify-content: center;}
         #queryModal > div {background: #fff;padding: 30px 20px;border-radius: 10px;max-width: 400px;width: 90vw;box-shadow: 0 8px 32px rgba(0,0,0,0.2);position: relative;}
         #queryModal textarea,#queryModal input[type="email"] {width: 100% !important;min-width: 0 !important;max-width: 100% !important;box-sizing: border-box !important;margin-bottom: 15px !important;padding: 10px !important;border-radius: 5px !important;border: 1px solid #ccc !important;}
@@ -45,8 +43,8 @@
     <!-- Navigation -->
     <header class="navbar">
         <a href="/index.html">Home</a>
-        <a href="./blog.html">Collaborate with us</a>
-        <a href="./About.html">About Us</a>
+        <a href="../Pages-inside/blog.html">Collaborate with us</a>
+        <a href="../Pages-inside/About.html">About Us</a>
     </header>
     <!-- Hero Section -->
     <section class="banner-area">
@@ -77,10 +75,10 @@
     </div>
     <!-- Gallery Section -->
     <h3 class="my-4" style="margin: 45px;">Gallery</h3>
-    <div class="row">
-        <img src="../img/himachal1.jpg" alt="Himachal View 1">
-        <img src="../img/himachal2.jpg" alt="Himachal View 2">
-        <img src="../img/himachal3.jpg" alt="Himachal View 3">
+    <div class="row gallery">
+        <img src="../img/p11.jpg" alt="Himachal 1">
+        <img src="../img/p12.jpg" alt="Himachal 2">
+        <img src="../img/p10.jpg" alt="Himachal 3">
     </div>
     <!-- Query Section -->
     <div class="text-center" style="margin: 30px 0;">

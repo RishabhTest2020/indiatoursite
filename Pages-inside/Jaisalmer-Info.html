@@ -14,7 +14,7 @@
         .navbar {background-color: #333; padding: 10px 30px;}
         .navbar a {color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500; transition: color 0.3s;}
         .navbar a:hover {color: #f9d342;}
-        .banner-area {background-image: url('../img/jaisalmer.jpg'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 150px 20px; position: relative; animation: fadeIn 2s;}
+        .banner-area {background-image: url('../img/p6.jpg'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 150px 20px; position: relative; animation: fadeIn 2s;}
         @keyframes fadeIn {from { opacity: 0; } to { opacity: 1; }}
         .banner-area .overlay {background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1;}
         .banner-content {position: relative; z-index: 2;}
@@ -41,42 +41,46 @@
 <body>
     <header class="navbar">
         <a href="/index.html">Home</a>
-        <a href="./blog.html">Collaborate with us</a>
-        <a href="./About.html">About Us</a>
+        <a href="../Pages-inside/blog.html">Collaborate with us</a>
+        <a href="../Pages-inside/About.html">About Us</a>
     </header>
+    <!-- Hero Section -->
     <section class="banner-area">
         <div class="overlay"></div>
         <div class="banner-content">
-            <h5>The Golden City</h5>
-            <h1>Jaisalmer, Rajasthan</h1>
+            <h5>Be part of this Wonderful Journey</h5>
+            <h1>Explore Jaisalmer!</h1>
             <button class="primary-btn" id="openQueryModal" type="button">Send Us Query</button>
         </div>
     </section>
+    <!-- About Section -->
     <div id="middle">
         <h3>About Jaisalmer</h3>
-        <p>Jaisalmer, known as the Golden City, is famous for its yellow sandstone architecture, majestic fort, and desert experiences. It is a gateway to the Thar Desert and a top destination for camel safaris.</p>
+        <p>Jaisalmer, the Golden City, is famed for its yellow sandstone architecture, majestic fort, and desert adventures. Explore the rich history and vibrant culture of this desert jewel.</p>
         <h3>Highlights</h3>
         <ul>
-            <li>Jaisalmer Fort</li>
-            <li>Patwon Ki Haveli</li>
-            <li>Sam Sand Dunes</li>
-            <li>Desert Festival</li>
+            <li>Jaisalmer Fort and Patwon Ki Haveli</li>
+            <li>Sam Sand Dunes and camel rides</li>
+            <li>Desert camping and folk performances</li>
+            <li>Traditional Rajasthani cuisine</li>
         </ul>
         <h3>Visitor Tips</h3>
         <ul>
-            <li>Best time to visit: November to February</li>
-            <li>Enjoy a camel safari in the desert</li>
-            <li>Attend the Desert Festival for local culture</li>
+            <li>Best time to visit: November to March</li>
+            <li>Carry sunscreen and water for desert trips</li>
+            <li>Respect local customs and environment</li>
         </ul>
     </div>
+    <!-- Gallery Section -->
     <h3 class="my-4" style="margin: 45px;">Gallery</h3>
     <div class="row gallery">
-        <img src="../img/jaisalmer-1.jpg" alt="Jaisalmer Fort">
-        <img src="../img/jaisalmer-2.jpg" alt="Sam Sand Dunes">
-        <img src="../img/jaisalmer-3.jpg" alt="Patwon Ki Haveli">
+        <img src="../img/p7.jpg" alt="Jaisalmer 1">
+        <img src="../img/p8.jpg" alt="Jaisalmer 2">
+        <img src="../img/p9.jpg" alt="Jaisalmer 3">
     </div>
+    <!-- Query Section -->
     <div class="text-center" style="margin: 30px 0;">
-        <button class="primary-btn w-100" id="openQueryModal2" type="button">Send Us Query</button>
+        <button class="primary-btn w-100" id="openQueryModal" type="button">Send Us Query</button>
     </div>
     <!-- Query Modal -->
     <div id="queryModal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;">
@@ -84,57 +88,16 @@
             <button id="closeQueryModal" style="position:absolute;top:10px;right:15px;background:none;border:none;font-size:22px;cursor:pointer;">&times;</button>
             <h4 style="margin-bottom:15px;">Send Us Your Query</h4>
             <form id="contact" action="https://formspree.io/f/xzzgaydr" method="POST">
-                <textarea name="message" placeholder="Type your query..." required></textarea>
-                <input name="email" type="email" placeholder="Your Email (for reply)" required>
+                <textarea name="message" placeholder="Type your query..." required style="width:100%;min-height:80px;margin-bottom:15px;padding:10px;border-radius:5px;border:1px solid #ccc;"></textarea>
+                <input name="email" type="email" placeholder="Your Email (for reply)" required style="width:100%;margin-bottom:15px;padding:10px;border-radius:5px;border:1px solid #ccc;">
                 <button class="primary-btn w-100" type="submit">Submit Query</button>
             </form>
             <div id="queryMsg" style="margin-top:10px;color:green;display:none;">Query sent! We'll get back to you soon.</div>
         </div>
     </div>
-    <footer class="footer-area section-gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>About Us</h6>
-                        <p>We Provide the best and latest content. Let yourself dive into the Beauty, Culture & festivals of India. Have You're Good time at India.</p>
-                        <p class="footer-text">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is created with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/rishabhtest2020" target="_blank">Rishabh Gupta</a></p>
-                    </div>
-                </div>
-                <div class="col-lg-5  col-md-6 col-sm-6">
-                    <div class="single-footer-widget">
-                        <h6>Newsletter</h6>
-                        <p>Stay update with our latest</p>
-                        <div class="" id="mc_embed_signup">
-                            <form target="_blank"  action="" method="get" class="form-inline">
-                                <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Email Here '" required="" type="email">
-                                <button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-                    <div class="single-footer-widget">
-                        <h6>Follow Us</h6>
-                        <p>Let us be social</p>
-                        <div class="footer-social d-flex align-items-center">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-snapchat"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
     <script>
     (function() {
         document.getElementById('openQueryModal').onclick = function() {
-            document.getElementById('queryModal').style.display = 'flex';
-        };
-        document.getElementById('openQueryModal2').onclick = function() {
             document.getElementById('queryModal').style.display = 'flex';
         };
         document.getElementById('closeQueryModal').onclick = function() {
@@ -168,5 +131,13 @@
         };
     })();
     </script>
+    <!-- Footer -->
+    <footer class="footer-area">
+        <p>© 2025 Explore India | All rights reserved</p>
+        <div class="footer-social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+    </footer>
 </body>
 </html>
