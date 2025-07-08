@@ -23,7 +23,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Tour India</a>
+      <a class="navbar-brand" href="../index.html">Tour India</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,12 +34,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="Recent-Announcement.html" target="_blank">Recent-Announcements</a>
           </li>
         </ul>
       </div>
@@ -76,7 +70,7 @@
               <h5 class="card-title">Contact Information</h5>
               <p class="card-text mb-1"><strong>Address:</strong> Scindia House, CONNAUGHT PLACE, 79, opp. LIC 310 Branch, Janpath, New Delhi, Delhi 110001</p>
               <p class="card-text mb-1"><strong>Phone:</strong> <a href="tel:08700140135">087001 40135</a></p>
-              <p class="card-text"><strong>Email:</strong> <a href="mailto:help@tourindia.com">help@tourindia.com</a></p>
+              <p class="card-text"><strong>Email:</strong> <a href="mailto:cityindiainfotravels@gmail.com">cityindiainfotravels@gmail.com</a></p>
             </div>
           </div>
         </div>
@@ -88,11 +82,22 @@
   <!-- Footer -->
   <footer class="py-3 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Tour India</p>
+      <p class="m-0 text-center text-white">Copyright &copy; City Info India Travels</p>
     </div>
   </footer>
 
-
+  <script>
+  // Smooth scroll for nav links (only for in-page # links)
+  document.querySelectorAll('.js-scroll-trigger').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#') && document.querySelector(href)) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+  </script>
 
 </body>
 
