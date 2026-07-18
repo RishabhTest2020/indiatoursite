@@ -23,7 +23,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Tour India</a>
+      <a class="navbar-brand" href="../index.html">Tour India</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,12 +34,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="blog.html">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-            <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="Recent-Announcement.html" target="_blank">Recent-Announcements</a>
           </li>
         </ul>
       </div>
@@ -57,51 +51,53 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>About Tour India</h2>
-          <p class="lead">We have wide Varieties of Hotel & Resorts to accomodate you. 3D4N or 15D16N totally upto you.</p>
+          <h2>About City Info India Travels</h2>
+          <p class="lead">CITY INFO INDIA TRAVELS is an organization approved by the Ministry of Tourism, Government of India, dedicated to making your journey across India seamless, memorable, and enriching.</p>
+          <p>We specialize in curating personalized travel experiences to India's most iconic destinations, including Delhi, Agra, Jaipur, Rajasthan, Kashmir, Himachal, Uttrakhand, and beyond. Whether you are seeking cultural immersion, adventure, or relaxation, our expert team crafts itineraries tailored to your interests and needs.</p>
           <ul>
-            <li>Ammenties Selection for every price options</li>
-            <li>Visa Ready - we got you everything covered</li>
-            <li>Personalized Travel Plans section bachelors to couples</li>
-            <li>Minimal custom duties and charges so you are free to explore your own unique options</li>
+            <li><strong>Comprehensive Travel Bookings:</strong> Hotels, flights, and car rentals for a hassle-free experience.</li>
+            <li><strong>Expert Local Guidance:</strong> In-depth knowledge of Delhi, Agra, Jaipur, Rajasthan, Kashmir, Himachal, Chandigarh, Amritsar, and more.</li>
+            <li><strong>Flexible Car Rentals:</strong> One-way and round-trip options with professional drivers.</li>
+            <li><strong>Authentic Cultural Experiences:</strong> Explore India's rich heritage, cuisine, and traditions with our curated tours.</li>
+            <li><strong>24/7 Customer Support:</strong> Our team is always available to assist you before, during, and after your trip.</li>
           </ul>
+          <p>Our mission is to provide accurate information, transparent pricing, and the best customer service, ensuring every traveler enjoys a safe and unforgettable journey in India.</p>
+          <div class="alert alert-info mt-4" role="alert">
+            <strong>Connect with us!</strong> Follow us on <a href="https://www.facebook.com/" target="_blank">Facebook</a> for travel inspiration, tips, and the latest updates.
+          </div>
+          <div class="card mt-4">
+            <div class="card-body">
+              <h5 class="card-title">Contact Information</h5>
+              <p class="card-text mb-1"><strong>Address:</strong> Scindia House, CONNAUGHT PLACE, 79, opp. LIC 310 Branch, Janpath, New Delhi, Delhi 110001</p>
+              <p class="card-text mb-1"><strong>Phone:</strong> <a href="tel:08700140135">087001 40135</a></p>
+              <p class="card-text"><strong>Email:</strong> <a href="mailto:cityindiainfotravels@gmail.com">cityindiainfotravels@gmail.com</a></p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Services we offer</h2>
-          <p class="lead">We offer cutomized plans as well as specially framed packages to accomodate you for the wonderful experience you're going to experience while travelling in Incredible India. We are always with you with our 24x7 cutomer support on online as well as on call. We're always there when you need us. Have a Life remembering Journey with our Hotels and Accomodation Partner all over the country of delights and culture.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 mx-auto">
-          <h2>Contact us</h2>
-            <p class="lead">phone Number. +91 9XXXXXXXXX</p>
-            <p class="lead">Fax : XXXXXXXXXXX</p>
-            <p class="lead">Email : help@tourindia.com</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer -->
   <footer class="py-3 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Tour India</p>
+      <p class="m-0 text-center text-white">Copyright &copy; City Info India Travels</p>
     </div>
   </footer>
 
-
+  <script>
+  // Smooth scroll for nav links (only for in-page # links)
+  document.querySelectorAll('.js-scroll-trigger').forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href && href.startsWith('#') && document.querySelector(href)) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+  </script>
 
 </body>
 
