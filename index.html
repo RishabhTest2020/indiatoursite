@@ -16,7 +16,8 @@
 		<!-- Site Title -->
 		<title>Explore India</title>
 		<link rel="icon" href="img/explore-india-logo.svg" type="image/svg+xml">
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
 			<!--CSS============================================= -->
 			<link rel="stylesheet" href="css/linearicons.css">
 			<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -26,294 +27,548 @@
 			<link rel="stylesheet" href="css/animate.min.css">
 			<link rel="stylesheet" href="css/owl.carousel.css">
 			<link rel="stylesheet" href="css/main.css">
+			<link rel="stylesheet" href="css/modern-custom.css">
 		</head>
 		<body>
-
-			<div class="icon-bar">
-				<a href="https://www.facebook.com/share/1L5AW4uipD/" class="facebook"><i class="fa fa-facebook"></i></a> 
-				<a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-				<a href="https://g.co/kgs/16ismLt" class="google"><i class="fa fa-google"></i></a> 
-				<a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-				<!-- <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>  -->
-				<a href="https://www.instagram.com/travels_cityinfoindia?igsh=MWp5cWM5YmFocDhmNg==" class="instagram"><i class="fa fa-instagram"></i></a>
-			  </div>
 			  
 			<div class="protfolio-wrap">
 
 			<!-- Start Header Area -->
 			<header class="default-header">
-				<nav class="navbar navbar-expand-lg  navbar-light">
+				<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
 						  <a class="navbar-brand" href="index.html">
-						  	<img src="img/wingslogo.png" alt="" style="height: 50px;">
+						  	<img src="img/wingslogo.png" alt="Incredible India Travels" style="height: 50px;">
 						  </a>
 						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						    <span class="text-white lnr lnr-menu"></span>
+						    <span class="lnr lnr-menu"></span>
 						  </button>
 
 						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
-						    <ul class="navbar-nav">
-						<div class="dropdown">
-							<li><a>Catagories</a></li>
-							<div class="dropdown-content">
-								<li><a href="#">Link ddddddd1</a></li>
-								<li><a href="#">Link 2ddddddd</a></li>
-								<li><a href="#">Link 3dddddd</a></li>
-								<li><a href="#">Link 4ddddd</a></li>
-								<li><a href="#">Link 5dddd</a></li>
-								<li><a href="#">Link 6dddddddd</a></li>
-							</div>
-						</div>
-								<li><a href="./Pages-inside/blog.html">Collaborate with us</a></li>
-								<!-- <li><a href="#portfolio">Places</a></li>
-								<li><a href="#service">Services</a></li> -->
-								<li><a href="./Pages-inside/About.html">About Us</a></li>
+						    <ul class="navbar-nav align-items-center">
+								<div class="dropdown">
+									<li><a>Explore Themes</a></li>
+									<div class="dropdown-content">
+										<li><a href="#" data-filter=".corporate">🏰 North Heritage</a></li>
+										<li><a href="#" data-filter=".personal">🕉️ Central Wonders</a></li>
+										<li><a href="#" data-filter=".agency">🌄 North-East Escapes</a></li>
+										<li><a href="#" data-filter=".portal">🏖️ South Coastlines</a></li>
+									</div>
+								</div>
+								<li><a href="./Pages-inside/blog.html">Travel Stories</a></li>
+								<li><a href="./Pages-inside/About.html">Our Motto</a></li>
+								<!-- Theme Toggle Switch -->
+								<div class="theme-toggle-container">
+									<button class="theme-btn" id="themeToggle" aria-label="Toggle Dark Mode">
+										<i class="fa fa-moon-o"></i>
+										<i class="fa fa-sun-o"></i>
+									</button>
+								</div>
 						    </ul>
 						  </div>						
 					</div>
 				</nav>
 			</header>
 			<!-- End Header Area -->	
+
 				<!-- start banner Area -->
 				<section class="banner-area" id="home" style="background-image: url('./img/mountain.jpg');">	
 					<div class="overlay overlay-bg"></div>
 					<div class="container">
 						<div class="row fullscreen d-flex align-items-center justify-content-center">
 							<div class="banner-content col-lg-10">
-								<h5 class="text-uppercase">Be the part of this Wonderful Journey</h5>
-								<h1>
-									Explore Incredible India!				
-								</h1>
-								<button class="primary-btn text-uppercase" id="openQueryModal" type="button">Send Us Query</button>					
+								<h5 class="text-uppercase">Be Part of a Wonderful Journey</h5>
+								<h1>Explore Incredible India!</h1>
+								
+								<!-- Hero Search Console -->
+								<div class="search-console">
+									<form class="search-grid" id="heroSearchForm">
+										<div class="search-item">
+											<label for="searchDest">Where to?</label>
+											<div class="search-input-wrap">
+												<i class="fa fa-map-marker"></i>
+												<input type="text" id="searchDest" placeholder="e.g. Kashmir, Hampi, Kerala...">
+											</div>
+										</div>
+										<div class="search-item">
+											<label for="searchVibe">Vibe</label>
+											<div class="search-input-wrap">
+												<i class="fa fa-compass"></i>
+												<select id="searchVibe">
+													<option value="all">All Vibes</option>
+													<option value="adventure">Adventure</option>
+													<option value="culture">Heritage & Culture</option>
+													<option value="nature">Nature & Wildlife</option>
+													<option value="beach">Coastal Beach</option>
+												</select>
+											</div>
+										</div>
+										<div class="search-item">
+											<label for="searchRegion">Region</label>
+											<div class="search-input-wrap">
+												<i class="fa fa-globe"></i>
+												<select id="searchRegion">
+													<option value="all">Any Region</option>
+													<option value="corporate">North</option>
+													<option value="personal">Central</option>
+													<option value="agency">North-Eastern</option>
+													<option value="portal">South</option>
+												</select>
+											</div>
+										</div>
+										<div class="search-btn-wrap">
+											<button class="search-btn" id="searchSubmit" type="button">
+												<i class="fa fa-search"></i> Find
+											</button>
+										</div>
+									</form>
+								</div>
+								
 							</div>											
 						</div>
 					</div>
 				</section>
 				<!-- End banner Area -->	
+
+				<!-- Start Interactive Vibe Planner Widget -->
+				<section class="vibe-planner-section">
+					<div class="container">
+						<div class="section-title-wrap">
+							<h2>Discover Your Vibe</h2>
+							<p>Choose your traveling style and let us reveal matching destinations recommended just for you.</p>
+						</div>
+						<div class="vibe-grid">
+							<div class="vibe-card" data-vibe="adventure">
+								<div class="vibe-icon"><i class="fa fa-rocket"></i></div>
+								<h4>Adventure</h4>
+								<p>Safaris, Trekking & Rivers</p>
+							</div>
+							<div class="vibe-card" data-vibe="culture">
+								<div class="vibe-icon"><i class="fa fa-university"></i></div>
+								<h4>Heritage & Culture</h4>
+								<p>Palaces, Temples & History</p>
+							</div>
+							<div class="vibe-card" data-vibe="nature">
+								<div class="vibe-icon"><i class="fa fa-tree"></i></div>
+								<h4>Nature & Wildlife</h4>
+								<p>Houseboats, Valleys & Peaks</p>
+							</div>
+							<div class="vibe-card" data-vibe="beach">
+								<div class="vibe-icon"><i class="fa fa-sun-o"></i></div>
+								<h4>Coastal Beach</h4>
+								<p>Golden Shores & Serenity</p>
+							</div>
+						</div>
+						
+						<div class="vibe-recommendations" id="vibeRecPanel">
+							<div class="rec-content">
+								<div class="rec-text">
+									<h3 id="recVibeTitle">Loading recommendation...</h3>
+									<p id="recVibeDesc">Select one of the vibe cards above.</p>
+								</div>
+								<div class="rec-actions">
+									<button class="primary-btn" id="viewVibeTours">
+										<i class="fa fa-map-o"></i> View Matching Tours
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- End Vibe Planner Widget -->
 			
 				<!-- Start portfolio-area Area -->	
-				<section id="middle" class="portfolio-area section-gap" id="portfolio">
-	
-				    
-				    <div class="filters">
-				      <ul>
-				        <li class="active" data-filter="*">All</li>
-				        <li data-filter=".corporate">North</li>
-				        <li data-filter=".personal">Central</li>
-				        <li data-filter=".agency">North-Eastern</li>
-				        <li data-filter=".portal">South</li>
-				      </ul>
-				    </div>
-				    
-				    <div class="filters-content">
-				      <div class="row grid">
-				        <div class="single-portfolio col-sm-4 all corporate">
-				          <div class="item">
-				            <img src="img/p1.jpg" alt="Work 1">
-				            <div class="p-inner">
-				              <h4><a href="./Pages-inside/GoldenTemple-Info.html">Golden Temple</a></h4>
-				              <div class="cat">Punjab</div>
-				            </div>
-				          </div>
-				        </div>
-				        <div class="single-portfolio col-sm-4 all personal">
-				          <div class="item">
-				            <img src="img/p2.jpg" alt="Work 1">
-				            <div class="p-inner">
-				              <h4><a href="./Pages-inside/GwaliorFort-Info.html">Gwalior Fort</a></h4>
-				              <div class="cat">Madhya Pradesh</div>
-				            </div>
-				          </div>
-				        </div>
-				        <div class="single-portfolio col-sm-4 all agency">
-				          <div class="item">
-				            <img src="img/p9.jpg" alt="Work 1">
-				            <div class="p-inner">
-				              <h5><a href="./Pages-inside/Twang-Info.html">Twang</a></h5>
-				              <div class="cat">Arunachal Pradesh</div>
-				            </div>
-				          </div>
-				        </div>
-				        <div class="single-portfolio col-sm-4 all portal">
-				          <div class="item">
-				            <img src="img/p12.jpg" alt="Work 1">
-				            <div class="p-inner">
-				              <h5><a href="./Pages-inside/Alleppey-Info.html">Alleppey</a></h5>
-				              <div class="cat">Kerala</div>
-				            </div>
-				          </div>
-				        </div>
+				<section id="middle" class="portfolio-area section-gap">
+					<div class="container">
+						<div class="section-title-wrap">
+							<h2>Inspirational Travel Packages</h2>
+							<p>Explore our carefully curated circuits mapping the best of cultural, spiritual, and adventure routes.</p>
+						</div>
+						
+						<div class="filters">
+						  <ul>
+							<li class="active" data-filter="*">All Destinations</li>
+							<li data-filter=".corporate">North</li>
+							<li data-filter=".personal">Central</li>
+							<li data-filter=".agency">North-Eastern</li>
+							<li data-filter=".portal">South</li>
+						  </ul>
+						</div>
+						
+						<div class="filters-content">
+						  <div class="row grid">
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p1.jpg" alt="Golden Temple">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Punjab</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.9</span>
+								  </div>
+								  <h4><a href="./Pages-inside/GoldenTemple-Info.html">Golden Temple</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 2 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all personal" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p2.jpg" alt="Gwalior Fort">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Madhya Pradesh</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.7</span>
+								  </div>
+								  <h4><a href="./Pages-inside/GwaliorFort-Info.html">Gwalior Fort</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all agency" data-vibe="nature">
+							  <div class="item">
+								<img src="img/p9.jpg" alt="Twang">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Arunachal Pradesh</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.8</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Twang-Info.html">Twang</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 6 Days</span>
+									<span><i class="fa fa-tag"></i> $$$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all portal" data-vibe="nature">
+							  <div class="item">
+								<img src="img/p12.jpg" alt="Alleppey">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Kerala</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.9</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Alleppey-Info.html">Alleppey</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
 
-				        <div class="single-portfolio col-sm-4 all corporate">
-				          <div class="item">
-				            <img src="img/p5.jpg" alt="Work 1">
-				            <div class="p-inner">
-				              <h4><a href="./Pages-inside/CamelSafari-Info.html">Camel Safari</a></h4>
-				              <div class="cat">Rajasthan</div>
-				            </div>
-				          </div>
-				        </div>
-				        <div class="single-portfolio col-sm-4 all personal">
-				          <div class="item">
-				            <img src="img/p6.jpg" alt="Work 1">
-				            <div class="p-inner">
-				              <h4><a href="./Pages-inside/SanchiStupa-Info.html">Sanchi Stupa</a></h4>
-				              <div class="cat">Madhya Pradesh</div>
-				            </div>
-				          </div>
-				        </div>
-				        <div class="single-portfolio col-sm-4 all agency">
-				          <div class="item">
-				            <img src="img/p7.jpg" alt="Work 1">
-				            <div class="p-inner">
-				              <h5><a href="./Pages-inside/UmngotRiver-Info.html">Umngot river</a></h5>
-				              <div class="cat">Meghalaya</div>
-				            </div>
-				          </div>
-				        </div>
-				        <div class="single-portfolio col-sm-4 all portal">
-				          <div class="item">
-				            <img src="img/p10.jpg" alt="Work 1">
-				            <div class="p-inner">
-				              <h5><a href="./Pages-inside/VivekanandaRockMemorial-Info.html">Vivekananda Rock Memorial</a></h5>
-				              <div class="cat">Tamil Nadu</div>
-				            </div>
-				          </div>
-				        </div>		
-				        <div class="single-portfolio col-sm-4 all corporate">
-				          <div class="item">
-				            <img src="img/p4.jpg" alt="Mehrangarh Fort">
-				            <div class="p-inner">
-				              <h4><a href="./Pages-inside/MehrangarhFort-Info.html">Mehrangarh Fort</a></h4>
-				              <div class="cat">Rajasthan</div>
-				            </div>
-				          </div>
-				        </div>
-				        <div class="single-portfolio col-sm-4 all personal">
-				          <div class="item">
-				            <img src="img/p3.jpg" alt="Hampi">
-				            <div class="p-inner">
-				              <h4><a href="./Pages-inside/Hampi-Info.html">Hampi</a></h4>
-				              <div class="cat">Karnataka</div>
-				            </div>
-				          </div>
-				        </div>
-				        <div class="single-portfolio col-sm-4 all agency">
-				          <div class="item">
-				            <img src="img/p8.jpg" alt="Mon">
-				            <div class="p-inner">
-				              <h5><a href="./Pages-inside/Mon-Info.html">Mon</a></h5>
-				              <div class="cat">Myanmar</div>
-				            </div>
-				          </div>
-				        </div>
-				        <div class="single-portfolio col-sm-4 all portal">
-				          <div class="item">
-				            <img src="img/p11.jpg" alt="Colva Beach">
-				            <div class="p-inner">
-				              <h5><a href="./Pages-inside/ColvaBeach-Info.html">Colva Beach</a></h5>
-				              <div class="cat">Goa</div>
-				            </div>
-				          </div>
-				        </div>					        
-				        <div class="single-portfolio col-sm-4 all corporate">
-          <div class="item">
-            <img src="img/p3.jpg" alt="Jaipur">
-            <div class="p-inner">
-              <h5><a href="./Pages-inside/Jaipur-Info.html">Jaipur</a></h5>
-              <div class="cat">Rajasthan</div>
-            </div>
-          </div>
-        </div>
-        <div class="single-portfolio col-sm-4 all corporate">
-          <div class="item">
-            <img src="img/p4.jpg" alt="Udaipur">
-            <div class="p-inner">
-              <h5><a href="./Pages-inside/Udaipur-Info.html">Udaipur</a></h5>
-              <div class="cat">Rajasthan</div>
-            </div>
-          </div>
-        </div>
-        <div class="single-portfolio col-sm-4 all corporate">
-          <div class="item">
-            <img src="img/p5.jpg" alt="Pushkar">
-            <div class="p-inner">
-              <h5><a href="./Pages-inside/Pushkar-Info.html">Pushkar</a></h5>
-              <div class="cat">Rajasthan</div>
-            </div>
-          </div>
-        </div>
-        <div class="single-portfolio col-sm-4 all corporate">
-          <div class="item">
-            <img src="img/p6.jpg" alt="Jaisalmer">
-            <div class="p-inner">
-              <h5><a href="./Pages-inside/Jaisalmer-Info.html">Jaisalmer</a></h5>
-              <div class="cat">Rajasthan</div>
-            </div>
-          </div>
-        </div>
-        <div class="single-portfolio col-sm-4 all corporate">
-          <div class="item">
-            <img src="img/p7.jpg" alt="Jodhpur">
-            <div class="p-inner">
-              <h5><a href="./Pages-inside/Jodhpur-Info.html">Jodhpur</a></h5>
-              <div class="cat">Rajasthan</div>
-            </div>
-          </div>
-        </div>
-        <div class="single-portfolio col-sm-4 all corporate">
-          <div class="item">
-            <img src="img/p8.jpg" alt="Bikaner">
-            <div class="p-inner">
-              <h5><a href="./Pages-inside/Bikaner-Info.html">Bikaner</a></h5>
-              <div class="cat">Rajasthan</div>
-            </div>
-          </div>
-        </div>
-        <div class="single-portfolio col-sm-4 all corporate">
-          <div class="item">
-            <img src="img/p10.jpg" alt="Kashmir">
-            <div class="p-inner">
-              <h5><a href="./Pages-inside/Kashmir-Info.html">Kashmir</a></h5>
-              <div class="cat">Jammu & Kashmir</div>
-            </div>
-          </div>
-        </div>
-        <div class="single-portfolio col-sm-4 all corporate">
-          <div class="item">
-            <img src="img/p11.jpg" alt="Himachal">
-            <div class="p-inner">
-              <h5><a href="./Pages-inside/Himachal-Info.html">Himachal</a></h5>
-              <div class="cat">Himachal Pradesh</div>
-            </div>
-          </div>
-        </div>
-        <div class="single-portfolio col-sm-4 all corporate">
-          <div class="item">
-            <img src="img/p12.jpg" alt="Uttrakhand">
-            <div class="p-inner">
-              <h5><a href="./Pages-inside/Uttrakhand-Info.html">Uttrakhand</a></h5>
-              <div class="cat">Uttrakhand</div>
-            </div>
-          </div>
-        </div>
-				      </div>
-				    </div>
-				    
-				  </div>
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="adventure">
+							  <div class="item">
+								<img src="img/p5.jpg" alt="Camel Safari">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Rajasthan</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.8</span>
+								  </div>
+								  <h4><a href="./Pages-inside/CamelSafari-Info.html">Camel Safari</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all personal" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p6.jpg" alt="Sanchi Stupa">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Madhya Pradesh</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.6</span>
+								  </div>
+								  <h4><a href="./Pages-inside/SanchiStupa-Info.html">Sanchi Stupa</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 2 Days</span>
+									<span><i class="fa fa-tag"></i> $</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all agency" data-vibe="adventure">
+							  <div class="item">
+								<img src="img/p7.jpg" alt="Umngot river">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Meghalaya</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.9</span>
+								  </div>
+								  <h4><a href="./Pages-inside/UmngotRiver-Info.html">Umngot river</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all portal" data-vibe="beach">
+							  <div class="item">
+								<img src="img/p10.jpg" alt="Vivekananda Rock Memorial">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Tamil Nadu</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.8</span>
+								  </div>
+								  <h4><a href="./Pages-inside/VivekanandaRockMemorial-Info.html">Vivekananda Rock Memorial</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 2 Days</span>
+									<span><i class="fa fa-tag"></i> $</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+									
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p4.jpg" alt="Mehrangarh Fort">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Rajasthan</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.9</span>
+								  </div>
+								  <h4><a href="./Pages-inside/MehrangarhFort-Info.html">Mehrangarh Fort</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all personal" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p3.jpg" alt="Hampi">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Karnataka</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.9</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Hampi-Info.html">Hampi</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all agency" data-vibe="nature">
+							  <div class="item">
+								<img src="img/p8.jpg" alt="Mon">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Myanmar Border</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.5</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Mon-Info.html">Mon</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 5 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all portal" data-vibe="beach">
+							  <div class="item">
+								<img src="img/p11.jpg" alt="Colva Beach">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Goa</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.7</span>
+								  </div>
+								  <h4><a href="./Pages-inside/ColvaBeach-Info.html">Colva Beach</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+												        
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p3.jpg" alt="Jaipur">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Rajasthan</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.9</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Jaipur-Info.html">Jaipur</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p4.jpg" alt="Udaipur">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Rajasthan</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.8</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Udaipur-Info.html">Udaipur</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p5.jpg" alt="Pushkar">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Rajasthan</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.6</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Pushkar-Info.html">Pushkar</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="adventure">
+							  <div class="item">
+								<img src="img/p6.jpg" alt="Jaisalmer">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Rajasthan</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.8</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Jaisalmer-Info.html">Jaisalmer</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p7.jpg" alt="Jodhpur">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Rajasthan</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.8</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Jodhpur-Info.html">Jodhpur</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
+							  <div class="item">
+								<img src="img/p8.jpg" alt="Bikaner">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Rajasthan</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.6</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Bikaner-Info.html">Bikaner</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="nature">
+							  <div class="item">
+								<img src="img/p10.jpg" alt="Kashmir">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Jammu & Kashmir</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.9</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Kashmir-Info.html">Kashmir</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 7 Days</span>
+									<span><i class="fa fa-tag"></i> $$$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="adventure">
+							  <div class="item">
+								<img src="img/p11.jpg" alt="Himachal">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Himachal Pradesh</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.9</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Himachal-Info.html">Himachal</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 6 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+							
+							<div class="single-portfolio col-sm-4 all corporate" data-vibe="adventure">
+							  <div class="item">
+								<img src="img/p12.jpg" alt="Uttrakhand">
+								<div class="p-inner">
+								  <div class="card-badges">
+									<span class="state-badge">Uttarakhand</span>
+									<span class="rating-badge"><i class="fa fa-star"></i> 4.8</span>
+								  </div>
+								  <h4><a href="./Pages-inside/Uttrakhand-Info.html">Uttrakhand</a></h4>
+								  <div class="card-meta-info">
+									<span><i class="fa fa-clock-o"></i> 5 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>
+								  </div>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
 				</section>
 				<!-- End portfolio-area Area -->	
 
 				
 				<!-- Start service Area -->
-				<section class="service-area section-gap relative" id="service">
+				<section class="service-area section-gap relative" id="service" style="background-image: url('img/service-bg.jpg');">
 					<div class="overlay overlay-bg"></div>	
 					<div class="container">
 						<div class="row d-flex justify-content-center">
 							<div class="menu-content pb-60 col-lg-10">
 								<div class="title text-center">
-									<h1 class="mb-10 text-white">Always Comes with the best content</h1>
-									<p>Who are always love to explore best</p>
+									<h1 class="mb-10 text-white">Always Comes with the Best Content</h1>
+									<p class="text-white opacity-75">We are dedicated to helping travelers discover the soul of India.</p>
 								</div>
 							</div>
 						</div>	
@@ -327,28 +582,28 @@
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="single-service">
-									<img class="img-fluid" src="img/s1.png" alt="">
+									<img class="img-fluid" src="img/s1.png" alt="Selective Content">
 									<h4>Selective Content</h4>
 									<p>
-										It's totaly on you what you want and what you want to explore.
+										Tailored choices completely aligned with what you love and want to explore.
 									</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="single-service">
-									<img class="img-fluid" src="img/s2.png" alt="">
+									<img class="img-fluid" src="img/s2.png" alt="Informative Content">
 									<h4>Informative Content</h4>
 									<p>
-										Our content provide you the detailed Information for travel and other topics .
+										Detailed regional insights, seasonal guidelines, and cultural information.
 									</p>
 								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="single-service">
-									<img class="img-fluid" src="img/s3.png" alt="">
-									<h4>Personalized and collaborative content</h4>
+									<img class="img-fluid" src="img/s3.png" alt="Personalized tours">
+									<h4>Collaborative Support</h4>
 									<p>
-										We have wide Varieties of collective content whick helps you to explore in better way :).
+										Direct support from local experts to help plan and fine-tune your schedules.
 									</p>
 								</div>
 							</div>														
@@ -363,77 +618,89 @@
 						<div class="row d-flex justify-content-center">
 							<div class="menu-content pb-60 col-lg-10">
 								<div class="title text-center">
-									<h1 class="mb-10">How Our Subcribers felt for Us</h1>
-									<p>Who are in extreme love with friendly &amp; Informative content</p>
+									<h1 class="mb-10">Subscriber Experiences</h1>
+									<p>Read what our global travelers feel about our custom guides.</p>
 								</div>
 							</div>
 						</div>							
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="single-review">
-									<img src="img/c1.png" alt="">
 									<div class="title d-flex flex-row">
-										<a href="#"><h4>Fannie Rowe</h4></a>									
+										<img src="img/c1.png" alt="Fannie Rowe">
+										<div>
+											<h4>Fannie Rowe</h4>
+											<span style="font-size: 11px; color: var(--text-secondary);">Verified Explorer</span>
+										</div>
 										<div class="star">
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
 										</div>
 									</div>
 									<p>
-										It was a life Experience to visit such a beautiful cultural country.
+										It was a life experience to visit such a beautiful and culturally diverse country. Highly recommended planning assistance!
 									</p>
 								</div>	
 								<div class="single-review">
-									<img src="img/c3.png" alt="">
 									<div class="title d-flex flex-row">
-										<a href="#"><h4>Lillie Summers</h4></a>									
+										<img src="img/c3.png" alt="Lillie Summers">
+										<div>
+											<h4>Lillie Summers</h4>
+											<span style="font-size: 11px; color: var(--text-secondary);">Family Trip Guide</span>
+										</div>
 										<div class="star">
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
 										</div>
 									</div>
 									<p>
-										Just one Word - Incredible!
+										Just one word - Incredible! The itinerary details were perfect and let us enjoy the backwaters in peace.
 									</p>
 								</div>															
 							</div>
 							<div class="col-lg-6">
 								<div class="single-review">
-									<img src="img/c2.png" alt="">
 									<div class="title d-flex flex-row">
-										<a href="#"><h4>Bob Marley</h4></a>									
+										<img src="img/c2.png" alt="Bob Marley">
+										<div>
+											<h4>Bob Marley</h4>
+											<span style="font-size: 11px; color: var(--text-secondary);">Solo Backpacker</span>
+										</div>
 										<div class="star">
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-starchecked"></span>
-											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
 										</div>
 									</div>
 									<p>
-										Damm! I'm thinking of staying here in this World.
+										Outstanding culture and sights! I am already thinking about my next trip back to discover the North-East.
 									</p>
 								</div>	
 								<div class="single-review">
-									<img src="img/c4.png" alt="">
 									<div class="title d-flex flex-row">
-										<a href="#"><h4>Jackie Chan</h4></a>									
+										<img src="img/c4.png" alt="Jackie Chan">
+										<div>
+											<h4>Jackie Chan</h4>
+											<span style="font-size: 11px; color: var(--text-secondary);">Wellness & Yoga</span>
+										</div>
 										<div class="star">
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
-											<span class="fa fa-star checked"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
+											<span class="fa fa-star"></span>
 										</div>
 									</div>
 									<p>
-										Now, I am big fan of Power Yoga. Thanks for such a gift to this world.
+										I am a big fan of standard yoga sessions in Rishikesh. Thank you for such an awesome, seamless local coordinator!
 									</p>
 								</div>															
 							</div>							
@@ -451,20 +718,20 @@
 								<div class="single-footer-widget">
 									<h6>About Us</h6>
 									<p>
-										We Provide the best and latest content. Let yourself dive into the Beauty, Culture &amp; festivals of India. Have You're Good time at India.
+										We curating and provide premium tours. Let yourself dive into the beauty, architecture, culture &amp; festivals of Incredible India.
 									</p>
-									<p class="footer-text">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This Website is created with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/rishabhtest2020" target="_blank">Rishabh Gupta</a>
+									<p class="footer-text" style="margin-top: 20px;">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Crafted by <a href="https://github.com/rishabhtest2020" target="_blank">Rishabh Gupta</a>
 								</p>	
 								</div>
 							</div>
 							<div class="col-lg-5  col-md-6 col-sm-6">
 								<div class="single-footer-widget">
 									<h6>Newsletter</h6>
-									<p>Stay update with our latest</p>
+									<p>Subscribe to receive trending itineraries and seasonal tour offers.</p>
 									<div class="" id="mc_embed_signup">
-							         <form target="_blank"  action="" method="get" class="form-inline">
-											<input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Your Email Here '" required="" type="email">
+							         <form target="_blank"  action="https://formspree.io/f/xzzgaydr" method="GET" class="form-inline">
+											<input class="form-control" name="EMAIL" placeholder="Your Email Address" required="" type="email">
 				                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 				                           
 											<div class="info"></div>
@@ -475,12 +742,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 							<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
 								<div class="single-footer-widget">
 									<h6>Follow Us</h6>
-									<p>Let us be social</p>
+									<p>Stay updated on social media</p>
 									<div class="footer-social d-flex align-items-center">
-										<a href="#"><i class="fa fa-facebook"></i></a>
+										<a href="https://www.facebook.com/share/1L5AW4uipD/" target="_blank"><i class="fa fa-facebook"></i></a>
 										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="#"><i class="fa fa-snapchat"></i></a>
-										<a href="#"><i class="fa fa-instagram"></i></a>
+										<a href="https://www.instagram.com/travels_cityinfoindia?igsh=MWp5cWM5YmFocDhmNg==" target="_blank"><i class="fa fa-instagram"></i></a>
+										<a href="https://g.co/kgs/16ismLt" target="_blank"><i class="fa fa-google"></i></a>
 									</div>
 								</div>
 							</div>							
@@ -489,6 +756,34 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				</footer>	
 				<!-- End footer Area -->					
 			</div>
+
+			<!-- Floating Inquiry Assistant Widget -->
+			<div class="chat-widget-container">
+				<div class="chat-fab" id="chatFab">
+					<i class="fa fa-comments-o"></i>
+					<div class="chat-fab-badge" style="display:none;"></div>
+				</div>
+				<div class="chat-panel" id="chatPanel">
+					<div class="chat-header">
+						<img src="img/logoex.jpg" alt="Local Guide">
+						<div class="chat-header-info">
+							<h5>Local Travel Guide</h5>
+							<span>Online</span>
+						</div>
+						<button class="chat-close" id="chatClose"><i class="fa fa-times"></i></button>
+					</div>
+					<div class="chat-body" id="chatBody">
+						<!-- Messages dynamic loaded -->
+					</div>
+					<div class="chat-footer">
+						<form class="chat-form" id="chatForm">
+							<input type="text" id="chatInput" placeholder="Type a message or click option..." required>
+							<button type="submit" class="chat-send-btn"><i class="fa fa-paper-plane-o"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>			
@@ -502,108 +797,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			<script src="js/mail-script.js"></script>
 			<script src="js/isotope.pkgd.min.js"></script>	
 			<script src="js/main.js"></script>	
-<style>
-.subscribe-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    width: 100%;
-}
-.subscribe-input {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    margin-bottom: 0;
-}
-.subscribe-btn {
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-    margin-top: 0;
-}
-@media (max-width: 991px) {
-    .subscribe-form {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-    }
-    .subscribe-input, .subscribe-btn {
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-    }
-}
-
-/* Strong override for subscription input/button visibility */
-.single-middle-widget input,
-.single-middle-widget .form-control {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    display: block !important;
-    margin-bottom: 10px !important;
-}
-.single-middle-widget .primary-btn {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    box-sizing: border-box !important;
-    display: block !important;
-    margin-bottom: 0 !important;
-}
-		</style>
-		<!-- Query Modal -->
-<div id="queryModal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;">
-    <div style="background:#fff;padding:30px 20px;border-radius:10px;max-width:400px;width:90vw;box-shadow:0 8px 32px rgba(0,0,0,0.2);position:relative;">
-        <button id="closeQueryModal" style="position:absolute;top:10px;right:15px;background:none;border:none;font-size:22px;cursor:pointer;">&times;</button>
-        <h4 style="margin-bottom:15px;">Send Us Your Query</h4>
-        <form id="contact" action="https://formspree.io/f/xzzgaydr" method="POST">
-            <textarea name="message" placeholder="Type your query..." required style="width:100%;min-height:80px;margin-bottom:15px;padding:10px;border-radius:5px;border:1px solid #ccc;"></textarea>
-            <input name="email" type="email" placeholder="Your Email (for reply)" required style="width:100%;margin-bottom:15px;padding:10px;border-radius:5px;border:1px solid #ccc;">
-            <button class="primary-btn w-100" type="submit">Submit Query</button>
-        </form>
-        <div id="queryMsg" style="margin-top:10px;color:green;display:none;">Query sent! We'll get back to you soon.</div>
-    </div>
-</div>
-<script>
-(function() {
-    document.getElementById('openQueryModal').onclick = function() {
-        document.getElementById('queryModal').style.display = 'flex';
-    };
-    document.getElementById('closeQueryModal').onclick = function() {
-        document.getElementById('queryModal').style.display = 'none';
-        document.getElementById('contact').reset();
-        document.getElementById('queryMsg').style.display = 'none';
-    };
-    document.getElementById('contact').onsubmit = function(e) {
-        e.preventDefault();
-        var email = document.querySelector('#contact input[name="email"]').value.trim();
-        var message = document.querySelector('#contact textarea[name="message"]').value.trim();
-        if (!email || !message) {
-            alert('Both email and query are required!');
-            return false;
-        }
-        var form = this;
-        var data = new FormData(form);
-        fetch(form.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-        }).then(function(response) {
-            document.getElementById('queryMsg').style.display = 'block';
-            document.getElementById('queryMsg').textContent = "Thank you! Your query has been sent.";
-            form.reset();
-        }).catch(function(error) {
-            document.getElementById('queryMsg').style.display = 'block';
-            document.getElementById('queryMsg').textContent = "There was an error. Please try again later.";
-        });
-        return false;
-    };
-})();
-</script>
+			<script src="js/modern-custom.js" defer></script>
 		</body>
 	</html>
 
