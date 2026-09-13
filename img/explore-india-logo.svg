@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 68" width="100%" height="100%">
+  <style>
+    .brand-primary { fill: #0f2952; transition: fill 0.3s ease; }
+    .brand-accent { fill: #e85d07; }
+    .brand-secondary { fill: #2c6e49; transition: fill 0.3s ease; }
+    .brand-light { fill: #ffffff; }
+    
+    /* Dark mode classes */
+    body.dark-mode .brand-primary { fill: #ffffff !important; }
+    body.dark-mode .brand-secondary { fill: #8cc084 !important; }
+  </style>
+
+  <!-- Left Emblem (Circular Landmark Sweep) -->
+  <g id="emblem" transform="translate(4, 4)">
+    <!-- Himalayas Background Silhouette -->
+    <path d="M 6 44 L 17 26 L 24 33 L 33 21 L 42 34 L 50 44 Z" fill="#a5cbdc" fill-opacity="0.4" />
+    
+    <!-- India Gate Silhouette (Left) -->
+    <path d="M 12 44 V 35 H 14 V 32 H 18 V 35 H 20 V 44 H 18 V 37 H 14 V 44 Z" fill="#c88c5c" />
+    
+    <!-- Taj Mahal Silhouette (Center) -->
+    <path d="M 23 44 H 35 V 39 H 23 Z M 27 39 C 27 33, 31 33, 31 39 Z M 29 33 V 31 Z" fill="#e2af66" />
+    <line x1="29" y1="33" x2="29" y2="31" stroke="#e2af66" stroke-width="1.5" />
+    <!-- Taj Mahal Minarets -->
+    <path d="M 22 44 H 23 V 31 H 22 Z M 35 44 H 36 V 31 H 35 Z" fill="#e2af66" />
+
+    <!-- Qutub Minar Silhouette (Right) -->
+    <path d="M 38 44 L 40 23 H 41 L 43 44 Z" fill="#a25b49" />
+    <line x1="38.5" y1="37" x2="42.5" y2="37" stroke="#ffffff" stroke-width="0.8" />
+    <line x1="39.2" y1="30" x2="41.8" y2="30" stroke="#ffffff" stroke-width="0.8" />
+
+    <!-- Rising Sun -->
+    <circle cx="43" cy="20" r="3.5" fill="#ffb703" />
+
+    <!-- Flying Birds -->
+    <path d="M 16 17 Q 17 16, 18 17 Q 19 16, 20 17" stroke="#0f2952" stroke-width="0.8" fill="none" class="brand-primary" />
+    <path d="M 22 19 Q 23 18, 24 19 Q 25 18, 26 19" stroke="#0f2952" stroke-width="0.8" fill="none" class="brand-primary" />
+
+    <!-- Circular Frames Swooshes -->
+    <!-- Blue outer sweep -->
+    <path d="M 10 44 A 22 22 0 1 1 48 38" fill="none" stroke="#0f2952" stroke-width="3" stroke-linecap="round" class="brand-primary" />
+    <!-- Gold inner sweep -->
+    <path d="M 22 11 A 22 22 0 0 1 47 22" fill="none" stroke="#e85d07" stroke-width="2" stroke-linecap="round" />
+    <!-- Green bottom sweep -->
+    <path d="M 8 32 A 22 22 0 0 0 24 53" fill="none" stroke="#2c6e49" stroke-width="2" stroke-linecap="round" class="brand-secondary" />
+
+    <!-- Swooping Roadway -->
+    <path d="M 14 47 C 22 38, 38 38, 46 47 C 38 56, 22 56, 14 47 Z" fill="#0f2952" class="brand-primary" />
+    <!-- Road Lane Dashes -->
+    <path d="M 30 43 C 30 46, 30 50, 30 53" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-dasharray="2,2" />
+
+    <!-- Jet Plane flying out of circle -->
+    <path d="M 45 12 L 49 8 L 48 11 L 52 12 L 48 13 L 49 16 Z" fill="#0f2952" class="brand-primary" />
+    <!-- Jet Trail -->
+    <path d="M 28 22 C 34 17, 39 15, 45 12" fill="none" stroke="#e85d07" stroke-width="1.2" />
+  </g>
+
+  <!-- Right Branding Text -->
+  <g id="brand-text" transform="translate(68, 0)">
+    <!-- "City Info" text -->
+    <text x="0" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-primary">City Info</text>
+    
+    <!-- Map Pin Marker replacing the dot on 'i' in "City" (approx x=17, y=14) -->
+    <path d="M 18.5 11 C 17 11, 16.2 12.2, 16.2 13.5 C 16.2 15.5, 18.5 18, 18.5 18 C 18.5 18, 20.8 15.5, 20.8 13.5 C 20.8 12.2, 20 11, 18.5 11 Z" fill="#e85d07" />
+    <circle cx="18.5" cy="13.5" r="0.9" fill="#ffffff" />
+    
+    <!-- "India" text -->
+    <text x="96" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-accent">India</text>
+    
+    <!-- Flight swoop accent under "India" -->
+    <path d="M 96 38 Q 118 38, 140 33" fill="none" stroke="#e85d07" stroke-width="1.5" />
+    <path d="M 140 33 L 143 30 L 142 32 L 145 33 L 142 34 L 143 36 Z" fill="#e85d07" />
+
+    <!-- "TRAVELS" subtitle -->
+    <text x="0" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="700" class="brand-secondary" letter-spacing="6.5">TRAVELS</text>
+    
+    <!-- Tiny Gold Lotus Symbol after "TRAVELS" (approx x=85, y=41) -->
+    <path d="M 95 44 C 93 42, 91.5 42, 90.5 44.5 C 90.5 42, 88.5 42, 86.5 44 C 88.5 46, 89.5 47.5, 90.5 47.5 C 91.5 47.5, 93 46, 95 44 Z" fill="#e85d07" />
+
+    <!-- Motto -->
+    <text x="0" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="6.5" font-weight="600" class="brand-secondary" opacity="0.8" letter-spacing="0.8">EXPLORE INDIA. EXPERIENCE MEMORIES.</text>
+  </g>
+</svg>

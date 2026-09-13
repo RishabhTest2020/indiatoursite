@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="accentGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="glow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#3b82f6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Book Cover Shadow & Outline -->
+  <path d="M14 13C14 11.3431 15.3431 10 17 10H47C48.6569 10 50 11.3431 50 13V51C50 52.6569 48.6569 54 47 54H17C15.3431 54 14 52.6569 14 51V13Z" fill="#1e293b" fill-opacity="0.15" filter="url(#glow2)"/>
+  <path d="M14 13C14 11.3431 15.3431 10 17 10H47C48.6569 10 50 11.3431 50 13V51C50 52.6569 48.6569 54 47 54H17C15.3431 54 14 52.6569 14 51V13Z" stroke="url(#grad2)" stroke-width="2.5"/>
+  <!-- Book Spine Detail -->
+  <line x1="22" y1="10" x2="22" y2="54" stroke="url(#grad2)" stroke-width="2" stroke-opacity="0.5"/>
+  <!-- Bookmark Ribbon -->
+  <path d="M37 10V25L41 21L45 25V10H37Z" fill="url(#accentGold)"/>
+  <!-- Content Lines (Guides/Checklist) -->
+  <line x1="26" y1="20" x2="33" y2="20" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="28" x2="42" y2="28" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="35" x2="40" y2="35" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="42" x2="38" y2="42" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="48" x2="34" y2="48" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+  <!-- Decorative Accent Dots -->
+  <circle cx="18" cy="18" r="2" fill="url(#accentGold)"/>
+  <circle cx="18" cy="46" r="2" fill="#3b82f6"/>
+</svg>

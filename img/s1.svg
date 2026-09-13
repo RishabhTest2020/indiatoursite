@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="needleRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="needleSilver" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94a3b8"/>
+      <stop offset="100%" stop-color="#64748b"/>
+    </linearGradient>
+    <filter id="glow1" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#f59e0b" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Outer Compass Ring -->
+  <circle cx="32" cy="32" r="28" stroke="url(#grad1)" stroke-width="2.5" fill="#1e293b" fill-opacity="0.15" filter="url(#glow1)"/>
+  <!-- Inner Ring & Tick Marks -->
+  <circle cx="32" cy="32" r="22" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="2 3"/>
+  <circle cx="32" cy="32" r="25" stroke="#94a3b8" stroke-opacity="0.3" stroke-width="1"/>
+  <!-- Compass Needle North (Orange-Red) -->
+  <polygon points="32,12 36,32 32,29" fill="url(#needleRed)"/>
+  <polygon points="32,12 28,32 32,29" fill="#f87171"/>
+  <!-- Compass Needle South (Silver/Slate) -->
+  <polygon points="32,52 36,32 32,35" fill="url(#needleSilver)"/>
+  <polygon points="32,52 28,32 32,35" fill="#cbd5e1"/>
+  <!-- Cardinal points -->
+  <circle cx="32" cy="7" r="1.5" fill="#f59e0b"/>
+  <circle cx="57" cy="32" r="1.5" fill="#94a3b8"/>
+  <circle cx="32" cy="57" r="1.5" fill="#94a3b8"/>
+  <circle cx="7" cy="32" r="1.5" fill="#94a3b8"/>
+  <!-- Center Pivot -->
+  <circle cx="32" cy="32" r="4.5" fill="#0f172a" stroke="url(#grad1)" stroke-width="2"/>
+  <circle cx="32" cy="32" r="1.5" fill="#ffffff"/>
+</svg>

@@ -4,7 +4,7 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
+		<link rel="shortcut icon" href="img/explore-india-logo.svg">
 		<!-- Author Meta -->
 		<meta name="author" content="">
 		<!-- Meta Description -->
@@ -34,11 +34,40 @@
 			<div class="protfolio-wrap">
 
 			<!-- Start Header Area -->
+			<!-- Start Header Area -->
 			<header class="default-header">
 				<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
-						  <a class="navbar-brand" href="index.html">
-						  	<img src="img/wingslogo.png" alt="Incredible India Travels" style="height: 50px;">
+						  <a class="navbar-brand d-flex align-items-center" href="index.html">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 68" style="height: 48px; width: auto;">
+							  <style>
+								.brand-primary { fill: #0f2952; transition: fill 0.3s ease; }
+								.brand-accent { fill: #e85d07; }
+								.brand-secondary { fill: #2c6e49; transition: fill 0.3s ease; }
+								body.dark-mode .brand-primary { fill: #ffffff !important; }
+								body.dark-mode .brand-secondary { fill: #8cc084 !important; }
+							  </style>
+							  <g id="emblem" transform="translate(4, 4)">
+								<path d="M 6 44 L 17 26 L 24 33 L 33 21 L 42 34 L 50 44 Z" fill="#a5cbdc" fill-opacity="0.4" />
+								<path d="M 12 44 V 35 H 14 V 32 H 18 V 35 H 20 V 44 H 18 V 37 H 14 V 44 Z" fill="#c88c5c" />
+								<path d="M 23 44 H 35 V 39 H 23 Z M 27 39 C 27 33, 31 33, 31 39 Z M 29 33 V 31 Z" fill="#e2af66" />
+								<line x1="29" y1="33" x2="29" y2="31" stroke="#e2af66" stroke-width="1.5" />
+								<path d="M 22 44 H 23 V 31 H 22 Z M 35 44 H 36 V 31 H 35 Z" fill="#e2af66" />
+								<path d="M 38 44 L 40 23 H 41 L 43 44 Z" fill="#a25b49" />
+								<circle cx="43" cy="20" r="3.5" fill="#ffb703" />
+								<path d="M 10 44 A 22 22 0 1 1 48 38" fill="none" stroke="#0f2952" stroke-width="3" stroke-linecap="round" class="brand-primary" />
+								<path d="M 22 11 A 22 22 0 0 1 47 22" fill="none" stroke="#e85d07" stroke-width="2" stroke-linecap="round" />
+								<path d="M 8 32 A 22 22 0 0 0 24 53" fill="none" stroke="#2c6e49" stroke-width="2" stroke-linecap="round" class="brand-secondary" />
+								<path d="M 14 47 C 22 38, 38 38, 46 47 C 38 56, 22 56, 14 47 Z" fill="#0f2952" class="brand-primary" />
+							  </g>
+							  <g id="brand-text" transform="translate(68, 0)">
+								<text x="0" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-primary">City Info</text>
+								<path d="M 18.5 11 C 17 11, 16.2 12.2, 16.2 13.5 C 16.2 15.5, 18.5 18, 18.5 18 C 18.5 18, 20.8 15.5, 20.8 13.5 C 20.8 12.2, 20 11, 18.5 11 Z" fill="#e85d07" />
+								<circle cx="18.5" cy="13.5" r="0.9" fill="#ffffff" />
+								<text x="96" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-accent">India</text>
+								<text x="0" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="700" class="brand-secondary" letter-spacing="6.5">TRAVELS</text>
+							  </g>
+							</svg>
 						  </a>
 						  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						    <span class="lnr lnr-menu"></span>
@@ -46,24 +75,39 @@
 
 						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 						    <ul class="navbar-nav align-items-center">
-								<div class="dropdown">
-									<li><a>Explore Themes</a></li>
-									<div class="dropdown-content">
-										<li><a href="#" data-filter=".corporate">🏰 North Heritage</a></li>
-										<li><a href="#" data-filter=".personal">🕉️ Central Wonders</a></li>
-										<li><a href="#" data-filter=".agency">🌄 North-East Escapes</a></li>
-										<li><a href="#" data-filter=".portal">🏖️ South Coastlines</a></li>
+								<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+								<li class="nav-item custom-dropdown">
+									<a class="nav-link" href="#middle">Destinations <i class="fa fa-angle-down"></i></a>
+									<div class="custom-dropdown-menu">
+										<a href="Pages-inside/GoldenTemple-Info.html">✨ Golden Temple (Amritsar)</a>
+										<a href="Pages-inside/Jaipur-Info.html">🏰 Jaipur (Pink City)</a>
+										<a href="Pages-inside/Kashmir-Info.html">❄️ Kashmir (Paradise)</a>
+										<a href="Pages-inside/Alleppey-Info.html">🚣 Alleppey (Backwaters)</a>
+										<a href="Pages-inside/Himachal-Info.html">🏔️ Himachal (Manali)</a>
+										<a href="Pages-inside/Jaisalmer-Info.html">🐪 Jaisalmer (Desert)</a>
+										<a href="Pages-inside/Udaipur-Info.html">👑 Udaipur (Lakes)</a>
+										<a href="Pages-inside/Hampi-Info.html">🏛️ Hampi (UNESCO Ruins)</a>
+										<a href="Pages-inside/MehrangarhFort-Info.html">🚩 Mehrangarh Fort (Jodhpur)</a>
+										<a href="Pages-inside/Uttrakhand-Info.html">🕉️ Uttarakhand (Rishikesh)</a>
+										<a href="Pages-inside/Twang-Info.html">🌄 Tawang (Monastery)</a>
+										<a href="Pages-inside/ColvaBeach-Info.html">🏖️ Colva Beach (Goa)</a>
+										<div class="dropdown-divider" style="height:1px; background:var(--card-border); margin:6px 0;"></div>
+										<a href="#middle" style="font-weight:700; color:var(--accent-primary) !important;">🗺️ View All Destinations &rarr;</a>
 									</div>
-								</div>
-								<li><a href="./Pages-inside/blog.html">Travel Stories</a></li>
-								<li><a href="./Pages-inside/About.html">Our Motto</a></li>
-								<!-- Theme Toggle Switch -->
-								<div class="theme-toggle-container">
-									<button class="theme-btn" id="themeToggle" aria-label="Toggle Dark Mode">
-										<i class="fa fa-moon-o"></i>
-										<i class="fa fa-sun-o"></i>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="#middle">Explore Themes</a></li>
+								<li class="nav-item"><a class="nav-link" href="Pages-inside/blog.html">Travel Stories</a></li>
+								<li class="nav-item"><a class="nav-link" href="Pages-inside/About.html">Our Motto</a></li>
+								<li class="nav-item"><a class="nav-link" href="Pages-inside/Recent-Announcement.html">Announcements</a></li>
+																<li class="nav-item">
+									<a class="wa-nav-btn wa-dynamic-btn" href="https://wa.me/918700140135" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+								</li>
+								<li class="nav-item theme-toggle-li">
+									<button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Dark Mode">
+										<i class="fa fa-moon-o moon-icon"></i>
+										<i class="fa fa-sun-o sun-icon"></i>
 									</button>
-								</div>
+								</li>
 						    </ul>
 						  </div>						
 					</div>
@@ -72,7 +116,7 @@
 			<!-- End Header Area -->	
 
 				<!-- start banner Area -->
-				<section class="banner-area" id="home" style="background-image: url('./img/mountain.jpg');">	
+				<section class="banner-area" id="home" style="background-image: url('./img/india_hero_banner.jpg');">	
 					<div class="overlay overlay-bg"></div>
 					<div class="container">
 						<div class="row fullscreen d-flex align-items-center justify-content-center">
@@ -199,7 +243,7 @@
 						  <div class="row grid">
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p1.jpg" alt="Golden Temple">
+								<img src="img/golden_temple_hero.png" alt="Golden Temple">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Punjab</span>
@@ -207,8 +251,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/GoldenTemple-Info.html">Golden Temple</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 2 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 2 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -216,7 +260,7 @@
 							
 							<div class="single-portfolio col-sm-4 all personal" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p2.jpg" alt="Gwalior Fort">
+								<img src="img/gwaliorfort_hero.jpg" alt="Gwalior Fort">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Madhya Pradesh</span>
@@ -224,8 +268,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/GwaliorFort-Info.html">Gwalior Fort</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 3 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -233,7 +277,7 @@
 							
 							<div class="single-portfolio col-sm-4 all agency" data-vibe="nature">
 							  <div class="item">
-								<img src="img/p9.jpg" alt="Twang">
+								<img src="img/twang_hero.jpg" alt="Twang">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Arunachal Pradesh</span>
@@ -241,8 +285,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Twang-Info.html">Twang</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 6 Days</span>
-									<span><i class="fa fa-tag"></i> $$$</span>
+<span><i class="fa fa-clock-o"></i> 6 Days</span>
+									<span><i class="fa fa-tag"></i> $$$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -250,7 +294,7 @@
 							
 							<div class="single-portfolio col-sm-4 all portal" data-vibe="nature">
 							  <div class="item">
-								<img src="img/p12.jpg" alt="Alleppey">
+								<img src="img/alleppey_hero.jpg" alt="Alleppey">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Kerala</span>
@@ -258,8 +302,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Alleppey-Info.html">Alleppey</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 4 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -267,7 +311,7 @@
 
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="adventure">
 							  <div class="item">
-								<img src="img/p5.jpg" alt="Camel Safari">
+								<img src="img/camelsafari_hero.jpg" alt="Camel Safari">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Rajasthan</span>
@@ -275,8 +319,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/CamelSafari-Info.html">Camel Safari</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 3 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -284,7 +328,7 @@
 							
 							<div class="single-portfolio col-sm-4 all personal" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p6.jpg" alt="Sanchi Stupa">
+								<img src="img/sanchistupa_hero.jpg" alt="Sanchi Stupa">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Madhya Pradesh</span>
@@ -292,8 +336,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/SanchiStupa-Info.html">Sanchi Stupa</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 2 Days</span>
-									<span><i class="fa fa-tag"></i> $</span>
+<span><i class="fa fa-clock-o"></i> 2 Days</span>
+									<span><i class="fa fa-tag"></i> $</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -301,7 +345,7 @@
 							
 							<div class="single-portfolio col-sm-4 all agency" data-vibe="adventure">
 							  <div class="item">
-								<img src="img/p7.jpg" alt="Umngot river">
+								<img src="img/umngotriver_hero.jpg" alt="Umngot river">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Meghalaya</span>
@@ -309,8 +353,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/UmngotRiver-Info.html">Umngot river</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 4 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -318,7 +362,7 @@
 							
 							<div class="single-portfolio col-sm-4 all portal" data-vibe="beach">
 							  <div class="item">
-								<img src="img/p10.jpg" alt="Vivekananda Rock Memorial">
+								<img src="img/vivekanandarock_hero.jpg" alt="Vivekananda Rock Memorial">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Tamil Nadu</span>
@@ -326,8 +370,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/VivekanandaRockMemorial-Info.html">Vivekananda Rock Memorial</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 2 Days</span>
-									<span><i class="fa fa-tag"></i> $</span>
+<span><i class="fa fa-clock-o"></i> 2 Days</span>
+									<span><i class="fa fa-tag"></i> $</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -335,7 +379,7 @@
 									
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p4.jpg" alt="Mehrangarh Fort">
+								<img src="img/mehrangarhfort_hero.jpg" alt="Mehrangarh Fort">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Rajasthan</span>
@@ -343,8 +387,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/MehrangarhFort-Info.html">Mehrangarh Fort</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 3 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -352,7 +396,7 @@
 							
 							<div class="single-portfolio col-sm-4 all personal" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p3.jpg" alt="Hampi">
+								<img src="img/hampi_hero.jpg" alt="Hampi">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Karnataka</span>
@@ -360,8 +404,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Hampi-Info.html">Hampi</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 4 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -369,7 +413,7 @@
 							
 							<div class="single-portfolio col-sm-4 all agency" data-vibe="nature">
 							  <div class="item">
-								<img src="img/p8.jpg" alt="Mon">
+								<img src="img/mon_hero.jpg" alt="Mon">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Myanmar Border</span>
@@ -377,8 +421,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Mon-Info.html">Mon</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 5 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 5 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -386,7 +430,7 @@
 							
 							<div class="single-portfolio col-sm-4 all portal" data-vibe="beach">
 							  <div class="item">
-								<img src="img/p11.jpg" alt="Colva Beach">
+								<img src="img/colvabeach_hero.jpg" alt="Colva Beach">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Goa</span>
@@ -394,8 +438,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/ColvaBeach-Info.html">Colva Beach</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 3 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -403,7 +447,7 @@
 												        
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p3.jpg" alt="Jaipur">
+								<img src="img/jaipur_hero.jpg" alt="Jaipur">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Rajasthan</span>
@@ -411,8 +455,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Jaipur-Info.html">Jaipur</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 4 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -420,7 +464,7 @@
 							
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p4.jpg" alt="Udaipur">
+								<img src="img/udaipur_hero.jpg" alt="Udaipur">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Rajasthan</span>
@@ -428,8 +472,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Udaipur-Info.html">Udaipur</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 4 Days</span>
-									<span><i class="fa fa-tag"></i> $$$</span>
+<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -437,7 +481,7 @@
 							
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p5.jpg" alt="Pushkar">
+								<img src="img/pushkar_hero.jpg" alt="Pushkar">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Rajasthan</span>
@@ -445,8 +489,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Pushkar-Info.html">Pushkar</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 3 Days</span>
-									<span><i class="fa fa-tag"></i> $</span>
+<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -454,7 +498,7 @@
 							
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="adventure">
 							  <div class="item">
-								<img src="img/p6.jpg" alt="Jaisalmer">
+								<img src="img/jaisalmer_hero.jpg" alt="Jaisalmer">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Rajasthan</span>
@@ -462,8 +506,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Jaisalmer-Info.html">Jaisalmer</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 4 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -471,7 +515,7 @@
 							
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p7.jpg" alt="Jodhpur">
+								<img src="img/jodhpur_hero.jpg" alt="Jodhpur">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Rajasthan</span>
@@ -479,8 +523,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Jodhpur-Info.html">Jodhpur</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 4 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 4 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -488,7 +532,7 @@
 							
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="culture">
 							  <div class="item">
-								<img src="img/p8.jpg" alt="Bikaner">
+								<img src="img/bikaner_hero.jpg" alt="Bikaner">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Rajasthan</span>
@@ -496,8 +540,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Bikaner-Info.html">Bikaner</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 3 Days</span>
-									<span><i class="fa fa-tag"></i> $</span>
+<span><i class="fa fa-clock-o"></i> 3 Days</span>
+									<span><i class="fa fa-tag"></i> $</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -505,7 +549,7 @@
 							
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="nature">
 							  <div class="item">
-								<img src="img/p10.jpg" alt="Kashmir">
+								<img src="img/kashmir_hero.jpg" alt="Kashmir">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Jammu & Kashmir</span>
@@ -513,8 +557,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Kashmir-Info.html">Kashmir</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 7 Days</span>
-									<span><i class="fa fa-tag"></i> $$$</span>
+<span><i class="fa fa-clock-o"></i> 7 Days</span>
+									<span><i class="fa fa-tag"></i> $$$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -522,7 +566,7 @@
 							
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="adventure">
 							  <div class="item">
-								<img src="img/p11.jpg" alt="Himachal">
+								<img src="img/himachal_hero.jpg" alt="Himachal">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Himachal Pradesh</span>
@@ -530,8 +574,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Himachal-Info.html">Himachal</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 6 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 6 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -539,7 +583,7 @@
 							
 							<div class="single-portfolio col-sm-4 all corporate" data-vibe="adventure">
 							  <div class="item">
-								<img src="img/p12.jpg" alt="Uttrakhand">
+								<img src="img/uttrakhand_hero.jpg" alt="Uttrakhand">
 								<div class="p-inner">
 								  <div class="card-badges">
 									<span class="state-badge">Uttarakhand</span>
@@ -547,8 +591,8 @@
 								  </div>
 								  <h4><a href="./Pages-inside/Uttrakhand-Info.html">Uttrakhand</a></h4>
 								  <div class="card-meta-info">
-									<span><i class="fa fa-clock-o"></i> 5 Days</span>
-									<span><i class="fa fa-tag"></i> $$</span>
+<span><i class="fa fa-clock-o"></i> 5 Days</span>
+									<span><i class="fa fa-tag"></i> $$</span>									<a href="https://wa.me/918700140135" class="wa-card-btn wa-dynamic-btn" title="Chat on WhatsApp for customized quote"><i class="fa fa-whatsapp"></i> Quote</a>
 								  </div>
 								</div>
 							  </div>
@@ -582,7 +626,7 @@
 						<div class="row">
 							<div class="col-lg-4">
 								<div class="single-service">
-									<img class="img-fluid" src="img/s1.png" alt="Selective Content">
+									<img class="img-fluid" src="img/s1.svg" alt="Selective Content">
 									<h4>Selective Content</h4>
 									<p>
 										Tailored choices completely aligned with what you love and want to explore.
@@ -591,7 +635,7 @@
 							</div>
 							<div class="col-lg-4">
 								<div class="single-service">
-									<img class="img-fluid" src="img/s2.png" alt="Informative Content">
+									<img class="img-fluid" src="img/s2.svg" alt="Informative Content">
 									<h4>Informative Content</h4>
 									<p>
 										Detailed regional insights, seasonal guidelines, and cultural information.
@@ -600,7 +644,7 @@
 							</div>
 							<div class="col-lg-4">
 								<div class="single-service">
-									<img class="img-fluid" src="img/s3.png" alt="Personalized tours">
+									<img class="img-fluid" src="img/s3.svg" alt="Personalized tours">
 									<h4>Collaborative Support</h4>
 									<p>
 										Direct support from local experts to help plan and fine-tune your schedules.
@@ -618,92 +662,27 @@
 						<div class="row d-flex justify-content-center">
 							<div class="menu-content pb-60 col-lg-10">
 								<div class="title text-center">
-									<h1 class="mb-10">Subscriber Experiences</h1>
-									<p>Read what our global travelers feel about our custom guides.</p>
+									<h1 class="mb-10">Client Experiences</h1>
+									<p>Real reviews shared by travelers on our Google Business Profile.</p>
 								</div>
 							</div>
-						</div>							
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="single-review">
-									<div class="title d-flex flex-row">
-										<img src="img/c1.png" alt="Fannie Rowe">
-										<div>
-											<h4>Fannie Rowe</h4>
-											<span style="font-size: 11px; color: var(--text-secondary);">Verified Explorer</span>
-										</div>
-										<div class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-									</div>
-									<p>
-										It was a life experience to visit such a beautiful and culturally diverse country. Highly recommended planning assistance!
-									</p>
-								</div>	
-								<div class="single-review">
-									<div class="title d-flex flex-row">
-										<img src="img/c3.png" alt="Lillie Summers">
-										<div>
-											<h4>Lillie Summers</h4>
-											<span style="font-size: 11px; color: var(--text-secondary);">Family Trip Guide</span>
-										</div>
-										<div class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-									</div>
-									<p>
-										Just one word - Incredible! The itinerary details were perfect and let us enjoy the backwaters in peace.
-									</p>
-								</div>															
+						</div>	
+						
+						<!-- Rating Filter Widget -->
+						<div class="row justify-content-center">
+							<div class="col-lg-12">
+								<div class="review-filters">
+									<button class="review-filter-btn active" data-rating="all"><i class="fa fa-list"></i> All Reviews</button>
+									<button class="review-filter-btn" data-rating="5"><i class="fa fa-star"></i> 5 Stars</button>
+									<button class="review-filter-btn" data-rating="4"><i class="fa fa-star"></i> 4 Stars</button>
+								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="single-review">
-									<div class="title d-flex flex-row">
-										<img src="img/c2.png" alt="Bob Marley">
-										<div>
-											<h4>Bob Marley</h4>
-											<span style="font-size: 11px; color: var(--text-secondary);">Solo Backpacker</span>
-										</div>
-										<div class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-									</div>
-									<p>
-										Outstanding culture and sights! I am already thinking about my next trip back to discover the North-East.
-									</p>
-								</div>	
-								<div class="single-review">
-									<div class="title d-flex flex-row">
-										<img src="img/c4.png" alt="Jackie Chan">
-										<div>
-											<h4>Jackie Chan</h4>
-											<span style="font-size: 11px; color: var(--text-secondary);">Wellness & Yoga</span>
-										</div>
-										<div class="star">
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-											<span class="fa fa-star"></span>
-										</div>
-									</div>
-									<p>
-										I am a big fan of standard yoga sessions in Rishikesh. Thank you for such an awesome, seamless local coordinator!
-									</p>
-								</div>															
-							</div>							
+						</div>
+
+						<div class="row" id="googleReviewsRow">
+							<div class="col-lg-12 text-center" id="reviewsLoadingMsg">
+								<p style="font-size: 16px; margin: 40px 0; color: var(--text-secondary);"><i class="fa fa-circle-o-notch fa-spin"></i> Loading live reviews from Google...</p>
+							</div>
 						</div>
                     </div>	
 				</section>
@@ -714,40 +693,47 @@
 				<footer class="footer-area section-gap">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-5 col-md-6 col-sm-6">
+							<div class="col-lg-4 col-md-6 col-sm-6 mb-4 mb-lg-0">
 								<div class="single-footer-widget">
-									<h6>About Us</h6>
-									<p>
-										We curating and provide premium tours. Let yourself dive into the beauty, architecture, culture &amp; festivals of Incredible India.
-									</p>
-									<p class="footer-text" style="margin-top: 20px;">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Crafted by <a href="https://github.com/rishabhtest2020" target="_blank">Rishabh Gupta</a>
-								</p>	
+									<h6>About City Info India Travels</h6>
+									<p>Approved by the Ministry of Tourism, Govt. of India. We curate authentic, unforgettable travel experiences across India's most iconic destinations with 24/7 dedicated support.</p>
+									<p class="footer-text" style="margin-top: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | City Info India Travels</p>
 								</div>
 							</div>
-							<div class="col-lg-5  col-md-6 col-sm-6">
+							<div class="col-lg-2 col-md-6 col-sm-6 mb-4 mb-lg-0">
 								<div class="single-footer-widget">
-									<h6>Newsletter</h6>
-									<p>Subscribe to receive trending itineraries and seasonal tour offers.</p>
-									<div class="" id="mc_embed_signup">
-							         <form target="_blank"  action="https://formspree.io/f/xzzgaydr" method="GET" class="form-inline">
-											<input class="form-control" name="EMAIL" placeholder="Your Email Address" required="" type="email">
-				                            	<button class="click-btn btn btn-default"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-				                           
-											<div class="info"></div>
+									<h6>Quick Links</h6>
+									<ul class="footer-nav">
+										<li><a href="index.html">Home</a></li>
+										<li><a href="#middle">Destinations</a></li>
+										<li><a href="Pages-inside/About.html">Our Motto</a></li>
+										<li><a href="Pages-inside/blog.html">Travel Stories</a></li>
+										<li><a href="Pages-inside/Recent-Announcement.html">Announcements</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+								<div class="single-footer-widget">
+									<h6>Contact Us</h6>
+									<p><i class="fa fa-map-marker" style="color:var(--accent-primary); margin-right:8px;"></i>79, Scindia House, Connaught Place, Janpath, New Delhi</p>
+									<p><i class="fa fa-phone" style="color:var(--accent-primary); margin-right:8px;"></i>+91 87001 40135</p>
+									<p><i class="fa fa-envelope" style="color:var(--accent-primary); margin-right:8px;"></i>cityinfonetservices45@gmail.com</p>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-sm-6">
+								<div class="single-footer-widget">
+									<h6>Stay Connected</h6>
+									<p>Subscribe for seasonal offers and travel guides.</p>
+									<div id="mc_embed_signup">
+										<form target="_blank" action="https://formspree.io/f/xzzgaydr" method="POST" class="form-inline footer-newsletter-form">
+											<input class="form-control" name="EMAIL" placeholder="Your Email" required type="email" style="font-size: 13px;">
+											<button class="click-btn btn btn-default" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
 										</form>
 									</div>
-								</div>
-							</div>						
-							<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-								<div class="single-footer-widget">
-									<h6>Follow Us</h6>
-									<p>Stay updated on social media</p>
-									<div class="footer-social d-flex align-items-center">
-										<a href="https://www.facebook.com/share/1L5AW4uipD/" target="_blank"><i class="fa fa-facebook"></i></a>
-										<a href="#"><i class="fa fa-twitter"></i></a>
-										<a href="https://www.instagram.com/travels_cityinfoindia?igsh=MWp5cWM5YmFocDhmNg==" target="_blank"><i class="fa fa-instagram"></i></a>
-										<a href="https://g.co/kgs/16ismLt" target="_blank"><i class="fa fa-google"></i></a>
+									<div class="footer-social d-flex align-items-center" style="margin-top: 16px;">
+										<a href="https://www.facebook.com/share/1L5AW4uipD/" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+										<a href="https://www.instagram.com/travels_cityinfoindia?igsh=MWp5cWM5YmFocDhmNg==" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+										<a href="https://g.co/kgs/16ismLt" target="_blank" aria-label="Google Reviews"><i class="fa fa-google"></i></a>
 									</div>
 								</div>
 							</div>							
@@ -755,6 +741,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 					</div>
 				</footer>	
 				<!-- End footer Area -->					
+			</div>
+
+			<!-- Universal Query Modal -->
+			<div id="queryModal">
+				<div class="modal-content-custom">
+					<button id="closeQueryModal" type="button">&times;</button>
+					<h4 style="font-weight: 700; margin-bottom: 8px;">Plan Your Trip</h4>
+					<p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">Send us your requirements for a customized package.</p>
+					<form id="contact" action="https://formspree.io/f/xzzgaydr" method="POST">
+						<input name="email" type="email" placeholder="Your Email Address" required style="width:100%; margin-bottom:12px; padding:12px; border-radius:8px; border:1px solid var(--card-border); background:var(--bg-primary); color:var(--text-primary);">
+						<textarea name="message" placeholder="Tell us your dates, group size & requirements..." required style="width:100%; min-height:90px; margin-bottom:16px; padding:12px; border-radius:8px; border:1px solid var(--card-border); background:var(--bg-primary); color:var(--text-primary);"></textarea>
+						<button class="primary-btn w-100" type="submit">Send Custom Enquiry</button>
+					</form>
+					<div id="queryMsg" style="margin-top:12px; color:#16a34a; font-weight:600; display:none; text-align:center;">Thank you! Your query has been submitted successfully.</div>
+				</div>
 			</div>
 
 			<!-- Floating Inquiry Assistant Widget -->

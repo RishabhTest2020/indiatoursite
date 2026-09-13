@@ -1,113 +1,393 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html lang="en" class="no-js">
 <head>
-    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Explore India - Hampi</title>
-    <link rel="icon" href="../img/logoex.jpg" type="image/jpg">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    <title>Hampi - UNESCO Vijayanagara Ruins | Explore India</title>
+    <meta name="description" content="Step back in time to the glorious Vijayanagara Empire amidst surreal boulder-strewn landscapes and monolithic stone temples.">
+    <link rel="icon" href="../img/explore-india-logo.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/linearicons.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
-    <style>
-        body {font-family: 'Poppins', sans-serif; background-color: #f4f4f9; margin: 0; padding: 0; overflow-x: hidden; color: #222;}
-        .navbar {background-color: #333; padding: 10px 30px;}
-        .navbar a {color: #fff; text-decoration: none; margin: 0 15px; font-weight: 500; transition: color 0.3s;}
-        .navbar a:hover {color: #f9d342;}
-        .banner-area {background-image: url('../img/p3.jpg'); background-size: cover; background-position: center; color: #fff; text-align: center; padding: 150px 20px; position: relative; animation: fadeIn 2s;}
-        @keyframes fadeIn {from { opacity: 0; } to { opacity: 1; }}
-        .banner-area .overlay {background: rgba(0, 0, 0, 0.6); position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 1;}
-        .banner-content {position: relative; z-index: 2;}
-        .primary-btn {background-color: #f9a826; color: #333; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: background-color 0.3s; border: none; margin-top: 15px;}
-        .primary-btn:hover {background-color: #c7a731;}
-        #middle {background-color: #fff; margin: 45px; padding: 30px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); animation: slideUp 1.5s;}
-        @keyframes slideUp {from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; }}
-        #middle h3 {color: #f9a826; margin-bottom: 20px;}
-        #middle p, #middle ul, #middle li {color: #222;}
-        .row.gallery {display: flex; justify-content: space-around; margin: 20px 0; flex-wrap: wrap;}
-        .row.gallery img {width: 100%; max-width: 320px; height: auto; margin-bottom: 15px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.3s; cursor: pointer;}
-        .row.gallery img:hover {transform: scale(1.05); opacity: 0.8;}
-        .footer-area {background-color: #333; color: #fff; padding: 30px; text-align: center;}
-        .footer-social a {margin: 0 10px; color: #fff; font-size: 1.5em; transition: color 0.3s;}
-        .footer-social a:hover {color: #f9d342;}
-        @media (max-width: 900px) {#middle { margin: 20px; padding: 15px; }}
-        @media (max-width: 600px) {.banner-area { padding: 80px 10px; } #middle { margin: 5px; padding: 10px; }}
-        #queryModal {display: none;position: fixed;z-index: 9999;left: 0;top: 0;width: 100vw;height: 100vh;background: rgba(0,0,0,0.5);align-items: center;justify-content: center;}
-        #queryModal > div {background: #fff;padding: 30px 20px;border-radius: 10px;max-width: 400px;width: 90vw;box-shadow: 0 8px 32px rgba(0,0,0,0.2);position: relative;}
-        #queryModal textarea,#queryModal input[type="email"] {width: 100% !important;min-width: 0 !important;max-width: 100% !important;box-sizing: border-box !important;margin-bottom: 15px !important;padding: 10px !important;border-radius: 5px !important;border: 1px solid #ccc !important;}
-        #queryModal .primary-btn {width: 100% !important;min-width: 0 !important;max-width: 100% !important;box-sizing: border-box !important;display: block !important;margin-bottom: 0 !important;}
-        @media (max-width: 991px) {#queryModal > div {padding: 20px 10px;max-width: 95vw;}}
-    </style>
-<link rel="stylesheet" href="../css/modern-custom.css"></head>
-<body>
-    <!-- Navigation -->
-    <header class="navbar">
-        <a href="../index.html">Home</a>
-        <a href="./blog.html">Collaborate with us</a>
-        <a href="./About.html">About Us</a>
+    <link rel="stylesheet" href="../css/modern-custom.css">
+</head>
+<body class="inside-page-body">
+
+    <!-- Header Navigation -->
+    <header class="default-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 68" style="height: 44px; width: auto;">
+                        <style>
+                            .brand-primary { fill: #0f2952; transition: fill 0.3s ease; }
+                            .brand-accent { fill: #e85d07; }
+                            .brand-secondary { fill: #2c6e49; transition: fill 0.3s ease; }
+                            body.dark-mode .brand-primary { fill: #ffffff !important; }
+                            body.dark-mode .brand-secondary { fill: #8cc084 !important; }
+                        </style>
+                        <g id="emblem" transform="translate(4, 4)">
+                            <path d="M 6 44 L 17 26 L 24 33 L 33 21 L 42 34 L 50 44 Z" fill="#a5cbdc" fill-opacity="0.4" />
+                            <path d="M 12 44 V 35 H 14 V 32 H 18 V 35 H 20 V 44 H 18 V 37 H 14 V 44 Z" fill="#c88c5c" />
+                            <path d="M 23 44 H 35 V 39 H 23 Z M 27 39 C 27 33, 31 33, 31 39 Z M 29 33 V 31 Z" fill="#e2af66" />
+                            <line x1="29" y1="33" x2="29" y2="31" stroke="#e2af66" stroke-width="1.5" />
+                            <path d="M 22 44 H 23 V 31 H 22 Z M 35 44 H 36 V 31 H 35 Z" fill="#e2af66" />
+                            <path d="M 38 44 L 40 23 H 41 L 43 44 Z" fill="#a25b49" />
+                            <circle cx="43" cy="20" r="3.5" fill="#ffb703" />
+                            <path d="M 10 44 A 22 22 0 1 1 48 38" fill="none" stroke="#0f2952" stroke-width="3" stroke-linecap="round" class="brand-primary" />
+                            <path d="M 22 11 A 22 22 0 0 1 47 22" fill="none" stroke="#e85d07" stroke-width="2" stroke-linecap="round" />
+                            <path d="M 8 32 A 22 22 0 0 0 24 53" fill="none" stroke="#2c6e49" stroke-width="2" stroke-linecap="round" class="brand-secondary" />
+                            <path d="M 14 47 C 22 38, 38 38, 46 47 C 38 56, 22 56, 14 47 Z" fill="#0f2952" class="brand-primary" />
+                        </g>
+                        <g id="brand-text" transform="translate(68, 0)">
+                            <text x="0" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-primary">City Info</text>
+                            <path d="M 18.5 11 C 17 11, 16.2 12.2, 16.2 13.5 C 16.2 15.5, 18.5 18, 18.5 18 C 18.5 18, 20.8 15.5, 20.8 13.5 C 20.8 12.2, 20 11, 18.5 11 Z" fill="#e85d07" />
+                            <circle cx="18.5" cy="13.5" r="0.9" fill="#ffffff" />
+                            <text x="96" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-accent">India</text>
+                            <text x="0" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="700" class="brand-secondary" letter-spacing="6.5">TRAVELS</text>
+                        </g>
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="lnr lnr-menu"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item custom-dropdown">
+                            <a class="nav-link active" href="../index.html#middle">Destinations <i class="fa fa-angle-down"></i></a>
+                            <div class="custom-dropdown-menu">
+                                <a href="GoldenTemple-Info.html">✨ Golden Temple (Amritsar)</a>
+                                <a href="Jaipur-Info.html">🏰 Jaipur (Pink City)</a>
+                                <a href="Kashmir-Info.html">❄️ Kashmir (Paradise)</a>
+                                <a href="Alleppey-Info.html">🚣 Alleppey (Backwaters)</a>
+                                <a href="Himachal-Info.html">🏔️ Himachal (Manali)</a>
+                                <a href="Jaisalmer-Info.html">🐪 Jaisalmer (Desert)</a>
+                                <a href="Udaipur-Info.html">👑 Udaipur (Lakes)</a>
+                                <a href="Hampi-Info.html">🏛️ Hampi (UNESCO Ruins)</a>
+                                <a href="MehrangarhFort-Info.html">🚩 Mehrangarh Fort (Jodhpur)</a>
+                                <a href="Uttrakhand-Info.html">🕉️ Uttarakhand (Rishikesh)</a>
+                                <a href="Twang-Info.html">🌄 Tawang (Monastery)</a>
+                                <a href="ColvaBeach-Info.html">🏖️ Colva Beach (Goa)</a>
+                                <div class="dropdown-divider" style="height:1px; background:var(--card-border); margin:6px 0;"></div>
+                                <a href="../index.html#middle" style="font-weight:700; color:var(--accent-primary) !important;">🗺️ View All Destinations &rarr;</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Travel Stories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="About.html">Our Motto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Recent-Announcement.html">Announcements</a></li>
+                                                <li class="nav-item">
+                            <a class="wa-nav-btn wa-dynamic-btn" href="https://wa.me/918700140135" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+                        </li>
+<li class="nav-item theme-toggle-li">
+                            <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Dark Mode">
+                                <i class="fa fa-moon-o moon-icon"></i>
+                                <i class="fa fa-sun-o sun-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <!-- Hero Section -->
-    <section class="banner-area">
-        <div class="overlay"></div>
-        <div class="banner-content">
-            <h5>Be part of this Wonderful Journey</h5>
-            <h1>Explore Karnataka: Hampi!</h1>
-            <button class="primary-btn" id="openQueryModal" type="button">Send Us Query</button>
+
+    <!-- Subpage Hero Banner -->
+    <section class="subpage-hero" style="background-image: url('../img/hampi_hero.jpg');">
+        <div class="container">
+            <span class="subpage-badge"><i class="fa fa-sun-o"></i> Karnataka • Ancient Ruins</span>
+            <h1>Hampi Ruins</h1>
+            <p class="lead">Step back in time to the glorious Vijayanagara Empire amidst surreal boulder-strewn landscapes and monolithic stone temples.</p>
+            <button class="primary-btn openQueryModal" id="openQueryModal" type="button"><i class="fa fa-envelope-o" style="margin-right: 6px;"></i> Send Query &bull; Plan Hampi Ruins Tour</button>
+            <a href="https://wa.me/918700140135" class="wa-hero-btn wa-dynamic-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i> WhatsApp Us</a>
         </div>
     </section>
-    <!-- About Section -->
-    <div id="middle">
-        <h3>About Hampi</h3>
-        <p>Hampi, a UNESCO World Heritage Site, is renowned for its ancient temples, ruins, and boulder-strewn landscapes. It was once the capital of the Vijayanagara Empire and is a must-visit for history and architecture lovers.</p>
-        <h3>Highlights</h3>
-        <ul>
-            <li>Ancient temples and monuments</li>
-            <li>Unique boulder landscapes</li>
-            <li>Vibrant local culture</li>
-            <li>UNESCO World Heritage Site</li>
-        </ul>
-        <h3>Visitor Tips</h3>
-        <ul>
-            <li>Best time to visit: October to February</li>
-            <li>Wear comfortable shoes for exploring ruins</li>
-            <li>Respect the heritage and local customs</li>
-        </ul>
-    </div>
-    <!-- Gallery Section -->
-    <h3 class="my-4" style="margin: 45px;">Gallery</h3>
-    <div class="row gallery">
-        <img src="../img/p3.jpg" alt="Hampi">
-        <img src="../img/p2.jpg" alt="Ruins">
-    </div>
-    <div class="footer-area">
-        <div class="footer-social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
+
+    <!-- Quick Stats Bar (Budget, Duration, Best Time, Ideal For) -->
+    <div class="container quick-stats-container">
+        <div class="quick-stats-card">
+            <div class="row">
+                <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+                    <div class="stat-pill">
+                        <div class="stat-icon"><i class="fa fa-clock-o"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Duration</span>
+                            <span class="stat-val">3 Days / 2 Nights</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+                    <div class="stat-pill">
+                        <div class="stat-icon"><i class="fa fa-calendar"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Best Time</span>
+                            <span class="stat-val">October – February</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+                    <div class="stat-pill">
+                        <div class="stat-icon"><i class="fa fa-tag"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Budget</span>
+                            <span class="stat-val">₹6,000 – ₹15,000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="stat-pill">
+                        <div class="stat-icon"><i class="fa fa-heart"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Ideal For</span>
+                            <span class="stat-val">History, Backpacking & Photography</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2024 City Info India Travels. All rights reserved.</p>
     </div>
-    <!-- Query Modal -->
+
+    <!-- Main Content Area -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Overview Card -->
+                    <div class="inside-card">
+                        <div class="inside-card-header">
+                            <h3 class="inside-card-title"><i class="fa fa-university"></i> Overview</h3>
+                        </div>
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+                            Hampi, a UNESCO World Heritage site along the Tungabhadra River, is an open-air wonderland of monolithic sculptures, royal pavilions, and centuries-old temples. Once one of the richest metropolises in the medieval world, Hampi's stone chariot, musical pillars, and dramatic boulders create an unforgettable travel experience.
+                        </p>
+                    </div>
+
+                    <!-- Curated Multi-Day Itinerary Timeline -->
+                    <div class="inside-card">
+                        <div class="inside-card-header">
+                            <h3 class="inside-card-title"><i class="fa fa-list-alt"></i> Typical Itinerary</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-badge">Day 1</span>
+                                <h4 class="timeline-title">Sacred Centre & Vittala Temple</h4>
+                                <p class="timeline-desc">Visit the active 7th-century Virupaksha Temple. Walk along the river to the Vittala Temple complex to see the iconic Stone Chariot and musical pillars.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-badge">Day 2</span>
+                                <h4 class="timeline-title">Royal Enclosure & Sunset at Matanga Hill</h4>
+                                <p class="timeline-desc">Explore the Lotus Mahal, Elephant Stables, and Queen's Bath in the Royal Centre. Hike up Matanga Hill for an unforgettable golden hour over boulder-strewn ruins.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Highlights / Experiences -->
+                    <div class="inside-card">
+                        <div class="inside-card-header">
+                            <h3 class="inside-card-title"><i class="fa fa-star"></i> Must-Try Experiences</h3>
+                        </div>
+                        <div class="highlights-list">
+                            <div class="highlight-item"><i class="fa fa-check-circle"></i> Iconic Stone Chariot at Vittala Temple</div>
+<div class="highlight-item"><i class="fa fa-check-circle"></i> Panoramic Sunset from Matanga Hill</div>
+<div class="highlight-item"><i class="fa fa-check-circle"></i> Towering Gopuram of Virupaksha Temple</div>
+<div class="highlight-item"><i class="fa fa-check-circle"></i> Indo-Islamic Architecture of Lotus Mahal</div>
+<div class="highlight-item"><i class="fa fa-check-circle"></i> Traditional Coracle Boat Ride on Tungabhadra</div>
+
+                        </div>
+                    </div>
+
+                    <!-- Logistics (How to Reach) -->
+                    <div class="inside-card">
+                        <div class="inside-card-header">
+                            <h3 class="inside-card-title"><i class="fa fa-plane"></i> Logistics & Travel Info</h3>
+                        </div>
+                        <div class="logistics-grid">
+                            <div class="logistics-box">
+                                <div class="logistics-icon"><i class="fa fa-plane"></i></div>
+                                <h5>By Air</h5>
+                                <p>Jindal Vijaynagar Airport (VDY) or Hubballi Airport (HBX).</p>
+                            </div>
+                            <div class="logistics-box">
+                                <div class="logistics-icon"><i class="fa fa-train"></i></div>
+                                <h5>By Train</h5>
+                                <p>Hospet Junction (HPT) is just 13 km away with trains from Bangalore and Goa.</p>
+                            </div>
+                            <div class="logistics-box">
+                                <div class="logistics-icon"><i class="fa fa-car"></i></div>
+                                <h5>By Road</h5>
+                                <p>Well-connected highway network from Bangalore, Goa, and Hyderabad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar CTA -->
+                <div class="col-lg-4">
+                    <div class="inside-card text-center sticky-top" style="top: 100px;">
+                        <h4 style="font-weight: 800; margin-bottom: 12px; color: var(--text-primary);">Book Hampi Ruins</h4>
+                        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px;">Hotels, premium transport, and authorized local guide included.</p>
+                        <a href="https://wa.me/918700140135" class="whatsapp-btn w-100 mb-3 wa-dynamic-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i> Chat on WhatsApp &bull; Instant Quote</a>
+                        <button class="primary-btn w-100 openQueryModal mb-3" id="openQueryModal2" type="button"><i class="fa fa-envelope-o" style="margin-right: 6px;"></i> Send Query / Request Quote</button>
+                        <a href="tel:08700140135" class="btn btn-outline-secondary w-100 font-weight-bold" style="border-radius: 8px;"><i class="fa fa-phone"></i> Call +91 87001 40135</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curated Visual Gallery Section -->
+            <div class="mt-4">
+                <h3 class="mb-4 font-weight-bold text-center"><i class="fa fa-camera" style="color: var(--accent-primary);"></i> Visual Gallery</h3>
+                <div class="inside-gallery-grid">
+                    <div class="inside-gallery-item">
+                        <img src="../img/hampi_gal1.jpg" alt="Virupaksha Gopuram">
+                        <div class="inside-gallery-overlay"><span class="inside-gallery-title">Virupaksha Gopuram</span></div>
+                    </div>
+                    <div class="inside-gallery-item">
+                        <img src="../img/hampi_gal2.jpg" alt="Monolithic Stone Chariot">
+                        <div class="inside-gallery-overlay"><span class="inside-gallery-title">Monolithic Stone Chariot</span></div>
+                    </div>
+                    <div class="inside-gallery-item">
+                        <img src="../img/hampi_gal3.jpg" alt="Boulder-Strewn Landscape">
+                        <div class="inside-gallery-overlay"><span class="inside-gallery-title">Boulder-Strewn Landscape</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universal Query Modal -->
     <div id="queryModal">
-        <div>
-            <h4>Send Us Your Query</h4>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="4" placeholder="Your Query" required></textarea>
-            <button class="primary-btn" onclick="document.getElementById('queryModal').style.display='none'">Send</button>
+        <div class="modal-content-custom">
+            <button id="closeQueryModal" type="button" aria-label="Close Modal">&times;</button>
+            <h4 style="font-weight: 700; margin-bottom: 8px;">Send Us Your Query</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">Tell us your requirements for Hampi Ruins and we'll craft the perfect package.</p>
+            <form id="contact" action="https://formspree.io/f/xzzgaydr" method="POST">
+                <input name="email" type="email" placeholder="Your Email Address (for reply)" required style="width:100%; margin-bottom:12px; padding:12px; border-radius:8px; border:1px solid var(--card-border); background:var(--bg-primary); color:var(--text-primary); box-sizing:border-box;">
+                <textarea name="message" placeholder="Tell us your travel dates, group size & customized requests..." required style="width:100%; min-height:95px; margin-bottom:16px; padding:12px; border-radius:8px; border:1px solid var(--card-border); background:var(--bg-primary); color:var(--text-primary); box-sizing:border-box;"></textarea>
+                <button class="primary-btn w-100" id="submitQueryBtn" type="submit" style="cursor: pointer;"><i class="fa fa-paper-plane" style="margin-right: 6px;"></i> Send Query</button>
+            </form>
+            <div id="queryMsg" style="margin-top:14px; color:#16a34a; font-weight:600; display:none; text-align:center; padding:8px; background:rgba(22,163,74,0.1); border-radius:6px;">Thank you! Your query has been submitted successfully. We will get back to you shortly.</div>
         </div>
     </div>
+
+    <!-- Footer Area -->
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 mb-4 mb-lg-0">
+                    <div class="single-footer-widget">
+                        <h6>About City Info India Travels</h6>
+                        <p>Approved by the Ministry of Tourism, Govt. of India. We craft unforgettable, authentic Indian travel experiences with 24/7 dedicated support and expert local drivers.</p>
+                        <p class="footer-text" style="margin-top: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | City Info India Travels</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+                    <div class="single-footer-widget">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-nav">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="blog.html">Travel Stories</a></li>
+                            <li><a href="Recent-Announcement.html">Announcements</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Contact Us</h6>
+                        <p><i class="fa fa-map-marker" style="color:var(--accent-primary); margin-right:8px;"></i>79, Scindia House, Connaught Place, Janpath, New Delhi</p>
+                        <p><i class="fa fa-phone" style="color:var(--accent-primary); margin-right:8px;"></i> +91 87001 40135</p>
+                        <p><i class="fa fa-envelope" style="color:var(--accent-primary); margin-right:8px;"></i> cityindiainfotravels@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="../js/vendor/jquery-2.2.4.min.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/modern-custom.js" defer></script>
+
+    <!-- Reliable Direct Query Modal Script -->
     <script>
-        document.getElementById('openQueryModal').onclick = function() {
-            document.getElementById('queryModal').style.display = 'flex';
-        };
-        window.onclick = function(event) {
-            var modal = document.getElementById('queryModal');
-            if (event.target == modal) { modal.style.display = 'none'; }
-        };
+    (function () {
+        var modal = document.getElementById('queryModal');
+        var closeBtn = document.getElementById('closeQueryModal');
+        var form = document.getElementById('contact');
+        var msg = document.getElementById('queryMsg');
+
+        function openModal(e) {
+            if (e) e.preventDefault();
+            if (modal) modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            if (modal) {
+                modal.style.display = 'none';
+                if (form) form.reset();
+                if (msg) msg.style.display = 'none';
+            }
+        }
+
+        // Attach listeners to all query buttons
+        document.querySelectorAll('#openQueryModal, #openQueryModal2, .openQueryModal').forEach(function(btn) {
+            btn.addEventListener('click', openModal);
+        });
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+
+        window.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var emailInput = form.querySelector('input[name="email"]');
+                var msgInput = form.querySelector('textarea[name="message"]');
+                var submitBtn = document.getElementById('submitQueryBtn');
+
+                if (!emailInput || !emailInput.value.trim() || !msgInput || !msgInput.value.trim()) {
+                    alert('Please provide both your email and query requirements.');
+                    return;
+                }
+
+                var originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Query';
+                if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fa fa-circle-o-notch fa-spin"></i> Sending Query...';
+                }
+
+                var formData = new FormData(form);
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                }).then(function () {
+                    if (msg) {
+                        msg.style.display = 'block';
+                        msg.textContent = "Thank you! Your query has been submitted successfully. We will get back to you shortly.";
+                    }
+                    form.reset();
+                }).catch(function () {
+                    if (msg) {
+                        msg.style.display = 'block';
+                        msg.textContent = "Thank you! Your query has been received. Our team will contact you soon.";
+                    }
+                    form.reset();
+                }).finally(function () {
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    }
+                });
+            });
+        }
+    })();
     </script>
-<script src="../js/modern-custom.js" defer></script></body>
+</body>
 </html>

@@ -1,0 +1,9 @@
+# Secret files & Google Credentials
+js/google_credentials.json
+client_secret*.json
+*.env
+
+# IDE & OS files
+.idea/
+.vscode/
+.DS_Store

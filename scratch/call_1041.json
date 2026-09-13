@@ -1,0 +1,11 @@
+{
+  "name": "write_to_file",
+  "args": {
+    "CodeContent": "import os\nimport json\n\ntranscript_path = r'C:\\Users\\Hp\\.gemini\\antigravity-ide\\brain\\b6a24b34-d684-47b0-b690-16419b294e21\\.system_generated\\logs\\transcript_full.jsonl'\n\nwith open(transcript_path, 'r', encoding='utf-8') as f:\n    for i, line in enumerate(f):\n        if 'Nature Lovers' in line:\n            obj = json.loads(line)\n            step_idx = obj.get('step_index')\n            source = obj.get('source')\n            tool_calls = obj.get('tool_calls', [])\n            print(f\"Match at line {i}, step_index {step_idx}, source {source}, tool_calls: {len(tool_calls)}\")\n            if tool_calls:\n                for tc in tool_calls:\n                    fn = tc.get('function', {})\n                    fname = fn.get('name')\n                    print(f\"  Tool: {fname}\")\n                    args = fn.get('arguments', {})\n                    if isinstance(args, str):\n                        try:\n                            args = json.loads(args)\n                        except:\n                            pass\n                    if isinstance(args, dict):\n                        target = args.get('TargetFile') or args.get('CommandLine') or ''\n                        print(f\"  Target: {target}\")\n                        if 'TargetFile' in args:\n                            with open('scratch/found_template_call.json', 'w', encoding='utf-8') as out:\n                                json.dump(args, out, indent=2, ensure_ascii=False)\n                            print(\"Dumped target file call to scratch/found_template_call.json!\")\n",
+    "Description": "Find exact template call from transcript_full.jsonl",
+    "Overwrite": true,
+    "TargetFile": "c:\\Users\\Hp\\PycharmProjects\\indiatoursite\\scratch\\find_template_call.py",
+    "toolAction": "Writing find_template_call.py",
+    "toolSummary": "Write find_template_call.py"
+  }
+}

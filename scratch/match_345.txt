@@ -1,0 +1,128 @@
+Created At: 2026-09-14T00:01:02+05:30
+Completed At: 2026-09-14T00:01:02+05:30
+File Path: `file:///c:/Users/Hp/PycharmProjects/indiatoursite/bulk_generate.py`
+Total Lines: 575
+Total Bytes: 37325
+Showing lines 1 to 120
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: import urllib.request
+2: import urllib.parse
+3: import json
+4: import os
+5: 
+6: TEMPLATE = """<!DOCTYPE html>
+7: <html lang="en" class="no-js">
+8: <head>
+9:     <meta charset="UTF-8">
+10:     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+11:     <title>{page_title} | Explore India</title>
+12:     <meta name="description" content="{hero_desc}">
+13:     <link rel="icon" href="../img/explore-india-logo.svg" type="image/svg+xml">
+14:     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+15:     <link rel="stylesheet" href="../css/linearicons.css">
+16:     <link rel="stylesheet" href="../css/font-awesome.min.css">
+17:     <link rel="stylesheet" href="../css/bootstrap.css">
+18:     <link rel="stylesheet" href="../css/main.css">
+19:     <link rel="stylesheet" href="../css/modern-custom.css">
+20: </head>
+21: <body class="inside-page-body">
+22: 
+23:     <!-- Header Navigation -->
+24:     <header class="default-header">
+25:         <nav class="navbar navbar-expand-lg navbar-light">
+26:             <div class="container">
+27:                 <a class="navbar-brand d-flex align-items-center" href="../index.html">
+28:                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 68" style="height: 44px; width: auto;">
+29:                         <style>
+30:                             .brand-primary {{ fill: #0f2952; transition: fill 0.3s ease; }}
+31:                             .brand-accent {{ fill: #e85d07; }}
+32:                             .brand-secondary {{ fill: #2c6e49; transition: fill 0.3s ease; }}
+33:                             body.dark-mode .brand-primary {{ fill: #ffffff !important; }}
+34:                             body.dark-mode .brand-secondary {{ fill: #8cc084 !important; }}
+35:                         </style>
+36:                         <g id="emblem" transform="translate(4, 4)">
+37:                             <path d="M 6 44 L 17 26 L 24 33 L 33 21 L 42 34 L 50 44 Z" fill="#a5cbdc" fill-opacity="0.4" />
+38:                             <path d="M 12 44 V 35 H 14 V 32 H 18 V 35 H 20 V 44 H 18 V 37 H 14 V 44 Z" fill="#c88c5c" />
+39:                             <path d="M 23 44 H 35 V 39 H 23 Z M 27 39 C 27 33, 31 33, 31 39 Z M 29 33 V 31 Z" fill="#e2af66" />
+40:                             <line x1="29" y1="33" x2="29" y2="31" stroke="#e2af66" stroke-width="1.5" />
+41:                             <path d="M 22 44 H 23 V 31 H 22 Z M 35 44 H 36 V 31 H 35 Z" fill="#e2af66" />
+42:                             <path d="M 38 44 L 40 23 H 41 L 43 44 Z" fill="#a25b49" />
+43:                             <circle cx="43" cy="20" r="3.5" fill="#ffb703" />
+44:                             <path d="M 10 44 A 22 22 0 1 1 48 38" fill="none" stroke="#0f2952" stroke-width="3" stroke-linecap="round" class="brand-primary" />
+45:                             <path d="M 22 11 A 22 22 0 0 1 47 22" fill="none" stroke="#e85d07" stroke-width="2" stroke-linecap="round" />
+46:                             <path d="M 8 32 A 22 22 0 0 0 24 53" fill="none" stroke="#2c6e49" stroke-width="2" stroke-linecap="round" class="brand-secondary" />
+47:                             <path d="M 14 47 C 22 38, 38 38, 46 47 C 38 56, 22 56, 14 47 Z" fill="#0f2952" class="brand-primary" />
+48:                         </g>
+49:                         <g id="brand-text" transform="translate(68, 0)">
+50:                             <text x="0" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-primary">City Info</text>
+51:                             <path d="M 18.5 11 C 17 11, 16.2 12.2, 16.2 13.5 C 16.2 15.5, 18.5 18, 18.5 18 C 18.5 18, 20.8 15.5, 20.8 13.5 C 20.8 12.2, 20 11, 18.5 11 Z" fill="#e85d07" />
+52:                             <circle cx="18.5" cy="13.5" r="0.9" fill="#ffffff" />
+53:                             <text x="96" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-accent">India</text>
+54:                             <text x="0" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="700" class="brand-secondary" letter-spacing="6.5">TRAVELS</text>
+55:                         </g>
+56:                     </svg>
+57:                 </a>
+58:                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+59:                     <span class="lnr lnr-menu"></span>
+60:                 </button>
+61:                 <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+62:                     <ul class="navbar-nav align-items-center">
+63:                         <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+64:                         <li class="nav-item custom-dropdown">
+65:                             <a class="nav-link active" href="../index.html#middle">Destinations <i class="fa fa-angle-down"></i></a>
+66:                             <div class="custom-dropdown-menu">
+67:                                 <a href="GoldenTemple-Info.html">✨ Golden Temple (Amritsar)</a>
+68:                                 <a href="Jaipur-Info.html">🏰 Jaipur (Pink City)</a>
+69:                                 <a href="Kashmir-Info.html">❄️ Kashmir (Paradise)</a>
+70:                                 <a href="Alleppey-Info.html">🚣 Alleppey (Backwaters)</a>
+71:                                 <a href="Himachal-Info.html">🏔️ Himachal (Manali)</a>
+72:                                 <a href="Jaisalmer-Info.html">🐪 Jaisalmer (Desert)</a>
+73:                                 <a href="Udaipur-Info.html">👑 Udaipur (Lakes)</a>
+74:                                 <a href="Hampi-Info.html">🏛️ Hampi (UNESCO Ruins)</a>
+75:                             </div>
+76:                         </li>
+77:                         <li class="nav-item"><a class="nav-link" href="blog.html">Travel Stories</a></li>
+78:                         <li class="nav-item"><a class="nav-link" href="About.html">Our Motto</a></li>
+79:                         <li class="nav-item"><a class="nav-link" href="Recent-Announcement.html">Announcements</a></li>
+80:                         <li class="nav-item theme-toggle-li">
+81:                             <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Dark Mode">
+82:                                 <i class="fa fa-moon-o moon-icon"></i>
+83:                                 <i class="fa fa-sun-o sun-icon"></i>
+84:                             </button>
+85:                         </li>
+86:                     </ul>
+87:                 </div>
+88:             </div>
+89:         </nav>
+90:     </header>
+91: 
+92:     <!-- Subpage Hero Banner -->
+93:     <section class="subpage-hero" style="background-image: url('../img/{img_hero}');">
+94:         <div class="container">
+95:             <span class="subpage-badge"><i class="fa fa-sun-o"></i> {badge_text}</span>
+96:             <h1>{hero_title}</h1>
+97:             <p class="lead">{hero_desc}</p>
+98:             <button class="primary-btn openQueryModal" type="button"><i class="fa fa-paper-plane"></i> Plan {hero_title} Tour</button>
+99:         </div>
+100:     </section>
+101: 
+102:     <!-- Quick Stats Bar -->
+103:     <div class="container quick-stats-container">
+104:         <div class="quick-stats-card">
+105:             <div class="row">
+106:                 <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+107:                     <div class="stat-pill">
+108:                         <div class="stat-icon"><i class="fa fa-clock-o"></i></div>
+109:                         <div class="stat-info">
+110:                             <span class="stat-label">Duration</span>
+111:                             <span class="stat-val">{duration}</span>
+112:                         </div>
+113:                     </div>
+114:                 </div>
+115:                 <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+116:                     <div class="stat-pill">
+117:                         <div class="stat-icon"><i class="fa fa-calendar"></i></div>
+118:                         <div class="stat-info">
+119:                             <span class="stat-label">Best Time</span>
+120:                             <span class="stat-val">{best_time}</span>
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.

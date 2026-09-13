@@ -1,0 +1,68 @@
+Created At: 2026-09-13T23:39:57+05:30
+Completed At: 2026-09-13T23:39:57+05:30
+File Path: `file:///c:/Users/Hp/PycharmProjects/indiatoursite/bulk_generate.py`
+Total Lines: 575
+Total Bytes: 37325
+Showing lines 61 to 120
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+61:                 <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+62:                     <ul class="navbar-nav align-items-center">
+63:                         <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+64:                         <li class="nav-item custom-dropdown">
+65:                             <a class="nav-link active" href="../index.html#middle">Destinations <i class="fa fa-angle-down"></i></a>
+66:                             <div class="custom-dropdown-menu">
+67:                                 <a href="GoldenTemple-Info.html">✨ Golden Temple (Amritsar)</a>
+68:                                 <a href="Jaipur-Info.html">🏰 Jaipur (Pink City)</a>
+69:                                 <a href="Kashmir-Info.html">❄️ Kashmir (Paradise)</a>
+70:                                 <a href="Alleppey-Info.html">🚣 Alleppey (Backwaters)</a>
+71:                                 <a href="Himachal-Info.html">🏔️ Himachal (Manali)</a>
+72:                                 <a href="Jaisalmer-Info.html">🐪 Jaisalmer (Desert)</a>
+73:                                 <a href="Udaipur-Info.html">👑 Udaipur (Lakes)</a>
+74:                                 <a href="Hampi-Info.html">🏛️ Hampi (UNESCO Ruins)</a>
+75:                             </div>
+76:                         </li>
+77:                         <li class="nav-item"><a class="nav-link" href="blog.html">Travel Stories</a></li>
+78:                         <li class="nav-item"><a class="nav-link" href="About.html">Our Motto</a></li>
+79:                         <li class="nav-item"><a class="nav-link" href="Recent-Announcement.html">Announcements</a></li>
+80:                         <li class="nav-item theme-toggle-li">
+81:                             <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Dark Mode">
+82:                                 <i class="fa fa-moon-o moon-icon"></i>
+83:                                 <i class="fa fa-sun-o sun-icon"></i>
+84:                             </button>
+85:                         </li>
+86:                     </ul>
+87:                 </div>
+88:             </div>
+89:         </nav>
+90:     </header>
+91: 
+92:     <!-- Subpage Hero Banner -->
+93:     <section class="subpage-hero" style="background-image: url('../img/{img_hero}');">
+94:         <div class="container">
+95:             <span class="subpage-badge"><i class="fa fa-sun-o"></i> {badge_text}</span>
+96:             <h1>{hero_title}</h1>
+97:             <p class="lead">{hero_desc}</p>
+98:             <button class="primary-btn openQueryModal" type="button"><i class="fa fa-paper-plane"></i> Plan {hero_title} Tour</button>
+99:         </div>
+100:     </section>
+101: 
+102:     <!-- Quick Stats Bar -->
+103:     <div class="container quick-stats-container">
+104:         <div class="quick-stats-card">
+105:             <div class="row">
+106:                 <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+107:                     <div class="stat-pill">
+108:                         <div class="stat-icon"><i class="fa fa-clock-o"></i></div>
+109:                         <div class="stat-info">
+110:                             <span class="stat-label">Duration</span>
+111:                             <span class="stat-val">{duration}</span>
+112:                         </div>
+113:                     </div>
+114:                 </div>
+115:                 <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+116:                     <div class="stat-pill">
+117:                         <div class="stat-icon"><i class="fa fa-calendar"></i></div>
+118:                         <div class="stat-info">
+119:                             <span class="stat-label">Best Time</span>
+120:                             <span class="stat-val">{best_time}</span>
+The above content does NOT show the entire file contents. If you need to view any lines of the file which were not shown to complete your task, call this tool again to view those lines.
