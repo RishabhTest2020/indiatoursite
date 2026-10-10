@@ -1,0 +1,443 @@
+[
+  {
+    "index": 1,
+    "filename": "GoldenTemple-Info.html",
+    "hero_title": "Golden Temple",
+    "duration": "2 Days / 1 Night",
+    "badge_text": "Punjab • Spiritual Heritage",
+    "hero_desc": "Experience divine serenity, pure gold sanctum reflections in the sacred Amrit Sarovar, and the world's largest community kitchen.",
+    "img_hero": "goldentemple_hero.jpg",
+    "budget": "₹5,000 – ₹14,000",
+    "ideal_for": "Spiritual Seekers & Families",
+    "overview_text": "Sri Harmandir Sahib, popularly known as the Golden Temple, is the spiritual heartbeat of Sikhism and one of India's most welcoming holy shrines. Its golden dome gleams brilliantly over the sacred Amrit Sarovar. The complex embodies universal brotherhood and equality, serving over 100,000 free hot meals daily in the monumental Langar hall.",
+    "day1_title": "Harmandir Sahib & Langar Experience",
+    "day2_title": "Wagah Border & Jallianwala Bagh",
+    "highlights": [
+      "Pure Gold Sanctum & Amrit Sarovar Reflection",
+      "World's Largest Free Kitchen (Langar Seva)",
+      "Wagah Border Beating Retreat Ceremony",
+      "Historic Jallianwala Bagh National Memorial",
+      "Heritage Street Night Walk & Amritsari Kulcha"
+    ]
+  },
+  {
+    "index": 2,
+    "filename": "Jaipur-Info.html",
+    "hero_title": "Jaipur",
+    "duration": "3 Days / 2 Nights",
+    "badge_text": "Rajasthan • Royal Heritage",
+    "hero_desc": "Experience the vibrant culture, majestic hilltop forts, and royal courtyards of Rajasthan's regal capital.",
+    "img_hero": "jaipur_hero.jpg",
+    "budget": "₹8,000 – ₹20,000",
+    "ideal_for": "History, Culture & Photography",
+    "overview_text": "Jaipur, the capital of Rajasthan, is world-famous as the Pink City. Founded in 1727 by Maharaja Sawai Jai Singh II, it is a magnificent blend of Rajput tradition and urban planning. The city features hilltop fortifications like Amer Fort, the iconic 953-casement Hawa Mahal, and bustling bazaars overflowing with jewels, block-printed textiles, and pottery.",
+    "day1_title": "Amer Fort & City Palace",
+    "day2_title": "Hawa Mahal & Local Bazaars",
+    "highlights": [
+      "Amer Fort Sheesh Mahal (Mirror Palace)",
+      "Iconic 953-Lattice Hawa Mahal Facade",
+      "City Palace Peacock Gate Details",
+      "UNESCO Jantar Mantar Observatory",
+      "Authentic Dal Baati Churma Rajasthani Thali"
+    ]
+  },
+  {
+    "index": 3,
+    "filename": "Kashmir-Info.html",
+    "hero_title": "Kashmir Valley",
+    "duration": "5 Days / 4 Nights",
+    "badge_text": "Jammu & Kashmir • Nature & Valleys",
+    "hero_desc": "Discover the pristine beauty of Dal Lake, snow-capped Himalayan peaks, and lush Mughal gardens in the 'Paradise on Earth'.",
+    "img_hero": "kashmir_hero.jpg",
+    "budget": "₹15,000 – ₹35,000",
+    "ideal_for": "Nature Lovers & Honeymooners",
+    "overview_text": "Kashmir is renowned globally for its surreal natural beauty. From the tranquil waters of Dal Lake in Srinagar dotted with cedar-carved houseboats and shikaras, to the alpine slopes of Gulmarg and breathtaking meadows of Pahalgam, Kashmir offers a dreamlike journey through the Himalayas.",
+    "day1_title": "Srinagar & Dal Lake Shikara",
+    "day2_title": "Gulmarg Mountain Excursion",
+    "highlights": [
+      "Carved Houseboat Stay on Dal Lake",
+      "Gulmarg Gondola Ride to Phase II (Apharwat)",
+      "Lush Mughal Gardens (Shalimar & Nishat)",
+      "Pahalgam Valley & Betaab Valley Walks",
+      "Authentic Kashmiri Kahwa & Royal Wazwan"
+    ]
+  },
+  {
+    "index": 4,
+    "filename": "Alleppey-Info.html",
+    "hero_title": "Alleppey Backwaters",
+    "duration": "2 Days / 1 Night",
+    "badge_text": "Kerala • Backwaters & Nature",
+    "hero_desc": "Cruise through tranquil palm-fringed canals and emerald green paddy fields on a traditional luxury Kerala houseboat.",
+    "img_hero": "alleppey_hero.jpg",
+    "budget": "₹7,000 – ₹18,000",
+    "ideal_for": "Relaxation & Romantic Escapes",
+    "overview_text": "Alappuzha, also known as Alleppey, is famous for its intricate network of interconnected backwater canals, lagoons, and lakes. Known as the 'Venice of the East', its signature attraction is the traditional Kettuvallam houseboat, providing a tranquil escape immersed in authentic coastal village life.",
+    "day1_title": "Houseboat Check-in & Backwater Cruise",
+    "day2_title": "Canoe Village Tour & Alleppey Beach",
+    "highlights": [
+      "Private Overnight Kettuvallam Houseboat Cruise",
+      "Vembanad Lake Sunset Reflections",
+      "Narrow Canal Country Boat Exploration",
+      "Fresh Coastal Kerala Sadya & Fish Pollichathu",
+      "Historic Alleppey Beach & Lighthouse"
+    ]
+  },
+  {
+    "index": 5,
+    "filename": "Himachal-Info.html",
+    "hero_title": "Shimla & Manali",
+    "duration": "6 Days / 5 Nights",
+    "badge_text": "Himachal Pradesh • Himalayan Escapes",
+    "hero_desc": "Escape to the majestic Himalayas. Experience colonial charm, deodar forests, rushing rivers, and thrilling mountain adventures.",
+    "img_hero": "himachal_hero.jpg",
+    "budget": "₹12,000 – ₹28,000",
+    "ideal_for": "Adventure, Snow & Nature",
+    "overview_text": "Himachal Pradesh offers the ultimate Himalayan holiday. Shimla, the historic summer capital of British India, retains its colonial elegance with the Ridge and Christ Church. In Kullu Valley, Manali serves as the premier adventure hub, nestled beside the roaring Beas River and leading into Solang Valley and Atal Tunnel.",
+    "day1_title": "Shimla Heritage Ridge & Mall Road",
+    "day2_title": "Solang Valley Adventures & Manali",
+    "highlights": [
+      "Shimla Ridge Walk & Colonial Architecture",
+      "Solang Valley Paragliding & Snow Activities",
+      "Scenic Drive through the Atal Tunnel",
+      "Ancient Wooden Pagoda of Hadimba Temple",
+      "UNESCO Kalka-Shimla Mountain Toy Train"
+    ]
+  },
+  {
+    "index": 6,
+    "filename": "Jaisalmer-Info.html",
+    "hero_title": "Jaisalmer",
+    "duration": "3 Days / 2 Nights",
+    "badge_text": "Rajasthan • Desert Safari",
+    "hero_desc": "Experience the magic of the Thar Desert, living yellow sandstone fortresses, and starlit campfire nights on the dunes.",
+    "img_hero": "jaisalmer_hero.jpg",
+    "budget": "₹7,000 – ₹18,000",
+    "ideal_for": "Desert Adventures & Heritage",
+    "overview_text": "Jaisalmer, rising like a golden mirage from the Thar Desert, is celebrated for its Sonar Qila (Golden Fort). Built in 1156 AD, it is one of the world's few living forts where thousands still live inside ancient ramparts. Exquisite sandstone havelis and camel expeditions across the Sam Sand Dunes complete this fairy-tale journey.",
+    "day1_title": "Sonar Qila & Intricate Havelis",
+    "day2_title": "Thar Desert Safari & Campfire",
+    "highlights": [
+      "UNESCO Living Golden Fort (Sonar Qila)",
+      "Sam Sand Dunes Sunset Camel Trek",
+      "Intricate Carvings of Patwon Ki Haveli",
+      "Desert Stargazing & Campfire Kalbelia Dance",
+      "Boating on Sacred Gadisar Lake"
+    ]
+  },
+  {
+    "index": 7,
+    "filename": "Udaipur-Info.html",
+    "hero_title": "Udaipur",
+    "duration": "3 Days / 2 Nights",
+    "badge_text": "Rajasthan • Royal Romance",
+    "hero_desc": "Immerse yourself in the royal romance of shimmering lakes, floating marble palaces, and the majestic Aravalli hills.",
+    "img_hero": "udaipur_hero.jpg",
+    "budget": "₹9,000 – ₹25,000",
+    "ideal_for": "Couples, Royalty & Architecture",
+    "overview_text": "Udaipur, framed by the oldest mountain range in India, is widely hailed as the most romantic city in the country. The city centers on Lake Pichola, home to the floating white marble Lake Palace. The monumental City Palace dominates the east bank, housing museums, courtyards, and mirror halls.",
+    "day1_title": "City Palace & Lake Pichola Cruise",
+    "day2_title": "Saheliyon Ki Bari & Sajjangarh Monsoon Palace",
+    "highlights": [
+      "Lake Pichola Sunset Boat Cruise",
+      "Sprawling City Palace Museum & Courtyards",
+      "Hilltop Sajjangarh (Monsoon Palace) Sunset",
+      "Fountain Gardens of Saheliyon Ki Bari",
+      "Candlelit Lakeside Mewari Dining"
+    ]
+  },
+  {
+    "index": 8,
+    "filename": "Hampi-Info.html",
+    "hero_title": "Hampi Ruins",
+    "duration": "3 Days / 2 Nights",
+    "badge_text": "Karnataka • Ancient Ruins",
+    "hero_desc": "Step back in time to the glorious Vijayanagara Empire amidst surreal boulder-strewn landscapes and monolithic stone temples.",
+    "img_hero": "hampi_hero.jpg",
+    "budget": "₹6,000 – ₹15,000",
+    "ideal_for": "History, Backpacking & Photography",
+    "overview_text": "Hampi, a UNESCO World Heritage site along the Tungabhadra River, is an open-air wonderland of monolithic sculptures, royal pavilions, and centuries-old temples. Once one of the richest metropolises in the medieval world, Hampi's stone chariot, musical pillars, and dramatic boulders create an unforgettable travel experience.",
+    "day1_title": "Sacred Centre & Vittala Temple",
+    "day2_title": "Royal Enclosure & Sunset at Matanga Hill",
+    "highlights": [
+      "Iconic Stone Chariot at Vittala Temple",
+      "Panoramic Sunset from Matanga Hill",
+      "Towering Gopuram of Virupaksha Temple",
+      "Indo-Islamic Architecture of Lotus Mahal",
+      "Traditional Coracle Boat Ride on Tungabhadra"
+    ]
+  },
+  {
+    "index": 9,
+    "filename": "Bikaner-Info.html",
+    "hero_title": "Bikaner",
+    "duration": "2 Days / 1 Night",
+    "badge_text": "Rajasthan • Desert Heritage",
+    "hero_desc": "Explore unvanquished desert fortresses, palatial havelis, and the authentic culinary traditions of northwestern Rajasthan.",
+    "img_hero": "bikaner_hero.jpg",
+    "budget": "₹6,000 – ₹15,000",
+    "ideal_for": "Culture, Architecture & Foodies",
+    "overview_text": "Founded in 1488 by Rao Bika, Bikaner is a vibrant desert city distinguished by Junagarh Fort, one of Rajasthan's few major forts not built on a hill. With its intricately carved red sandstone palaces, world-renowned Bikaneri savories, and unique Karni Mata Temple, Bikaner delivers authentic desert heritage.",
+    "day1_title": "Junagarh Fort & Lalgarh Palace",
+    "day2_title": "Karni Mata Temple & Camel Research Centre",
+    "highlights": [
+      "Unconquered Junagarh Fort & Anup Mahal",
+      "Historic Red Sandstone Lalgarh Palace",
+      "Karni Mata Temple at Deshnoke",
+      "National Research Centre on Camel",
+      "Famous Bikaneri Bhujia & Rasgulla Tastings"
+    ]
+  },
+  {
+    "index": 10,
+    "filename": "CamelSafari-Info.html",
+    "hero_title": "Camel Safari",
+    "duration": "2 Days / 1 Night",
+    "badge_text": "Rajasthan • Desert Expedition",
+    "hero_desc": "Traverse rolling golden dunes, visit remote nomadic hamlets, and sleep under millions of desert stars.",
+    "img_hero": "camelsafari_hero.jpg",
+    "budget": "₹5,000 – ₹12,000",
+    "ideal_for": "Adventure Seekers & Campers",
+    "overview_text": "A camel safari across Rajasthan's Thar Desert is an iconic travel adventure. Riding atop gentle camels into the golden sunset, dining around blazing campfires with Rajasthani folk music, and sleeping in luxury desert Swiss tents beneath the Milky Way will stay with you forever.",
+    "day1_title": "Dune Caravan & Sunset Ride",
+    "day2_title": "Desert Sunrise & Village Interaction",
+    "highlights": [
+      "Authentic Camel Caravan across Thar Dunes",
+      "Dramatic Sunset over Sam Sand Dunes",
+      "Starlit Luxury Desert Camp Stay",
+      "Live Kalbelia Music & Fire Dance",
+      "Rustic Village Hospitality & Fresh Bajra Roti"
+    ]
+  },
+  {
+    "index": 11,
+    "filename": "ColvaBeach-Info.html",
+    "hero_title": "Colva Beach",
+    "duration": "3 Days / 2 Nights",
+    "badge_text": "Goa • Sun, Sand & Sea",
+    "hero_desc": "Relax on powder-white sands, enjoy thrilling water sports, and savor fresh Goan seafood along South Goa's coastline.",
+    "img_hero": "colvabeach_hero.jpg",
+    "budget": "₹8,000 – ₹20,000",
+    "ideal_for": "Beach Lovers, Water Sports & Families",
+    "overview_text": "Colva Beach is one of South Goa's oldest and most scenic coastal stretches. Spanning 2.4 kilometers of powdery white sand lined with swaying coconut palms, Colva offers beachside shacks, thrilling parasailing, jet skiing, and Portuguese heritage churches just a short stroll inland.",
+    "day1_title": "White Sands & Watersports",
+    "day2_title": "Portuguese Churches & Sunset Walk",
+    "highlights": [
+      "Powder-White Sandy Coastline",
+      "Parasailing, Jet Skiing & Speedboat Rides",
+      "Historic Church of Our Lady of Mercy",
+      "Authentic Goan Fish Curry & Bebinca",
+      "Lively Evening Beach Shacks & Live Music"
+    ]
+  },
+  {
+    "index": 12,
+    "filename": "GwaliorFort-Info.html",
+    "hero_title": "Gwalior Fort",
+    "duration": "2 Days / 1 Night",
+    "badge_text": "Madhya Pradesh • Monumental Fortresses",
+    "hero_desc": "Marvel at the vibrant blue-tiled Man Mandir Palace, colossal rock-cut Jain statues, and ancient temple architecture in Madhya Pradesh.",
+    "img_hero": "gwaliorfort_hero.jpg",
+    "budget": "₹5,000 – ₹13,000",
+    "ideal_for": "Archaeology, Architecture & History",
+    "overview_text": "Gwalior Fort, described by Mughal Emperor Babur as 'the pearl amongst fortresses in India', dominates the city skyline from a sheer 300-foot sandstone plateau. Dating back over a millennium, it houses the vibrant turquoise and yellow enameled tiles of Man Mandir Palace, the Sas Bahu temples, and colossal 15th-century rock-cut Jain colossi.",
+    "day1_title": "Man Mandir Palace & Sas Bahu Temples",
+    "day2_title": "Gopachal Jain Statues & Sound and Light Show",
+    "highlights": [
+      "Vibrant Turquoise-Tiled Man Mandir Palace",
+      "Towering Gopachal Rock-Cut Jain Statues",
+      "Intricately Carved 11th-Century Sas Bahu Temples",
+      "Teli Ka Mandir Dravidian-Nagara Blend",
+      "Evening Sound & Light Show over Gwalior City"
+    ]
+  },
+  {
+    "index": 13,
+    "filename": "Jodhpur-Info.html",
+    "hero_title": "Jodhpur",
+    "duration": "2 Days / 1 Night",
+    "badge_text": "Rajasthan • Blue City Splendor",
+    "hero_desc": "Wander the cobalt-blue alleys of the Old City, admire white marble cenotaphs, and gaze up at monumental Mehrangarh Fort.",
+    "img_hero": "jodhpur_hero.jpg",
+    "budget": "₹7,000 – ₹18,000",
+    "ideal_for": "Culture, Photography & Architecture",
+    "overview_text": "Jodhpur, the iconic Blue City, sits dramatically at the edge of the Thar Desert. Famous for its sea of indigo-washed Brahmin houses in the Brahmapuri quarter, the city is crowned by Mehrangarh Fort and features Jaswant Thada, a gleaming white marble memorial often called the 'Taj Mahal of Marwar'.",
+    "day1_title": "Brahmapuri Blue Alleys & Jaswant Thada",
+    "day2_title": "Umaid Bhawan Palace & Clock Tower Market",
+    "highlights": [
+      "Walking Tour of Cobalt-Blue Old City Alleys",
+      "Gleaming White Marble Cenotaph of Jaswant Thada",
+      "Royal Museum at Art-Deco Umaid Bhawan Palace",
+      "Historic Ghanta Ghar (Clock Tower) & Spice Market",
+      "Famous Jodhpuri Mirchi Vada & Pyaaz Kachori"
+    ]
+  },
+  {
+    "index": 14,
+    "filename": "MehrangarhFort-Info.html",
+    "hero_title": "Mehrangarh Fort",
+    "duration": "1 Day Tour",
+    "badge_text": "Rajasthan • Mighty Citadel",
+    "hero_desc": "Tower 400 feet above Jodhpur within one of India's largest and most formidable 15th-century cliff-top fortresses.",
+    "img_hero": "mehrangarhfort_hero.jpg",
+    "budget": "₹4,000 – ₹10,000",
+    "ideal_for": "History, Royal Splendor & Views",
+    "overview_text": "Mehrangarh Fort, rising sheerly from a 410-foot rocky cliff, is one of the most magnificent fortifications in Asia. Built by Rao Jodha in 1459, its walls still bear the marks of cannonballs. Inside lies a museum with royal palanquins, the gilded Phool Mahal, and the Chamunda Devi temple.",
+    "day1_title": "Fort Ramparts & Royal Museum",
+    "day2_title": "Zip-Lining (Flying Fox) & Panoramic Views",
+    "highlights": [
+      "Cannonball Scars at 15th-Century Battlements",
+      "Opulent Gilded Ceiling of Phool Mahal",
+      "World-Class Royal Palanquin & Armory Museum",
+      "Flying Fox Aerial Zip-Line Tour Over Battlements",
+      "Breathtaking 360-Degree Views of the Blue City"
+    ]
+  },
+  {
+    "index": 15,
+    "filename": "Mon-Info.html",
+    "hero_title": "Mon, Nagaland",
+    "duration": "4 Days / 3 Nights",
+    "badge_text": "Nagaland • Tribal Heritage",
+    "hero_desc": "Journey into the misty highlands of Nagaland to witness traditional Morung architecture, facial tattoos, and unique tribal heritage.",
+    "img_hero": "mon_hero.jpg",
+    "budget": "₹14,000 – ₹30,000",
+    "ideal_for": "Tribal Anthropology & Offbeat Journeys",
+    "overview_text": "Mon, situated in northern Nagaland, is the ancestral homeland of the Konyak Nagas, historically renowned for facial tattoos and headhunting traditions. A highlight is Longwa Village, where the international boundary between India and Myanmar passes through the middle of the King's Morung house.",
+    "day1_title": "Mon Town & Traditional Morung Houses",
+    "day2_title": "Longwa Village - Border between Two Nations",
+    "highlights": [
+      "Longwa Village on the Indo-Myanmar Border",
+      "Meet Veteran Konyak Tattooed Warriors",
+      "Traditional Thatch-Roofed Morung Architecture",
+      "Ancient Woodcarving and Beaded Tribal Regalia",
+      "Stunning Highland Valleys and Tea Plantations"
+    ]
+  },
+  {
+    "index": 16,
+    "filename": "Pushkar-Info.html",
+    "hero_title": "Pushkar",
+    "duration": "2 Days / 1 Night",
+    "badge_text": "Rajasthan • Sacred Oasis",
+    "hero_desc": "Immerse in the spiritual chants of 52 holy bathing ghats, visit the world's rarest Brahma Temple, and experience camel fair heritage.",
+    "img_hero": "pushkar_hero.jpg",
+    "budget": "₹5,000 – ₹14,000",
+    "ideal_for": "Spirituality, Festivals & Photography",
+    "overview_text": "Pushkar, nestled on the shores of a sacred lake surrounded by the Aravalli hills, is one of the oldest and most sacred pilgrimage destinations in India. It is home to one of the few existing temples dedicated to Lord Brahma. The town comes alive with thousands of decorated camels and traders during the world-famous Pushkar Fair.",
+    "day1_title": "Pushkar Lake Ghats & Brahma Temple",
+    "day2_title": "Savitri Temple Hike & Desert Sunset",
+    "highlights": [
+      "Sacred Pushkar Lake & 52 Holy Bathing Ghats",
+      "World-Famous Jagatpita Brahma Temple",
+      "Panoramic Sunrise from Ratnagiri Hill (Savitri Temple)",
+      "Pushkar Camel Fair Grounds & Desert Safari",
+      "Vibrant Rose Gardens & Malpua Delicacies"
+    ]
+  },
+  {
+    "index": 17,
+    "filename": "SanchiStupa-Info.html",
+    "hero_title": "Sanchi Stupa",
+    "duration": "1 Day Tour",
+    "badge_text": "Madhya Pradesh • Buddhist Heritage",
+    "hero_desc": "Stand in awe before the Great Stupa of Sanchi, commissioned by Emperor Ashoka in the 3rd century BCE, featuring carved torana gateways.",
+    "img_hero": "sanchistupa_hero.jpg",
+    "budget": "₹4,000 – ₹9,000",
+    "ideal_for": "Buddhist Pilgrimage, History & Art",
+    "overview_text": "Sanchi is home to the oldest stone structures in India and a designated UNESCO World Heritage site. Commissioned by Emperor Ashoka the Great, the Great Stupa is renowned for its four ornately carved stone gateways (Toranas) that depict Jataka tales, Ashoka's life, and early Buddhist iconography.",
+    "day1_title": "The Great Stupa & Ashoka Pillar",
+    "day2_title": "Sanchi Archaeological Museum & Stupa 2",
+    "highlights": [
+      "The Monumental Great Stupa (Stupa 1)",
+      "Masterpiece Carvings on Four Stone Toranas",
+      "Historic Polished Ashoka Pillar & Lion Capital",
+      "Archaeological Museum Artifacts and Reliquaries",
+      "Serene Hilltop Setting Surrounded by Countryside"
+    ]
+  },
+  {
+    "index": 18,
+    "filename": "Twang-Info.html",
+    "hero_title": "Tawang Monastery",
+    "duration": "5 Days / 4 Nights",
+    "badge_text": "Arunachal Pradesh • Monasteries & Passes",
+    "hero_desc": "Journey across the snow-clad Sela Pass to discover India's largest Buddhist monastery perched at 10,000 feet in the Eastern Himalayas.",
+    "img_hero": "twang_hero.jpg",
+    "budget": "₹16,000 – ₹32,000",
+    "ideal_for": "Adventure, High Altitude & Buddhism",
+    "overview_text": "Tawang, located near the borders of Tibet and Bhutan at an altitude of 10,000 feet, is home to the 400-year-old Tawang Monastery (Gaden Namgyal Lhatse), the largest Buddhist monastery in India. Reached via the snow-crowned Sela Pass (13,700 ft), Tawang offers pristine alpine lakes, war memorials, and profound peace.",
+    "day1_title": "Scenic Drive via Sela Pass & Sela Lake",
+    "day2_title": "Tawang Monastery & Urgelling Gompa",
+    "highlights": [
+      "400-Year-Old Tawang Monastery & Museum",
+      "Crossing Breathtaking Sela Pass (13,700 ft)",
+      "Magnificent 28-Foot Gilded Buddha Statue",
+      "Frozen Paradise of Sela Lake and Madhuri Lake",
+      "Spectacular Nuranang Falls (Jang Falls)"
+    ]
+  },
+  {
+    "index": 19,
+    "filename": "UmngotRiver-Info.html",
+    "hero_title": "Umngot River, Dawki",
+    "duration": "2 Days / 1 Night",
+    "badge_text": "Meghalaya • Pristine Waters",
+    "hero_desc": "Glide upon water so transparent that boats appear to float in mid-air along the emerald gorge of Meghalaya.",
+    "img_hero": "umngotriver_hero.jpg",
+    "budget": "₹6,000 – ₹15,000",
+    "ideal_for": "Nature Lovers, Boating & Photographers",
+    "overview_text": "The Umngot River in Dawki, Meghalaya, is universally celebrated for having some of the clearest, most transparent natural river waters on the planet. Flowing peacefully between the Jaintia and Khasi hills right to the India-Bangladesh border, looking into the river reveals smooth pebbles and swimming fish several meters below.",
+    "day1_title": "Crystal Clear Boating & Cliff Camping",
+    "day2_title": "Living Root Bridges & Krang Shuri Falls",
+    "highlights": [
+      "Glass-Clear Transparent River Boating",
+      "Kayaking & Snorkeling in Natural Emerald Currents",
+      "Riverside Pebble Beach Camping Under Stars",
+      "Nearby Double Decker Living Root Bridges",
+      "Visit the India-Bangladesh Friendship Border"
+    ]
+  },
+  {
+    "index": 20,
+    "filename": "Uttrakhand-Info.html",
+    "hero_title": "Rishikesh & Haridwar",
+    "duration": "3 Days / 2 Nights",
+    "badge_text": "Uttarakhand • Yoga & Rapids",
+    "hero_desc": "Discover the Yoga Capital of the World, exhilarating whitewater Ganges rafting, and soul-stirring evening Ganga Aarti ceremonies.",
+    "img_hero": "uttrakhand_hero.jpg",
+    "budget": "₹6,000 – ₹16,000",
+    "ideal_for": "Yoga, Adventure Rafting & Spirituality",
+    "overview_text": "Rishikesh, nestled in the Himalayan foothills where the emerald Ganges flows into the plains, is globally revered as the Yoga Capital of the World. From serene meditation ashrams and the historic Beatles Ashram to heart-pumping Grade IV whitewater rafting and bungee jumping, Uttarakhand offers an energizing spiritual and adventure journey.",
+    "day1_title": "Whitewater Rafting & Triveni Ghat Aarti",
+    "day2_title": "Beatles Ashram & Ram Jhula Walk",
+    "highlights": [
+      "Ganges Whitewater Rafting & Cliff Jumping",
+      "Evening Ganga Aarti Ceremony at Triveni Ghat",
+      "Chaurasi Kutia (Historic Beatles Ashram)",
+      "Suspension Bridges of Ram Jhula & Lakshman Jhula",
+      "Yoga & Ayurvedic Wellness Meditation Sessions"
+    ]
+  },
+  {
+    "index": 21,
+    "filename": "VivekanandaRockMemorial-Info.html",
+    "hero_title": "Vivekananda Rock Memorial",
+    "duration": "2 Days / 1 Night",
+    "badge_text": "Tamil Nadu • Three Oceans Confluence",
+    "hero_desc": "Stand at the southernmost tip of India where the Arabian Sea, Bay of Bengal, and Indian Ocean meet in sacred harmony.",
+    "img_hero": "vivekanandarock_hero.jpg",
+    "budget": "₹5,000 – ₹13,000",
+    "ideal_for": "Spirituality, Geography & Coastal Views",
+    "overview_text": "Perched on a monolithic rock 500 meters off the southern tip of India at Kanyakumari, the Vivekananda Rock Memorial was built in 1970 to honor Swami Vivekananda, who meditated on this very rock in 1892. Adjacent stands the colossal 133-foot Thiruvalluvar Statue, standing tall at the meeting point of three great oceans.",
+    "day1_title": "Ferry Ride to Rock Memorial & Thiruvalluvar Statue",
+    "day2_title": "Triveni Sangam Sunrise & Gandhi Memorial",
+    "highlights": [
+      "Ferry Crossing to Vivekananda Rock Memorial",
+      "Colossal 133-Foot Thiruvalluvar Stone Statue",
+      "Unique Triveni Sangam Three-Ocean Confluence",
+      "Simultaneous Sunrise & Sunset Coastal Views",
+      "Dhyana Mandapam Silent Meditation Hall"
+    ]
+  }
+]

@@ -1,0 +1,666 @@
+import json
+import os
+import re
+
+SEO_DATA = {
+    "GoldenTemple-Info.html": {
+        "title": "Golden Temple Amritsar Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Golden Temple tour package. Experience the holy Amrit Sarovar, Langar seva, and Wagah Border with City Info India Travels."
+    },
+    "Jaipur-Info.html": {
+        "title": "Jaipur Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 3 Days / 2 Nights Jaipur tour package. Explore Amer Fort, Hawa Mahal, City Palace, and royal Rajasthani heritage with City Info India Travels."
+    },
+    "Kashmir-Info.html": {
+        "title": "Kashmir Valley Tour Packages & Itinerary | City Info India Travels",
+        "description": "Explore Kashmir with our 5 Days / 4 Nights tour package. Enjoy Dal Lake houseboats, Gulmarg Gondola, and Mughal gardens with City Info India Travels."
+    },
+    "Alleppey-Info.html": {
+        "title": "Alleppey Backwaters Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Alleppey tour package. Cruise Kerala's scenic backwaters on a luxury houseboat with meals and guided village canoe tours."
+    },
+    "Himachal-Info.html": {
+        "title": "Shimla & Manali Tour Packages & Itinerary | City Info India Travels",
+        "description": "Escape on our 6 Days / 5 Nights Himachal tour package. Explore Shimla Ridge, Solang Valley snow sports, and Atal Tunnel with City Info India Travels."
+    },
+    "Jaisalmer-Info.html": {
+        "title": "Jaisalmer Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 3 Days / 2 Nights Jaisalmer tour package. Discover the living Golden Fort, Sam sand dunes camel safaris, and desert campfire camping."
+    },
+    "Udaipur-Info.html": {
+        "title": "Udaipur Tour Packages & Itinerary | City Info India Travels",
+        "description": "Experience royal romance on our 3 Days / 2 Nights Udaipur tour package. Tour City Palace, Lake Pichola boat cruises, and Sajjangarh Monsoon Palace."
+    },
+    "Hampi-Info.html": {
+        "title": "Hampi Ruins Tour Packages & Itinerary | City Info India Travels",
+        "description": "Step back in time with our 3 Days / 2 Nights Hampi tour package. Explore UNESCO Vijayanagara ruins, Vittala stone chariot, and Virupaksha Temple."
+    },
+    "Bikaner-Info.html": {
+        "title": "Bikaner Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Bikaner heritage tour package. Explore Junagarh Fort, red sandstone Lalgarh Palace, and authentic desert food culture."
+    },
+    "CamelSafari-Info.html": {
+        "title": "Thar Desert Camel Safari Tour Packages | City Info India Travels",
+        "description": "Experience our 2 Days / 1 Night Thar Desert camel safari package. Enjoy sunset dune treks, starlit luxury desert camping, and folk music shows."
+    },
+    "ColvaBeach-Info.html": {
+        "title": "Colva Beach Goa Tour Packages & Itinerary | City Info India Travels",
+        "description": "Relax on our 3 Days / 2 Nights Colva Beach Goa tour package. Enjoy white sands, thrilling water sports, Portuguese churches, and Goan dining."
+    },
+    "GwaliorFort-Info.html": {
+        "title": "Gwalior Fort Tour Packages & Itinerary | City Info India Travels",
+        "description": "Explore Gwalior Fort on our 2 Days / 1 Night heritage tour package. Marvel at blue-tiled Man Mandir Palace, rock-cut Jain statues, and light shows."
+    },
+    "Jodhpur-Info.html": {
+        "title": "Jodhpur Blue City Tour Packages & Itinerary | City Info India Travels",
+        "description": "Discover the Blue City on our 2 Days / 1 Night Jodhpur tour package. Visit Jaswant Thada, blue Brahmin alleys, and iconic Umaid Bhawan Palace."
+    },
+    "MehrangarhFort-Info.html": {
+        "title": "Mehrangarh Fort Jodhpur Tour Packages | City Info India Travels",
+        "description": "Book our 1 Day Mehrangarh Fort tour package in Jodhpur. Tour 15th-century cliff-top ramparts, royal palanquin museums, and aerial flying fox zips."
+    },
+    "Mon-Info.html": {
+        "title": "Mon Nagaland Tour Packages & Itinerary | City Info India Travels",
+        "description": "Journey to Nagaland with our 4 Days / 3 Nights Mon tour package. Experience Konyak tribal culture, Morung architecture, and border village Longwa."
+    },
+    "Pushkar-Info.html": {
+        "title": "Pushkar Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Pushkar holy tour package. Visit the sacred Brahma Temple, 52 bathing ghats, Savitri hilltop shrine, and desert dunes."
+    },
+    "SanchiStupa-Info.html": {
+        "title": "Sanchi Stupa Tour Packages & Itinerary | City Info India Travels",
+        "description": "Discover UNESCO Sanchi Stupa on our 1 Day Buddhist heritage tour package. Explore Ashoka's Great Stupa, carved stone torana gates, and museum."
+    },
+    "Twang-Info.html": {
+        "title": "Tawang Monastery Tour Packages & Itinerary | City Info India Travels",
+        "description": "Travel to Arunachal on our 5 Days / 4 Nights Tawang tour package. Cross 13,700 ft Sela Pass to visit India's largest 400-year-old Buddhist gompa."
+    },
+    "UmngotRiver-Info.html": {
+        "title": "Umngot River Dawki Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Dawki tour package. Experience crystal-clear boating on the Umngot River, Meghalaya root bridges, and riverside camping."
+    },
+    "Uttrakhand-Info.html": {
+        "title": "Rishikesh & Haridwar Tour Packages & Itinerary | City Info India Travels",
+        "description": "Join our 3 Days / 2 Nights Uttarakhand tour package. Experience Ganges whitewater rafting in Rishikesh, Beatles Ashram, and evening Ganga Aarti."
+    },
+    "VivekanandaRockMemorial-Info.html": {
+        "title": "Vivekananda Rock Memorial Tour Packages | City Info India Travels",
+        "description": "Visit Kanyakumari on our 2 Days / 1 Night tour package. Ferry to Vivekananda Rock Memorial, Thiruvalluvar Statue, and Triveni Sangam ocean confluence."
+    }
+}
+
+# Read current build_all_21_modern_subpages.py
+builder_file = r'c:\Users\Hp\PycharmProjects\indiatoursite\scripts\build_all_21_modern_subpages.py'
+with open(builder_file, 'r', encoding='utf-8') as f:
+    code = f.read()
+
+# Isolate DESTINATIONS_DATA from current file
+dest_data_match = re.search(r'(DESTINATIONS_DATA\s*=\s*\[[\s\S]*?\])\s*\n\s*TEMPLATE', code)
+if not dest_data_match:
+    raise ValueError("Could not find DESTINATIONS_DATA in builder script")
+dest_data_code = dest_data_match.group(1)
+
+NEW_TEMPLATE = '''TEMPLATE = """<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <!-- Google Tag Manager -->
+    <!-- Replace GTM-XXXXXXX with your actual Google Tag Manager Container ID -->
+    <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
+    new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    }})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{seo_title}</title>
+    <meta name="description" content="{seo_desc}">
+    <link rel="canonical" href="https://cityinfoindiatravels.com/Pages-inside/{filename}">
+    <link rel="icon" href="../img/explore-india-logo.svg" type="image/svg+xml">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cityinfoindiatravels.com/Pages-inside/{filename}">
+    <meta property="og:title" content="{seo_title}">
+    <meta property="og:description" content="{seo_desc}">
+    <meta property="og:image" content="https://cityinfoindiatravels.com/img/{img_hero}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://cityinfoindiatravels.com/Pages-inside/{filename}">
+    <meta name="twitter:title" content="{seo_title}">
+    <meta name="twitter:description" content="{seo_desc}">
+    <meta name="twitter:image" content="https://cityinfoindiatravels.com/img/{img_hero}">
+
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/linearicons.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/modern-custom.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+{json_ld}
+    </script>
+</head>
+<body class="inside-page-body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header Navigation -->
+    <header class="default-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 68" style="height: 44px; width: auto;">
+                        <style>
+                            .brand-primary {{ fill: #0f2952; transition: fill 0.3s ease; }}
+                            .brand-accent {{ fill: #e85d07; }}
+                            .brand-secondary {{ fill: #2c6e49; transition: fill 0.3s ease; }}
+                            body.dark-mode .brand-primary {{ fill: #ffffff !important; }}
+                            body.dark-mode .brand-secondary {{ fill: #8cc084 !important; }}
+                        </style>
+                        <g id="emblem" transform="translate(4, 4)">
+                            <path d="M 6 44 L 17 26 L 24 33 L 33 21 L 42 34 L 50 44 Z" fill="#a5cbdc" fill-opacity="0.4" />
+                            <path d="M 12 44 V 35 H 14 V 32 H 18 V 35 H 20 V 44 H 18 V 37 H 14 V 44 Z" fill="#c88c5c" />
+                            <path d="M 23 44 H 35 V 39 H 23 Z M 27 39 C 27 33, 31 33, 31 39 Z M 29 33 V 31 Z" fill="#e2af66" />
+                            <line x1="29" y1="33" x2="29" y2="31" stroke="#e2af66" stroke-width="1.5" />
+                            <path d="M 22 44 H 23 V 31 H 22 Z M 35 44 H 36 V 31 H 35 Z" fill="#e2af66" />
+                            <path d="M 38 44 L 40 23 H 41 L 43 44 Z" fill="#a25b49" />
+                            <circle cx="43" cy="20" r="3.5" fill="#ffb703" />
+                            <path d="M 10 44 A 22 22 0 1 1 48 38" fill="none" stroke="#0f2952" stroke-width="3" stroke-linecap="round" class="brand-primary" />
+                            <path d="M 22 11 A 22 22 0 0 1 47 22" fill="none" stroke="#e85d07" stroke-width="2" stroke-linecap="round" />
+                            <path d="M 8 32 A 22 22 0 0 0 24 53" fill="none" stroke="#2c6e49" stroke-width="2" stroke-linecap="round" class="brand-secondary" />
+                            <path d="M 14 47 C 22 38, 38 38, 46 47 C 38 56, 22 56, 14 47 Z" fill="#0f2952" class="brand-primary" />
+                        </g>
+                        <g id="brand-text" transform="translate(68, 0)">
+                            <text x="0" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-primary">City Info</text>
+                            <path d="M 18.5 11 C 17 11, 16.2 12.2, 16.2 13.5 C 16.2 15.5, 18.5 18, 18.5 18 C 18.5 18, 20.8 15.5, 20.8 13.5 C 20.8 12.2, 20 11, 18.5 11 Z" fill="#e85d07" />
+                            <circle cx="18.5" cy="13.5" r="0.9" fill="#ffffff" />
+                            <text x="96" y="32" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" class="brand-accent">India</text>
+                            <text x="0" y="47" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="700" class="brand-secondary" letter-spacing="6.5">TRAVELS</text>
+                        </g>
+                    </svg>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="lnr lnr-menu"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <li class="nav-item custom-dropdown">
+                            <a class="nav-link active" href="../index.html#middle">Destinations <i class="fa fa-angle-down"></i></a>
+                            <div class="custom-dropdown-menu">
+                                <a href="GoldenTemple-Info.html">✨ Golden Temple (Amritsar)</a>
+                                <a href="Jaipur-Info.html">🏰 Jaipur (Pink City)</a>
+                                <a href="Kashmir-Info.html">❄️ Kashmir (Paradise)</a>
+                                <a href="Alleppey-Info.html">🚣 Alleppey (Backwaters)</a>
+                                <a href="Himachal-Info.html">🏔️ Himachal (Manali)</a>
+                                <a href="Jaisalmer-Info.html">🐪 Jaisalmer (Desert)</a>
+                                <a href="Udaipur-Info.html">👑 Udaipur (Lakes)</a>
+                                <a href="Hampi-Info.html">🏛️ Hampi (UNESCO Ruins)</a>
+                                <a href="MehrangarhFort-Info.html">🚩 Mehrangarh Fort (Jodhpur)</a>
+                                <a href="Uttrakhand-Info.html">🕉️ Uttarakhand (Rishikesh)</a>
+                                <a href="Twang-Info.html">🌄 Tawang (Monastery)</a>
+                                <a href="ColvaBeach-Info.html">🏖️ Colva Beach (Goa)</a>
+                                <div class="dropdown-divider" style="height:1px; background:var(--card-border); margin:6px 0;"></div>
+                                <a href="../index.html#middle" style="font-weight:700; color:var(--accent-primary) !important;">🗺️ View All Destinations &rarr;</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Travel Stories</a></li>
+                        <li class="nav-item"><a class="nav-link" href="About.html">Our Motto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Recent-Announcement.html">Announcements</a></li>
+                        <li class="nav-item">
+                            <a class="wa-nav-btn wa-dynamic-btn" href="https://wa.me/918700140135" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+                        </li>
+                        <li class="nav-item theme-toggle-li">
+                            <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Dark Mode">
+                                <i class="fa fa-moon-o moon-icon"></i>
+                                <i class="fa fa-sun-o sun-icon"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Subpage Hero Banner -->
+    <section class="subpage-hero" style="background-image: url('../img/{img_hero}');">
+        <div class="container">
+            <span class="subpage-badge"><i class="fa fa-sun-o"></i> {badge_text}</span>
+            <h1>{hero_title}</h1>
+            <p class="lead">{hero_desc}</p>
+            <button class="primary-btn openQueryModal" id="openQueryModal" type="button"><i class="fa fa-envelope-o" style="margin-right: 6px;"></i> Send Query &bull; Plan {hero_title} Tour</button>
+            <a href="https://wa.me/918700140135" class="wa-hero-btn wa-dynamic-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i> WhatsApp Us</a>
+        </div>
+    </section>
+
+    <!-- Quick Stats Bar (Budget, Duration, Best Time, Ideal For) -->
+    <div class="container quick-stats-container">
+        <div class="quick-stats-card">
+            <div class="row">
+                <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+                    <div class="stat-pill">
+                        <div class="stat-icon"><i class="fa fa-clock-o"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Duration</span>
+                            <span class="stat-val">{duration}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+                    <div class="stat-pill">
+                        <div class="stat-icon"><i class="fa fa-calendar"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Best Time</span>
+                            <span class="stat-val">{best_time}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6 mb-3 mb-lg-0">
+                    <div class="stat-pill">
+                        <div class="stat-icon"><i class="fa fa-tag"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Budget</span>
+                            <span class="stat-val">{budget}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="stat-pill">
+                        <div class="stat-icon"><i class="fa fa-heart"></i></div>
+                        <div class="stat-info">
+                            <span class="stat-label">Ideal For</span>
+                            <span class="stat-val">{ideal_for}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Overview Card -->
+                    <div class="inside-card">
+                        <div class="inside-card-header">
+                            <h3 class="inside-card-title"><i class="fa fa-university"></i> Overview</h3>
+                        </div>
+                        <p style="font-size: 1.05rem; line-height: 1.8; color: var(--text-secondary);">
+                            {overview_text}
+                        </p>
+                    </div>
+
+                    <!-- Curated Multi-Day Itinerary Timeline -->
+                    <div class="inside-card">
+                        <div class="inside-card-header">
+                            <h3 class="inside-card-title"><i class="fa fa-list-alt"></i> Typical Itinerary</h3>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-badge">Day 1</span>
+                                <h4 class="timeline-title">{day1_title}</h4>
+                                <p class="timeline-desc">{day1_desc}</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-badge">Day 2</span>
+                                <h4 class="timeline-title">{day2_title}</h4>
+                                <p class="timeline-desc">{day2_desc}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Highlights / Experiences -->
+                    <div class="inside-card">
+                        <div class="inside-card-header">
+                            <h3 class="inside-card-title"><i class="fa fa-star"></i> Must-Try Experiences</h3>
+                        </div>
+                        <div class="highlights-list">
+                            {highlights_html}
+                        </div>
+                    </div>
+
+                    <!-- Logistics (How to Reach) -->
+                    <div class="inside-card">
+                        <div class="inside-card-header">
+                            <h3 class="inside-card-title"><i class="fa fa-plane"></i> Logistics & Travel Info</h3>
+                        </div>
+                        <div class="logistics-grid">
+                            <div class="logistics-box">
+                                <div class="logistics-icon"><i class="fa fa-plane"></i></div>
+                                <h5>By Air</h5>
+                                <p>{air_logistics}</p>
+                            </div>
+                            <div class="logistics-box">
+                                <div class="logistics-icon"><i class="fa fa-train"></i></div>
+                                <h5>By Train</h5>
+                                <p>{train_logistics}</p>
+                            </div>
+                            <div class="logistics-box">
+                                <div class="logistics-icon"><i class="fa fa-car"></i></div>
+                                <h5>By Road</h5>
+                                <p>{road_logistics}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar CTA -->
+                <div class="col-lg-4">
+                    <div class="inside-card text-center sticky-top" style="top: 100px;">
+                        <h4 style="font-weight: 800; margin-bottom: 12px; color: var(--text-primary);">Book {hero_title}</h4>
+                        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px;">Hotels, premium transport, and authorized local guide included.</p>
+                        <a href="https://wa.me/918700140135" class="whatsapp-btn w-100 mb-3 wa-dynamic-btn" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i> Chat on WhatsApp &bull; Instant Quote</a>
+                        <button class="primary-btn w-100 openQueryModal mb-3" id="openQueryModal2" type="button"><i class="fa fa-envelope-o" style="margin-right: 6px;"></i> Send Query / Request Quote</button>
+                        <a href="tel:08700140135" class="btn btn-outline-secondary w-100 font-weight-bold" style="border-radius: 8px;"><i class="fa fa-phone"></i> Call +91 87001 40135</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curated Visual Gallery Section -->
+            <div class="mt-4">
+                <h3 class="mb-4 font-weight-bold text-center"><i class="fa fa-camera" style="color: var(--accent-primary);"></i> Visual Gallery</h3>
+                <div class="inside-gallery-grid">
+                    <div class="inside-gallery-item">
+                        <img src="../img/{img_gal1}" alt="{cap1}" loading="lazy">
+                        <div class="inside-gallery-overlay"><span class="inside-gallery-title">{cap1}</span></div>
+                    </div>
+                    <div class="inside-gallery-item">
+                        <img src="../img/{img_gal2}" alt="{cap2}" loading="lazy">
+                        <div class="inside-gallery-overlay"><span class="inside-gallery-title">{cap2}</span></div>
+                    </div>
+                    <div class="inside-gallery-item">
+                        <img src="../img/{img_gal3}" alt="{cap3}" loading="lazy">
+                        <div class="inside-gallery-overlay"><span class="inside-gallery-title">{cap3}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Universal Query Modal -->
+    <div id="queryModal">
+        <div class="modal-content-custom">
+            <button id="closeQueryModal" type="button" aria-label="Close Modal">&times;</button>
+            <h4 style="font-weight: 700; margin-bottom: 8px;">Plan Your Trip</h4>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">Tell us your requirements for {hero_title} and we'll craft the perfect package.</p>
+            <form id="contact" action="https://formspree.io/f/xzzgaydr" method="POST">
+                <input name="email" type="email" placeholder="Your Email Address (for reply)" required style="width:100%; margin-bottom:12px; padding:12px; border-radius:8px; border:1px solid var(--card-border); background:var(--bg-primary); color:var(--text-primary); box-sizing:border-box;">
+                <textarea name="message" placeholder="Tell us your travel dates, group size & customized requests..." required style="width:100%; min-height:95px; margin-bottom:16px; padding:12px; border-radius:8px; border:1px solid var(--card-border); background:var(--bg-primary); color:var(--text-primary); box-sizing:border-box;"></textarea>
+                <button class="primary-btn w-100" id="submitQueryBtn" type="submit" style="cursor: pointer;"><i class="fa fa-paper-plane" style="margin-right: 6px;"></i> Send Query</button>
+            </form>
+            <div id="queryMsg" style="margin-top:14px; color:#16a34a; font-weight:600; display:none; text-align:center; padding:8px; background:rgba(22,163,74,0.1); border-radius:6px;">Thank you! Your query has been submitted successfully. We will get back to you shortly.</div>
+        </div>
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-sm-6 mb-4 mb-lg-0">
+                    <div class="single-footer-widget">
+                        <h6>About City Info India Travels</h6>
+                        <p>Approved by the Ministry of Tourism, Govt. of India. We craft unforgettable, authentic Indian travel experiences with 24/7 dedicated support and expert local drivers.</p>
+                        <p class="footer-text" style="margin-top: 16px;">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | City Info India Travels</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-lg-0">
+                    <div class="single-footer-widget">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-nav">
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="About.html">About Us</a></li>
+                            <li><a href="blog.html">Travel Stories</a></li>
+                            <li><a href="Recent-Announcement.html">Announcements</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Contact Us</h6>
+                        <p><i class="fa fa-map-marker" style="color:var(--accent-primary); margin-right:8px;"></i>79, Scindia House, Connaught Place, Janpath, New Delhi</p>
+                        <p><i class="fa fa-phone" style="color:var(--accent-primary); margin-right:8px;"></i> +91 87001 40135</p>
+                        <p><i class="fa fa-whatsapp" style="color:var(--wa-green, #25D366); margin-right:8px;"></i> <a href="https://wa.me/918700140135" class="wa-dynamic-btn" target="_blank" rel="noopener noreferrer" style="color:inherit; font-weight:600;">+91 87001 40135 (WhatsApp)</a></p>
+                        <p><i class="fa fa-envelope" style="color:var(--accent-primary); margin-right:8px;"></i> cityindiainfotravels@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script src="../js/modern-custom.js" defer></script>
+
+    <!-- Reliable Direct Query Modal Script -->
+    <script>
+    (function () {{
+        var modal = document.getElementById('queryModal');
+        var closeBtn = document.getElementById('closeQueryModal');
+        var form = document.getElementById('contact');
+        var msg = document.getElementById('queryMsg');
+
+        function openModal(e) {{
+            if (e) e.preventDefault();
+            if (modal) modal.style.display = 'flex';
+        }}
+
+        function closeModal() {{
+            if (modal) {{
+                modal.style.display = 'none';
+                if (form) form.reset();
+                if (msg) msg.style.display = 'none';
+            }}
+        }}
+
+        // Attach listeners to all query buttons
+        document.querySelectorAll('#openQueryModal, #openQueryModal2, .openQueryModal').forEach(function(btn) {{
+            btn.addEventListener('click', openModal);
+        }});
+
+        if (closeBtn) {{
+            closeBtn.addEventListener('click', closeModal);
+        }}
+
+        window.addEventListener('click', function (e) {{
+            if (e.target === modal) {{
+                closeModal();
+            }}
+        }});
+
+        if (form) {{
+            form.dataset.customAjax = 'true';
+            form.addEventListener('submit', function (e) {{
+                e.preventDefault();
+                var emailInput = form.querySelector('input[name="email"]');
+                var msgInput = form.querySelector('textarea[name="message"]');
+                var submitBtn = document.getElementById('submitQueryBtn');
+
+                if (!emailInput || !emailInput.value.trim() || !msgInput || !msgInput.value.trim()) {{
+                    alert('Please provide both your email and query requirements.');
+                    return;
+                }}
+
+                var originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Query';
+                if (submitBtn) {{
+                    submitBtn.disabled = true;
+                    submitBtn.innerHTML = '<i class="fa fa-circle-o-notch fa-spin"></i> Sending Query...';
+                }}
+
+                var formData = new FormData(form);
+                fetch(form.action, {{
+                    method: 'POST',
+                    body: formData,
+                    headers: {{ 'Accept': 'application/json' }}
+                }}).then(function () {{
+                    if (msg) {{
+                        msg.style.display = 'block';
+                        msg.textContent = "Thank you! Your query has been submitted successfully. We will get back to you shortly.";
+                    }}
+                    form.reset();
+                    // Lead Conversion Hook: Plan Your Trip Form Submission
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({{
+                        'event': 'submit_lead_form',
+                        'form_name': 'Plan Your Trip Modal'
+                    }});
+                }}).catch(function () {{
+                    if (msg) {{
+                        msg.style.display = 'block';
+                        msg.textContent = "Thank you! Your query has been received. Our team will contact you soon.";
+                    }}
+                    form.reset();
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({{
+                        'event': 'submit_lead_form',
+                        'form_name': 'Plan Your Trip Modal'
+                    }});
+                }}).finally(function () {{
+                    if (submitBtn) {{
+                        submitBtn.disabled = false;
+                        submitBtn.innerHTML = originalBtnText;
+                    }}
+                }});
+            }});
+        }}
+    }})();
+    </script>
+</body>
+</html>"""'''
+
+BUILD_ALL_FUNCTION = '''def build_all():
+    for dest in DESTINATIONS_DATA:
+        hl_html = ""
+        for hl in dest['highlights']:
+            hl_html += f'<div class="highlight-item"><i class="fa fa-check-circle"></i> {hl}</div>\\n'
+
+        fn = dest['filename']
+        seo = SEO_DATA[fn]
+        seo_title = seo['title']
+        seo_desc = seo['description']
+
+        json_ld_dict = {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "TouristTrip",
+                    "@id": f"https://cityinfoindiatravels.com/Pages-inside/{fn}#trip",
+                    "name": seo_title,
+                    "description": seo_desc,
+                    "touristType": dest["ideal_for"],
+                    "provider": {
+                        "@type": "TravelAgency",
+                        "name": "City Info India Travels",
+                        "url": "https://cityinfoindiatravels.com",
+                        "telephone": "+918700140135"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "INR",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "priceCurrency": "INR",
+                            "description": dest["budget"]
+                        },
+                        "availability": "https://schema.org/InStock"
+                    },
+                    "itinerary": {
+                        "@type": "ItemList",
+                        "numberOfItems": 2,
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": dest["day1_title"],
+                                "description": dest["day1_desc"]
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": dest["day2_title"],
+                                "description": dest["day2_desc"]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "TouristDestination",
+                    "@id": f"https://cityinfoindiatravels.com/Pages-inside/{fn}#destination",
+                    "name": dest["hero_title"],
+                    "description": dest["hero_desc"],
+                    "image": f"https://cityinfoindiatravels.com/img/{dest['img_hero']}",
+                    "touristType": dest["ideal_for"]
+                }
+            ]
+        }
+        json_ld = json.dumps(json_ld_dict, indent=4, ensure_ascii=False)
+
+        html = TEMPLATE.format(
+            filename=fn,
+            seo_title=seo_title,
+            seo_desc=seo_desc,
+            json_ld=json_ld,
+            page_title=dest['page_title'],
+            hero_desc=dest['hero_desc'],
+            img_hero=dest['img_hero'],
+            badge_text=dest['badge_text'],
+            hero_title=dest['hero_title'],
+            duration=dest['duration'],
+            best_time=dest['best_time'],
+            budget=dest['budget'],
+            ideal_for=dest['ideal_for'],
+            overview_text=dest['overview_text'],
+            day1_title=dest['day1_title'],
+            day1_desc=dest['day1_desc'],
+            day2_title=dest['day2_title'],
+            day2_desc=dest['day2_desc'],
+            highlights_html=hl_html,
+            air_logistics=dest['air_logistics'],
+            train_logistics=dest['train_logistics'],
+            road_logistics=dest['road_logistics'],
+            img_gal1=dest['img_gal1'],
+            img_gal2=dest['img_gal2'],
+            img_gal3=dest['img_gal3'],
+            cap1=dest['cap1'],
+            cap2=dest['cap2'],
+            cap3=dest['cap3']
+        )
+
+        out_path = os.path.join(PAGES_DIR, dest['filename'])
+        with open(out_path, 'w', encoding='utf-8') as f:
+            f.write(html)
+        print(f"Generated: {dest['filename']}")
+
+    print(f"Successfully generated all {len(DESTINATIONS_DATA)} subpages with GTM, SEO, Open Graph & JSON-LD!")'''
+
+new_builder_code = f"""import os
+import json
+
+WORKSPACE = r'c:\\Users\\Hp\\PycharmProjects\\indiatoursite'
+PAGES_DIR = os.path.join(WORKSPACE, 'Pages-inside')
+
+{dest_data_code}
+
+SEO_DATA = {json.dumps(SEO_DATA, indent=4, ensure_ascii=False)}
+
+{NEW_TEMPLATE}
+
+{BUILD_ALL_FUNCTION}
+
+if __name__ == '__main__':
+    build_all()
+"""
+
+with open(builder_file, 'w', encoding='utf-8') as f:
+    f.write(new_builder_code)
+
+print("Updated build_all_21_modern_subpages.py successfully!")
