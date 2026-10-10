@@ -311,6 +311,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         body: formData,
                         headers: { 'Accept': 'application/json' }
                     }).then(() => {
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'submit_lead_form', {
+                                'form_name': 'Chat Callback Request',
+                                'page_location': window.location.pathname,
+                                'event_category': 'Leads',
+                                'event_label': 'Inquiry Form Submitted'
+                            });
+                        }
                         window.dataLayer = window.dataLayer || [];
                         window.dataLayer.push({
                             'event': 'submit_lead_form',
@@ -389,6 +397,14 @@ document.addEventListener('DOMContentLoaded', function () {
                         body: formData,
                         headers: { 'Accept': 'application/json' }
                     }).then(() => {
+                        if (typeof gtag === 'function') {
+                            gtag('event', 'submit_lead_form', {
+                                'form_name': 'Plan Your Trip Wizard',
+                                'page_location': window.location.pathname,
+                                'event_category': 'Leads',
+                                'event_label': 'Inquiry Form Submitted'
+                            });
+                        }
                         window.dataLayer = window.dataLayer || [];
                         window.dataLayer.push({
                             'event': 'submit_lead_form',
@@ -744,7 +760,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 form.reset();
 
-                // GTM DataLayer Push: submit_lead_form
+                // Direct GA4 & GTM Event: submit_lead_form
+                if (typeof gtag === 'function') {
+                    gtag('event', 'submit_lead_form', {
+                        'form_name': 'Plan Your Trip Modal',
+                        'page_location': window.location.pathname,
+                        'event_category': 'Leads',
+                        'event_label': 'Inquiry Form Submitted'
+                    });
+                }
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
                     'event': 'submit_lead_form',
@@ -757,6 +781,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 form.reset();
 
+                if (typeof gtag === 'function') {
+                    gtag('event', 'submit_lead_form', {
+                        'form_name': 'Plan Your Trip Modal',
+                        'page_location': window.location.pathname,
+                        'event_category': 'Leads',
+                        'event_label': 'Inquiry Form Submitted'
+                    });
+                }
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({
                     'event': 'submit_lead_form',
@@ -1021,7 +1053,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function trackWhatsAppClick(btn) {
         if (!btn) return;
-        window.dataLayer = window.dataLayer || [];
 
         // 1. Determine click location
         let clickLocation = 'Package Card';
@@ -1039,35 +1070,28 @@ document.addEventListener('DOMContentLoaded', function () {
             clickLocation = 'Package Card';
         }
 
-        // 2. Determine destination context
-        let destContext = '';
-        const card = btn.closest('.single-portfolio, .portfolio-card, .item');
-        if (card) {
-            destContext = card.querySelector('h4, h5, .p-inner h4')?.textContent?.trim() || '';
-        }
-        if (!destContext) {
-            const subHeroTitle = document.querySelector('.subpage-hero h1');
-            if (subHeroTitle) {
-                destContext = subHeroTitle.textContent.trim();
-            }
-        }
-        if (!destContext) {
-            destContext = document.title.split('-')[0].split('|')[0].trim();
-        }
-        if (!destContext) {
-            destContext = 'Explore India';
+        // 2. Direct GA4 event tracking
+        if (typeof gtag === 'function') {
+            gtag('event', 'generate_lead_whatsapp', {
+                'destination_context': document.title || 'Unknown Destination',
+                'link_url': btn.href || 'https://wa.me/918700140135',
+                'event_category': 'Engagement',
+                'event_label': 'WhatsApp Inquiry'
+            });
         }
 
+        // 3. GTM DataLayer push
+        window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             'event': 'generate_lead_whatsapp',
-            'destination_context': destContext,
+            'destination_context': document.title || 'Unknown Destination',
             'click_location': clickLocation
         });
     }
 
     // Global event delegation for all WhatsApp outbound links
     document.addEventListener('click', function (e) {
-        const waAnchor = e.target.closest('a[href*="wa.me"], .whatsapp-btn, .wa-hero-btn, .wa-card-btn, .wa-nav-btn, .wa-popup-action-btn, #waPopupActionBtn');
+        const waAnchor = e.target.closest('a[href*="wa.me/918700140135"], a[href*="wa.me"], .whatsapp-btn, .wa-hero-btn, .wa-card-btn, .wa-nav-btn, .wa-popup-action-btn, #waPopupActionBtn');
         if (waAnchor) {
             trackWhatsAppClick(waAnchor);
         }

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QWM7WPBCMF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QWM7WPBCMF');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -463,6 +474,14 @@
                     }
                     form.reset();
                     // Lead Conversion Hook: Plan Your Trip Form Submission
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'submit_lead_form', {
+                            'form_name': 'Plan Your Trip Modal',
+                            'page_location': window.location.pathname,
+                            'event_category': 'Leads',
+                            'event_label': 'Inquiry Form Submitted'
+                        });
+                    }
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({
                         'event': 'submit_lead_form',
@@ -474,6 +493,14 @@
                         msg.textContent = "Thank you! Your query has been received. Our team will contact you soon.";
                     }
                     form.reset();
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'submit_lead_form', {
+                            'form_name': 'Plan Your Trip Modal',
+                            'page_location': window.location.pathname,
+                            'event_category': 'Leads',
+                            'event_label': 'Inquiry Form Submitted'
+                        });
+                    }
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({
                         'event': 'submit_lead_form',
