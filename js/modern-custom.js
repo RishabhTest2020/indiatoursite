@@ -311,6 +311,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         body: formData,
                         headers: { 'Accept': 'application/json' }
                     }).then(() => {
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            'event': 'submit_lead_form',
+                            'form_name': 'Chat Callback Request'
+                        });
                         form.innerHTML = '<span style="color:#10b981;font-weight:600;"><i class="fa fa-check"></i> Request Received! We will call you shortly.</span>';
                         setTimeout(() => {
                             addMessage('bot', "Is there anything else I can assist you with today?");
@@ -384,6 +389,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         body: formData,
                         headers: { 'Accept': 'application/json' }
                     }).then(() => {
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({
+                            'event': 'submit_lead_form',
+                            'form_name': 'Plan Your Trip Wizard'
+                        });
                         form.innerHTML = '<span style="color:#10b981;font-weight:600;"><i class="fa fa-check"></i> Inquiry sent! We have emailed you your trip planner confirmation.</span>';
                         setTimeout(() => {
                             addMessage('bot', "Our local guide will reach out to you at " + email + " to finalize your trip schedule!");
@@ -696,6 +706,71 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Unified "Plan Your Trip" inquiry form submission handler with GTM lead tracking
+    const contactForm = document.getElementById('contact');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            // If already handled by subpage inline script, avoid duplicate execution
+            if (contactForm.dataset.customAjax === 'true') {
+                return;
+            }
+            e.preventDefault();
+            const form = this;
+            const emailInput = form.querySelector('input[name="email"]');
+            const msgInput = form.querySelector('textarea[name="message"]');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const msg = document.getElementById('queryMsg');
+
+            if (!emailInput || !emailInput.value.trim() || !msgInput || !msgInput.value.trim()) {
+                alert('Please provide both your email and query requirements.');
+                return;
+            }
+
+            const originalBtnText = submitBtn ? submitBtn.innerHTML : 'Send Custom Enquiry';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa fa-circle-o-notch fa-spin"></i> Sending Enquiry...';
+            }
+
+            const formData = new FormData(form);
+            fetch(form.action || 'https://formspree.io/f/xzzgaydr', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            }).then(function () {
+                if (msg) {
+                    msg.style.display = 'block';
+                    msg.textContent = "Thank you! Your query has been submitted successfully. We will get back to you shortly.";
+                }
+                form.reset();
+
+                // GTM DataLayer Push: submit_lead_form
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'submit_lead_form',
+                    'form_name': 'Plan Your Trip Modal'
+                });
+            }).catch(function () {
+                if (msg) {
+                    msg.style.display = 'block';
+                    msg.textContent = "Thank you! Your query has been received. Our team will contact you soon.";
+                }
+                form.reset();
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'submit_lead_form',
+                    'form_name': 'Plan Your Trip Modal'
+                });
+            }).finally(function () {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                }
+            });
+        });
+    }
+
     // Lightbox modal logic
     document.querySelectorAll('.inside-gallery-item').forEach(item => {
         item.addEventListener('click', function () {
@@ -938,6 +1013,65 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+
+    /* ==========================================================================
+       GTM CONVERSION TRACKING: OUTBOUND WHATSAPP CLICKS
+       ========================================================================== */
+    window.dataLayer = window.dataLayer || [];
+
+    function trackWhatsAppClick(btn) {
+        if (!btn) return;
+        window.dataLayer = window.dataLayer || [];
+
+        // 1. Determine click location
+        let clickLocation = 'Package Card';
+        if (btn.closest('header, nav, .default-header, .navbar, .wa-nav-btn')) {
+            clickLocation = 'Navbar';
+        } else if (btn.closest('footer, .footer-area')) {
+            clickLocation = 'Footer';
+        } else if (btn.closest('.subpage-hero, .banner-area, .wa-hero-btn')) {
+            clickLocation = 'Hero Banner';
+        } else if (btn.closest('#waFloatingWidget, .wa-floating-container, .wa-popup-card, .wa-floating-fab, .wa-popup-action-btn')) {
+            clickLocation = 'Floating Widget';
+        } else if (btn.closest('#queryModal, .modal-content-custom')) {
+            clickLocation = 'Modal';
+        } else if (btn.closest('.single-portfolio, .portfolio-card, .item, .quick-stats-card, .inside-card, .wa-card-btn, .whatsapp-btn')) {
+            clickLocation = 'Package Card';
+        }
+
+        // 2. Determine destination context
+        let destContext = '';
+        const card = btn.closest('.single-portfolio, .portfolio-card, .item');
+        if (card) {
+            destContext = card.querySelector('h4, h5, .p-inner h4')?.textContent?.trim() || '';
+        }
+        if (!destContext) {
+            const subHeroTitle = document.querySelector('.subpage-hero h1');
+            if (subHeroTitle) {
+                destContext = subHeroTitle.textContent.trim();
+            }
+        }
+        if (!destContext) {
+            destContext = document.title.split('-')[0].split('|')[0].trim();
+        }
+        if (!destContext) {
+            destContext = 'Explore India';
+        }
+
+        window.dataLayer.push({
+            'event': 'generate_lead_whatsapp',
+            'destination_context': destContext,
+            'click_location': clickLocation
+        });
+    }
+
+    // Global event delegation for all WhatsApp outbound links
+    document.addEventListener('click', function (e) {
+        const waAnchor = e.target.closest('a[href*="wa.me"], .whatsapp-btn, .wa-hero-btn, .wa-card-btn, .wa-nav-btn, .wa-popup-action-btn, #waPopupActionBtn');
+        if (waAnchor) {
+            trackWhatsAppClick(waAnchor);
+        }
+    });
 
     // Initialize WhatsApp System
     initFloatingWhatsAppWidget();

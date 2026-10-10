@@ -700,22 +700,143 @@ DESTINATIONS_DATA = [
     }
 ]
 
+SEO_DATA = {
+    "GoldenTemple-Info.html": {
+        "title": "Golden Temple Amritsar Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Golden Temple tour package. Experience the holy Amrit Sarovar, Langar seva, and Wagah Border with City Info India Travels."
+    },
+    "Jaipur-Info.html": {
+        "title": "Jaipur Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 3 Days / 2 Nights Jaipur tour package. Explore Amer Fort, Hawa Mahal, City Palace, and royal Rajasthani heritage with City Info India Travels."
+    },
+    "Kashmir-Info.html": {
+        "title": "Kashmir Valley Tour Packages & Itinerary | City Info India Travels",
+        "description": "Explore Kashmir with our 5 Days / 4 Nights tour package. Enjoy Dal Lake houseboats, Gulmarg Gondola, and Mughal gardens with City Info India Travels."
+    },
+    "Alleppey-Info.html": {
+        "title": "Alleppey Backwaters Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Alleppey tour package. Cruise Kerala's scenic backwaters on a luxury houseboat with meals and guided village canoe tours."
+    },
+    "Himachal-Info.html": {
+        "title": "Shimla & Manali Tour Packages & Itinerary | City Info India Travels",
+        "description": "Escape on our 6 Days / 5 Nights Himachal tour package. Explore Shimla Ridge, Solang Valley snow sports, and Atal Tunnel with City Info India Travels."
+    },
+    "Jaisalmer-Info.html": {
+        "title": "Jaisalmer Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 3 Days / 2 Nights Jaisalmer tour package. Discover the living Golden Fort, Sam sand dunes camel safaris, and desert campfire camping."
+    },
+    "Udaipur-Info.html": {
+        "title": "Udaipur Tour Packages & Itinerary | City Info India Travels",
+        "description": "Experience royal romance on our 3 Days / 2 Nights Udaipur tour package. Tour City Palace, Lake Pichola boat cruises, and Sajjangarh Monsoon Palace."
+    },
+    "Hampi-Info.html": {
+        "title": "Hampi Ruins Tour Packages & Itinerary | City Info India Travels",
+        "description": "Step back in time with our 3 Days / 2 Nights Hampi tour package. Explore UNESCO Vijayanagara ruins, Vittala stone chariot, and Virupaksha Temple."
+    },
+    "Bikaner-Info.html": {
+        "title": "Bikaner Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Bikaner heritage tour package. Explore Junagarh Fort, red sandstone Lalgarh Palace, and authentic desert food culture."
+    },
+    "CamelSafari-Info.html": {
+        "title": "Thar Desert Camel Safari Tour Packages | City Info India Travels",
+        "description": "Experience our 2 Days / 1 Night Thar Desert camel safari package. Enjoy sunset dune treks, starlit luxury desert camping, and folk music shows."
+    },
+    "ColvaBeach-Info.html": {
+        "title": "Colva Beach Goa Tour Packages & Itinerary | City Info India Travels",
+        "description": "Relax on our 3 Days / 2 Nights Colva Beach Goa tour package. Enjoy white sands, thrilling water sports, Portuguese churches, and Goan dining."
+    },
+    "GwaliorFort-Info.html": {
+        "title": "Gwalior Fort Tour Packages & Itinerary | City Info India Travels",
+        "description": "Explore Gwalior Fort on our 2 Days / 1 Night heritage tour package. Marvel at blue-tiled Man Mandir Palace, rock-cut Jain statues, and light shows."
+    },
+    "Jodhpur-Info.html": {
+        "title": "Jodhpur Blue City Tour Packages & Itinerary | City Info India Travels",
+        "description": "Discover the Blue City on our 2 Days / 1 Night Jodhpur tour package. Visit Jaswant Thada, blue Brahmin alleys, and iconic Umaid Bhawan Palace."
+    },
+    "MehrangarhFort-Info.html": {
+        "title": "Mehrangarh Fort Jodhpur Tour Packages | City Info India Travels",
+        "description": "Book our 1 Day Mehrangarh Fort tour package in Jodhpur. Tour 15th-century cliff-top ramparts, royal palanquin museums, and aerial flying fox zips."
+    },
+    "Mon-Info.html": {
+        "title": "Mon Nagaland Tour Packages & Itinerary | City Info India Travels",
+        "description": "Journey to Nagaland with our 4 Days / 3 Nights Mon tour package. Experience Konyak tribal culture, Morung architecture, and border village Longwa."
+    },
+    "Pushkar-Info.html": {
+        "title": "Pushkar Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Pushkar holy tour package. Visit the sacred Brahma Temple, 52 bathing ghats, Savitri hilltop shrine, and desert dunes."
+    },
+    "SanchiStupa-Info.html": {
+        "title": "Sanchi Stupa Tour Packages & Itinerary | City Info India Travels",
+        "description": "Discover UNESCO Sanchi Stupa on our 1 Day Buddhist heritage tour package. Explore Ashoka's Great Stupa, carved stone torana gates, and museum."
+    },
+    "Twang-Info.html": {
+        "title": "Tawang Monastery Tour Packages & Itinerary | City Info India Travels",
+        "description": "Travel to Arunachal on our 5 Days / 4 Nights Tawang tour package. Cross 13,700 ft Sela Pass to visit India's largest 400-year-old Buddhist gompa."
+    },
+    "UmngotRiver-Info.html": {
+        "title": "Umngot River Dawki Tour Packages & Itinerary | City Info India Travels",
+        "description": "Book our 2 Days / 1 Night Dawki tour package. Experience crystal-clear boating on the Umngot River, Meghalaya root bridges, and riverside camping."
+    },
+    "Uttrakhand-Info.html": {
+        "title": "Rishikesh & Haridwar Tour Packages & Itinerary | City Info India Travels",
+        "description": "Join our 3 Days / 2 Nights Uttarakhand tour package. Experience Ganges whitewater rafting in Rishikesh, Beatles Ashram, and evening Ganga Aarti."
+    },
+    "VivekanandaRockMemorial-Info.html": {
+        "title": "Vivekananda Rock Memorial Tour Packages | City Info India Travels",
+        "description": "Visit Kanyakumari on our 2 Days / 1 Night tour package. Ferry to Vivekananda Rock Memorial, Thiruvalluvar Statue, and Triveni Sangam ocean confluence."
+    }
+}
+
 TEMPLATE = """<!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){{w[l]=w[l]||[];w[l].push({{'gtm.start':
+    new Date().getTime(),event:'gtm.js'}});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    }})(window,document,'script','dataLayer','GTM-NR4N55ZR');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{page_title} | Explore India</title>
-    <meta name="description" content="{hero_desc}">
+    <title>{seo_title}</title>
+    <meta name="description" content="{seo_desc}">
+    <link rel="canonical" href="https://cityinfoindiatravels.com/Pages-inside/{filename}">
     <link rel="icon" href="../img/explore-india-logo.svg" type="image/svg+xml">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cityinfoindiatravels.com/Pages-inside/{filename}">
+    <meta property="og:title" content="{seo_title}">
+    <meta property="og:description" content="{seo_desc}">
+    <meta property="og:image" content="https://cityinfoindiatravels.com/img/{img_hero}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://cityinfoindiatravels.com/Pages-inside/{filename}">
+    <meta name="twitter:title" content="{seo_title}">
+    <meta name="twitter:description" content="{seo_desc}">
+    <meta name="twitter:image" content="https://cityinfoindiatravels.com/img/{img_hero}">
+
+    <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/linearicons.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/modern-custom.css">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+{json_ld}
+    </script>
 </head>
 <body class="inside-page-body">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NR4N55ZR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header Navigation -->
     <header class="default-header">
@@ -780,6 +901,9 @@ TEMPLATE = """<!DOCTYPE html>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Travel Stories</a></li>
                         <li class="nav-item"><a class="nav-link" href="About.html">Our Motto</a></li>
                         <li class="nav-item"><a class="nav-link" href="Recent-Announcement.html">Announcements</a></li>
+                        <li class="nav-item">
+                            <a class="wa-nav-btn wa-dynamic-btn" href="https://wa.me/918700140135" target="_blank" rel="noopener noreferrer"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+                        </li>
                         <li class="nav-item theme-toggle-li">
                             <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="Toggle Dark Mode">
                                 <i class="fa fa-moon-o moon-icon"></i>
@@ -933,15 +1057,15 @@ TEMPLATE = """<!DOCTYPE html>
                 <h3 class="mb-4 font-weight-bold text-center"><i class="fa fa-camera" style="color: var(--accent-primary);"></i> Visual Gallery</h3>
                 <div class="inside-gallery-grid">
                     <div class="inside-gallery-item">
-                        <img src="../img/{img_gal1}" alt="{cap1}">
+                        <img src="../img/{img_gal1}" alt="{cap1}" loading="lazy">
                         <div class="inside-gallery-overlay"><span class="inside-gallery-title">{cap1}</span></div>
                     </div>
                     <div class="inside-gallery-item">
-                        <img src="../img/{img_gal2}" alt="{cap2}">
+                        <img src="../img/{img_gal2}" alt="{cap2}" loading="lazy">
                         <div class="inside-gallery-overlay"><span class="inside-gallery-title">{cap2}</span></div>
                     </div>
                     <div class="inside-gallery-item">
-                        <img src="../img/{img_gal3}" alt="{cap3}">
+                        <img src="../img/{img_gal3}" alt="{cap3}" loading="lazy">
                         <div class="inside-gallery-overlay"><span class="inside-gallery-title">{cap3}</span></div>
                     </div>
                 </div>
@@ -953,7 +1077,7 @@ TEMPLATE = """<!DOCTYPE html>
     <div id="queryModal">
         <div class="modal-content-custom">
             <button id="closeQueryModal" type="button" aria-label="Close Modal">&times;</button>
-            <h4 style="font-weight: 700; margin-bottom: 8px;">Send Us Your Query</h4>
+            <h4 style="font-weight: 700; margin-bottom: 8px;">Plan Your Trip</h4>
             <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 20px;">Tell us your requirements for {hero_title} and we'll craft the perfect package.</p>
             <form id="contact" action="https://formspree.io/f/xzzgaydr" method="POST">
                 <input name="email" type="email" placeholder="Your Email Address (for reply)" required style="width:100%; margin-bottom:12px; padding:12px; border-radius:8px; border:1px solid var(--card-border); background:var(--bg-primary); color:var(--text-primary); box-sizing:border-box;">
@@ -991,6 +1115,7 @@ TEMPLATE = """<!DOCTYPE html>
                         <h6>Contact Us</h6>
                         <p><i class="fa fa-map-marker" style="color:var(--accent-primary); margin-right:8px;"></i>79, Scindia House, Connaught Place, Janpath, New Delhi</p>
                         <p><i class="fa fa-phone" style="color:var(--accent-primary); margin-right:8px;"></i> +91 87001 40135</p>
+                        <p><i class="fa fa-whatsapp" style="color:var(--wa-green, #25D366); margin-right:8px;"></i> <a href="https://wa.me/918700140135" class="wa-dynamic-btn" target="_blank" rel="noopener noreferrer" style="color:inherit; font-weight:600;">+91 87001 40135 (WhatsApp)</a></p>
                         <p><i class="fa fa-envelope" style="color:var(--accent-primary); margin-right:8px;"></i> cityindiainfotravels@gmail.com</p>
                     </div>
                 </div>
@@ -1039,6 +1164,7 @@ TEMPLATE = """<!DOCTYPE html>
         }});
 
         if (form) {{
+            form.dataset.customAjax = 'true';
             form.addEventListener('submit', function (e) {{
                 e.preventDefault();
                 var emailInput = form.querySelector('input[name="email"]');
@@ -1067,12 +1193,23 @@ TEMPLATE = """<!DOCTYPE html>
                         msg.textContent = "Thank you! Your query has been submitted successfully. We will get back to you shortly.";
                     }}
                     form.reset();
+                    // Lead Conversion Hook: Plan Your Trip Form Submission
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({{
+                        'event': 'submit_lead_form',
+                        'form_name': 'Plan Your Trip Modal'
+                    }});
                 }}).catch(function () {{
                     if (msg) {{
                         msg.style.display = 'block';
                         msg.textContent = "Thank you! Your query has been received. Our team will contact you soon.";
                     }}
                     form.reset();
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({{
+                        'event': 'submit_lead_form',
+                        'form_name': 'Plan Your Trip Modal'
+                    }});
                 }}).finally(function () {{
                     if (submitBtn) {{
                         submitBtn.disabled = false;
@@ -1092,7 +1229,72 @@ def build_all():
         for hl in dest['highlights']:
             hl_html += f'<div class="highlight-item"><i class="fa fa-check-circle"></i> {hl}</div>\n'
 
+        fn = dest['filename']
+        seo = SEO_DATA[fn]
+        seo_title = seo['title']
+        seo_desc = seo['description']
+
+        json_ld_dict = {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "TouristTrip",
+                    "@id": f"https://cityinfoindiatravels.com/Pages-inside/{fn}#trip",
+                    "name": seo_title,
+                    "description": seo_desc,
+                    "touristType": dest["ideal_for"],
+                    "provider": {
+                        "@type": "TravelAgency",
+                        "name": "City Info India Travels",
+                        "url": "https://cityinfoindiatravels.com",
+                        "telephone": "+918700140135"
+                    },
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "INR",
+                        "priceSpecification": {
+                            "@type": "PriceSpecification",
+                            "priceCurrency": "INR",
+                            "description": dest["budget"]
+                        },
+                        "availability": "https://schema.org/InStock"
+                    },
+                    "itinerary": {
+                        "@type": "ItemList",
+                        "numberOfItems": 2,
+                        "itemListElement": [
+                            {
+                                "@type": "ListItem",
+                                "position": 1,
+                                "name": dest["day1_title"],
+                                "description": dest["day1_desc"]
+                            },
+                            {
+                                "@type": "ListItem",
+                                "position": 2,
+                                "name": dest["day2_title"],
+                                "description": dest["day2_desc"]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "@type": "TouristDestination",
+                    "@id": f"https://cityinfoindiatravels.com/Pages-inside/{fn}#destination",
+                    "name": dest["hero_title"],
+                    "description": dest["hero_desc"],
+                    "image": f"https://cityinfoindiatravels.com/img/{dest['img_hero']}",
+                    "touristType": dest["ideal_for"]
+                }
+            ]
+        }
+        json_ld = json.dumps(json_ld_dict, indent=4, ensure_ascii=False)
+
         html = TEMPLATE.format(
+            filename=fn,
+            seo_title=seo_title,
+            seo_desc=seo_desc,
+            json_ld=json_ld,
             page_title=dest['page_title'],
             hero_desc=dest['hero_desc'],
             img_hero=dest['img_hero'],
@@ -1124,7 +1326,7 @@ def build_all():
             f.write(html)
         print(f"Generated: {dest['filename']}")
 
-    print(f"Successfully generated all {len(DESTINATIONS_DATA)} subpages with budget, itinerary timeline & working send query button!")
+    print(f"Successfully generated all {len(DESTINATIONS_DATA)} subpages with GTM, SEO, Open Graph & JSON-LD!")
 
 if __name__ == '__main__':
     build_all()
